@@ -1,0 +1,8 @@
+node_modules/
+out/
+props.json
+public/
+cue.md
+stills.txt
+build/
+thumb_props.json

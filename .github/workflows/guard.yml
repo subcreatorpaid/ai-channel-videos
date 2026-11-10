@@ -1,0 +1,24 @@
+name: Guard checks
+
+# Every push and every day 06:30 UTC: brain files, secrets, video folders (never-list, long-form score, disclosures).
+# A failed run emails the owner; the secretary reads the result each morning.
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/guard.py --strict

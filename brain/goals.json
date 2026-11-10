@@ -1,0 +1,10 @@
+{
+  "goal": "1,000 subscribers + 4,000 public watch hours",
+  "start": "2026-11-10",
+  "deadline": "2027-02-08",
+  "daily_pace": {"subscribers": 11, "watch_hours": 45},
+  "videos_per_week": "3-4 long (8-12 min); Shorts from week 4",
+  "note": "Numbers come from YouTube Studio, the stats workflow or vidIQ. Never estimate; leave null if unknown. Check YPP thresholds on YouTube Help before quoting them.",
+  "latest": {"date": null, "subscribers": null, "watch_hours_public": null, "views_28d": null, "ctr_pct": null, "avg_view_duration_s": null},
+  "history": []
+}
