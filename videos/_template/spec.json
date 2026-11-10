@@ -1,45 +1,45 @@
 {
   "slug": "<slug>",
   "title": "<chosen title>",
+  "keyword": "<target keyword>",
   "style": "wide",
   "audio": {
     "kokoro_voice": "am_michael+am_puck",
-    "speed": 1.1
+    "speed": 1.0
   },
   "theme": {},
-  "watermark": "",
   "beats": [
     {
-      "say": "I let Claude run my inbox for seven days. Here is exactly what happened.",
+      "say": "Four twelve AM. A street in Chicago.",
       "show": {
-        "type": "title",
-        "kicker": "7-day test",
-        "title": "Claude ran my *inbox* for a week",
-        "sub": "The setup, the mistakes, and the result",
-        "word": "Here"
+        "type": "dateline",
+        "time": "4:12 AM",
+        "place": "Chicago, Illinois",
+        "image": "assets/truck.png",
+        "move": "in"
       }
     },
     {
-      "say": "Chapter one. The setup, which takes about ten minutes.",
+      "say": "Act one. The tunnel.",
       "show": {
         "type": "chapter",
         "n": 1,
-        "title": "The setup"
+        "title": "The tunnel"
       }
     },
     {
-      "say": "Watch this next video to build the full system.",
+      "say": "Which hidden job should we follow next? Tell us below, and we'll credit you on screen.",
       "show": {
         "type": "endscreen",
-        "title": "Build the full system next"
+        "title": "Follow the next shift"
       }
     }
   ],
-  "keyword": "<target keyword>",
   "thumbs": [
     {
-      "words": "TWO TO FOUR WORDS",
-      "hot": "FOUR"
+      "layout": "word",
+      "words": "WORD",
+      "image": "assets/thumb.png"
     }
   ]
 }

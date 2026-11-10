@@ -1,7 +1,7 @@
 // Long-form 16:9 scene kit (1920x1080) for the channel's 8-12 minute tutorials.
 // Every scene is built from the spec, so a new video is only JSON (videos/<slug>/spec.json, "style": "wide"):
 //   beat.show = {type: '<kind>', ...params, lower?: {name, sub}, tr?: 'fade'|'push'|'zoom'|'wipe'}
-// Kinds: title, chapter, screen, points, stat, compare, text, endscreen (params documented per scene below).
+// Kinds: illus, titlecard, dateline, dialogue (illustrated story scenes), title, chapter, screen, points, stat, compare, text, endscreen.
 // Word anchors ("word" params) are display words from the beat's `say`; a missing word falls back to a time in the beat.
 // The look comes from props.theme (brain/brand.md -> spec "theme"), so the palette can change without touching code.
 import React from 'react';
@@ -10,8 +10,9 @@ import {Fonts, FONT} from '../Short';
 import {expo, inOut, mix, clamp01} from '../flow/kit';
 
 export const W = 1920, H = 1080;
-export const DEFAULT_THEME = {bg: '#0E1014', panel: '#171A21', paper: '#F4F4F0', ink: '#0E1014', text: '#F4F4F0', muted: '#9AA0AA',
-  accent: '#4F8CFF', accent2: '#FFD24F', line: '#262A33', warn: '#E5484D'};
+// Default = brand option A (night blue + warm orange, brain/brand.md) until the owner picks a palette; specs override with "theme".
+export const DEFAULT_THEME = {bg: '#101A2E', panel: '#1B2742', paper: '#F2E8D5', ink: '#101A2E', text: '#F7F1E3', muted: '#A7AFC0',
+  accent: '#F28C28', accent2: '#FFD166', line: '#2A3756', warn: '#E5484D'};
 const MONO = '"JetBrains Mono", "DejaVu Sans Mono", monospace';
 const clean = (s) => String(s).replace(/[^\w$%.'-]/g, '').replace(/\.$/, '').toLowerCase();
 
@@ -148,7 +149,68 @@ const EndScreen = ({f, s, b, T}) => (
   </AbsoluteFill>
 );
 
-const SCENES = {title: Title, chapter: Chapter, screen: Screen, points: Points, stat: Stat, compare: Compare, text: Text, endscreen: EndScreen};
+
+// ------------------------------------------------------------------ illustrated story scenes (Capital Case-style look, our own art)
+// Illustrations are 16:9 PNGs in videos/<slug>/assets/ (our character sheet + Flow-made scenes, docs/animator-rules.md).
+const Missing = ({T, note}) => <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', background: T.panel, color: T.muted, fontFamily: MONO, fontSize: 34}}>[ illustration: {note || 'add image'} ]</AbsoluteFill>;
+const MOVES = {in: [1, 1.12, 0, 0], out: [1.12, 1, 0, 0], left: [1.08, 1.08, 40, -40], right: [1.08, 1.08, -40, 40], up: [1.08, 1.08, 0, 0]};
+const Pan = ({f, b, s, T, children, dim = 0}) => {
+  const [z0, z1, x0, x1] = MOVES[s.move || 'in'] || MOVES.in;
+  const t = clamp01((f - b.from) / Math.max(1, b.frames));
+  const y = s.move === 'up' ? mix(30, -30, t) : 0;
+  return (<AbsoluteFill style={{overflow: 'hidden', background: T.bg}}>
+    <AbsoluteFill style={{transform: `translate(${mix(x0, x1, t)}px, ${y}px) scale(${mix(z0, z1, t)})`}}>
+      {s.image ? <Img src={staticFile(s.image)} style={{width: W, height: H, objectFit: 'cover'}} /> : <Missing T={T} note={s.note} />}
+      {(s.layers || []).map((l, i) => <Img key={i} src={staticFile(l.image)} style={{position: 'absolute', inset: 0, width: W, height: H, objectFit: 'cover',
+        transform: `translateX(${mix(0, (l.depth || 1) * -30, t)}px)`}} />)}
+    </AbsoluteFill>
+    {dim > 0 && <AbsoluteFill style={{background: `linear-gradient(0deg, rgba(0,0,0,${dim}), rgba(0,0,0,${dim * 0.3}) 60%)`}} />}
+    {children}
+  </AbsoluteFill>);
+};
+
+// illus: {image, move?: in|out|left|right|up, layers?: [{image, depth}], caption?, word?}  full-bleed illustration with a slow camera move
+const Illus = ({f, s, b, T}) => (<Pan f={f} b={b} s={s} T={T} dim={s.caption ? 0.45 : 0}>
+  {s.caption && <Rise f={f} at={wordAt(b, s.word, 10)} style={{position: 'absolute', left: 120, right: 120, bottom: 90}}>
+    <div style={{fontFamily: FONT, fontWeight: 800, fontSize: 54, color: T.text, textShadow: '0 4px 18px rgba(0,0,0,0.7)'}}><Accent text={s.caption} T={T} /></div></Rise>}
+</Pan>);
+
+// titlecard: {word, sub?}  black card with one key term (e.g. "THE NIGHT SHIFT"), letters spaced, a soft flicker in
+const TitleCard = ({f, s, b, T}) => {
+  const p = expo(f - b.from - 2, 10), fl = f - b.from < 8 ? ((f - b.from) % 2 ? 0.55 : 1) : 1;
+  return (<AbsoluteFill style={{background: '#000', alignItems: 'center', justifyContent: 'center'}}>
+    <div style={{fontFamily: FONT, fontWeight: 900, fontSize: s.size || 150, letterSpacing: 18, color: '#F7F1E3', opacity: p * fl, transform: `scale(${mix(1.06, 1, p)})`}}>{s.word}</div>
+    {s.sub && <Rise f={f} at={b.from + 14}><div style={{fontFamily: MONO, fontSize: 32, letterSpacing: 6, color: T.accent, marginTop: 24, textTransform: 'uppercase'}}>{s.sub}</div></Rise>}
+  </AbsoluteFill>);
+};
+
+// dateline: {time, place, image?, move?}  cold-open stamp ("3:12 AM" / "beneath Manhattan") typed over the scene
+const Dateline = ({f, s, b, T}) => {
+  const typed = (txt, at) => String(txt || '').slice(0, Math.max(0, Math.floor((f - at) / 1.6)));
+  return (<Pan f={f} b={b} s={s} T={T} dim={0.55}>
+    <div style={{position: 'absolute', left: 120, bottom: 130}}>
+      <div style={{fontFamily: MONO, fontWeight: 700, fontSize: 96, color: T.accent2}}>{typed(s.time, b.from + 6)}</div>
+      <div style={{fontFamily: MONO, fontSize: 46, color: T.text, marginTop: 8}}>{typed(s.place, b.from + 6 + String(s.time || '').length * 1.6 + 6)}</div>
+    </div>
+  </Pan>);
+};
+
+// dialogue: {image, speaker?, line?, x, y, move?}  a character's voiced line in a speech bubble pointing at (x, y) (0-1 of the frame)
+//   the beat's "say" is the spoken line; set beat "voice" to give the character a different Kokoro voice
+const Dialogue = ({f, s, b, T}) => {
+  const p = expo(f - b.speakFrom + 4, 10), x = (s.x ?? 0.5) * W, y = (s.y ?? 0.4) * H;
+  const right = x > W * 0.6;
+  return (<Pan f={f} b={b} s={{move: 'in', ...s}} T={T}>
+    <div style={{position: 'absolute', top: Math.max(40, y - 260), [right ? 'right' : 'left']: right ? W - x - 60 : x - 60, maxWidth: 760,
+      background: '#FFFDF7', color: '#14161C', borderRadius: 28, padding: '24px 34px', border: '5px solid #14161C', transform: `scale(${p})`,
+      transformOrigin: right ? 'bottom right' : 'bottom left', boxShadow: '0 12px 30px rgba(0,0,0,0.35)'}}>
+      {s.speaker && <div style={{fontFamily: MONO, fontSize: 22, letterSpacing: 2, color: '#7A6A55', textTransform: 'uppercase'}}>{s.speaker}</div>}
+      <div style={{fontFamily: FONT, fontWeight: 800, fontSize: 44, lineHeight: 1.15}}>{s.line || b.say}</div>
+    </div>
+  </Pan>);
+};
+
+const SCENES = {illus: Illus, titlecard: TitleCard, dateline: Dateline, dialogue: Dialogue, title: Title, chapter: Chapter, screen: Screen, points: Points, stat: Stat, compare: Compare, text: Text, endscreen: EndScreen};
 
 // lower third: {name, sub?}  slides in on the beat start, out 1 s before the beat ends
 const Lower = ({f, l, b, T}) => {

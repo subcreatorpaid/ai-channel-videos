@@ -1,19 +1,22 @@
 {
   "slug": "_example",
-  "title": "Example: every long-form scene type",
+  "title": "Why Your Trash Disappears Before You Wake Up",
+  "keyword": "garbage collection",
   "style": "wide",
-  "audio": {"kokoro_voice": "am_michael+am_puck", "speed": 1.1},
+  "audio": {"kokoro_voice": "am_michael+am_puck", "speed": 1.0},
   "theme": {},
-  "watermark": "",
   "beats": [
-    {"say": "I let Claude run my inbox for seven days. Here is exactly what happened.", "show": {"type": "title", "kicker": "7-day test", "title": "Claude ran my *inbox* for a week", "sub": "The setup, the mistakes, and the result", "word": "Here"}},
-    {"say": "By the end, it had answered over three hundred emails on its own.", "show": {"type": "stat", "value": "312", "label": "emails answered without me", "word": "three"}},
-    {"say": "But day three almost made me switch it off. Stay for that part.", "show": {"type": "text", "text": "Day 3 almost made me *quit*", "word": "day"}},
-    {"say": "Chapter one. The setup, which takes about ten minutes.", "show": {"type": "chapter", "n": 1, "title": "The setup"}},
-    {"say": "Open the automations page, then click run automation.", "show": {"type": "screen", "image": "assets/screen_demo.png", "url": "app.example.com/automations", "zoom": {"x": 0.4, "y": 0.45, "s": 1.6, "word": "click"}, "pointer": [{"x": 0.6, "y": 0.3}, {"x": 0.33, "y": 0.45, "word": "run", "click": true}], "label": {"text": "Step 1", "x": 0.5, "y": 0.04}, "lower": {"name": "Tool: Claude", "sub": "free plan works for this"}}},
-    {"say": "You need three things: a Claude account, an email label, and one simple rule.", "show": {"type": "points", "title": "What you *need*", "items": [{"text": "A Claude account", "word": "Claude"}, {"text": "An email label", "word": "email"}, {"text": "One simple rule", "word": "rule"}]}},
-    {"say": "Doing it by hand versus letting the bot do it.", "show": {"type": "compare", "left": {"title": "By hand", "items": ["2 hours a day", "Missed replies"]}, "right": {"title": "With Claude", "items": ["10 minutes a day", "Every email answered"]}, "word": "letting"}},
-    {"say": "Watch this next video to build the full system.", "show": {"type": "endscreen", "title": "Build the full system next"}}
+    {"say": "Four twelve AM. A street in Chicago.", "show": {"type": "dateline", "time": "4:12 AM", "place": "Chicago, Illinois", "image": "assets/truck.png", "move": "in"}},
+    {"say": "By the time you wake up, eleven thousand tons of garbage collection will already be done. Nobody sees it happen.", "show": {"type": "illus", "image": "assets/truck.png", "move": "right", "caption": "*11,000 tons* before sunrise", "word": "eleven"}},
+    {"say": "And the strangest part? The routes are planned like airline schedules.", "show": {"type": "titlecard", "word": "THE ROUTE", "sub": "planned to the minute"}},
+    {"say": "This is the story of the night shift you never meet.", "show": {"type": "text", "text": "The night shift you *never* meet"}},
+    {"say": "Act one. The tunnel.", "show": {"type": "chapter", "n": 1, "title": "The tunnel"}},
+    {"say": "Below the city, the work never really stops.", "show": {"type": "illus", "image": "assets/tunnel.png", "move": "in"}},
+    {"say": "We start at two. If the lamp goes out, you wait.", "voice": "am_fenrir", "show": {"type": "dialogue", "image": "assets/worker.png", "speaker": "Night crew, Line 4", "x": 0.62, "y": 0.42}},
+    {"say": "Which hidden job should we follow next? Tell us below, and we'll credit you on screen.", "show": {"type": "endscreen", "title": "Follow the next shift"}}
   ],
-  "thumb": {"words": "IT ANSWERED 312 EMAILS", "hot": "312", "image": "assets/screen_demo.png", "badge": "7 DAYS"}
+  "thumbs": [
+    {"layout": "word", "words": "4 AM", "image": "assets/truck.png"},
+    {"words": "NOBODY SEES THIS", "hot": "NOBODY", "image": "assets/worker.png"}
+  ]
 }

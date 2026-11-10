@@ -1,6 +1,6 @@
 ---
 name: analytics-review
-description: AI channel analytics review - 48-hour and 7-day review of each upload (CTR, average view duration, retention drops, traffic sources), monthly audit, and writing what works into brain/learnings.md (uses /youtube analyze and /youtube audit). Triggers - "how did the video do", "48 hour review", "analytics", "why are views low", "audit the channel".
+description: Night Shift channel analytics review - 48-hour and 7-day review of each upload (CTR, average view duration, retention drops, traffic sources), monthly audit, and writing what works into brain/learnings.md (uses /youtube analyze and /youtube audit). Triggers - "how did the video do", "48 hour review", "analytics", "why are views low", "audit the channel".
 ---
 
 # Analytics review (Sonnet)
