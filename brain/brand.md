@@ -9,6 +9,8 @@ caricatures, title cards, one narrator), with our own characters, palette and fo
 - Audience: curious adults (18-54) who like "how things work", business and infrastructure stories. No prior knowledge needed.
 - Topic rule: a hidden job or overnight process people rely on every day + the scale or money behind it + one counterintuitive twist
   you can say in one line. One news-peg video a month (a strike, a port jam, a blackout "explained like you're 5").
+- Series (from `brain/research/2026-11-10-video-ideas-30.md`; start with the first three): **Every Level**, **Life Below Deck**, **The Night Shift**,
+  **Follow the Waste**, **Extreme Shift**, **Jobs Nobody Wants**, **Explained Like You're 5**. One playlist per series.
 - Formats: **The shift** (follow one job through a night), **How it works** (one system: trash routes, subway rebuilds, airport nights),
   **The mistake** (a failure that changed how the system runs), **Explained** (a news event through the workers behind it).
 
