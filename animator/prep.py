@@ -59,7 +59,13 @@ for b in spec["beats"]:
 if sum(1 for h in holds if h) > 3: warn(f"{sum(1 for h in holds if h)} beats have a hold; P2 allows 2-3")
 toks = [tokens(b["say"]) for b in spec["beats"]]
 spoken = [" ".join(w for _, ws in tk for w in ws) for tk in toks]
-clips = kokoro_lines(spoken, voice=a.get("kokoro_voice", "af_heart"), speed=speed)
+# beat "voice" (e.g. a worker's line in a character voice) overrides the narrator; lines are made per voice, then put back in order
+narrator = a.get("kokoro_voice", "af_heart")
+voices = [b.get("voice", narrator) for b in spec["beats"]]
+clips = [None] * len(spoken)
+for v in dict.fromkeys(voices):
+    idx = [i for i, x in enumerate(voices) if x == v]
+    for i, c in zip(idx, kokoro_lines([spoken[i] for i in idx], voice=v, speed=speed)): clips[i] = c
 ramp = np.linspace(0, 1, FADE, dtype=np.float32)
 for c in clips:
     if len(c) > 2 * FADE: c[:FADE] *= ramp; c[-FADE:] *= ramp[::-1]

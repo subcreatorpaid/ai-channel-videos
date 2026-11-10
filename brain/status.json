@@ -2,14 +2,42 @@
  "updated": "2026-11-10 12:00",
  "updated_by": "setup",
  "today": [
-  {"task": "Upload the four files from your start-here note (blueprint, brain, brand, rules) in the project thread", "link": "", "mins": 2},
-  {"task": "Pick a brand look from the 3 options when they arrive", "link": "", "mins": 5},
-  {"task": "Add GEMINI_API_KEY and YT_API_KEY as repo secrets (Settings > Secrets and variables > Actions)", "link": "https://github.com/subcreatorpaid/ai-channel-videos/settings/secrets/actions", "mins": 4}
+  {
+   "task": "Pick one of 3 palette + character styles for the channel (coming in the thread)",
+   "link": "",
+   "mins": 5
+  },
+  {
+   "task": "Upload the four files from your start-here note (blueprint, brain, brand, rules)",
+   "link": "",
+   "mins": 2
+  },
+  {
+   "task": "Add GEMINI_API_KEY and YT_API_KEY as repo secrets",
+   "link": "https://github.com/subcreatorpaid/ai-channel-videos/settings/secrets/actions",
+   "mins": 4
+  }
  ],
  "approvals": [
-  {"what": "Review and merge the setup pull request", "say": "merge it", "since": "2026-11-10"}
+  {
+   "what": "Review and merge the niche update pull request (hidden workers, Capital Case style)",
+   "say": "merge it",
+   "since": "2026-11-10"
+  }
  ],
  "alerts": [],
- "pipeline": {"ideas": 0, "ok1_picked": 0, "scripted": 0, "storyboarded": 0, "reviewed_360": 0, "final": 0, "uploaded": 0},
- "channel": {"name": null, "handle": null, "url": null}
+ "pipeline": {
+  "ideas": 0,
+  "ok1_picked": 0,
+  "scripted": 0,
+  "storyboarded": 0,
+  "reviewed_360": 0,
+  "final": 0,
+  "uploaded": 0
+ },
+ "channel": {
+  "name": null,
+  "handle": null,
+  "url": null
+ }
 }

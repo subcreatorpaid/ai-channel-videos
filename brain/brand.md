@@ -1,38 +1,42 @@
-# Brand book (draft, 10 Nov 2026: name and palette still open)
+# Brand book (10 Nov 2026: niche set, name and palette still open)
 
 ## Identity
-Working name "AI Channel" until the owner picks the real one. A faceless channel that shows, step by step, how to use AI to automate
-work and create things: Claude, Gemini, Google Flow, bots, agents and the tools around them.
-- Promise: "Watch me build it, then build it yourself." Every video ends with something the viewer can use the same day.
-- Position: a builder showing real screens. Never claim results, income or experience the owner does not have. Real numbers only.
-- Audience: adults who work on a computer (freelancers, small-business owners, creators, office workers) and want AI to save them time.
-  Beginner to intermediate; no coding needed unless the title says so.
-- Formats: **Tutorial** ("How to automate X with Claude"), **How I built it** (a real build, start to finish), **Tested** (a tool or
-  workflow tried for N days, with the result), **Compared** (two tools on one job). Series and playlists per format.
+Working name "Night Shift" until the owner picks the real one. A faceless, illustrated YouTube channel that follows the workers and processes
+people rarely see: overnight maintenance, sanitation, logistics and building operations. Model: Capital Case's graphic style (flat 2D
+caricatures, title cards, one narrator), with our own characters, palette and fonts. Research: `brain/competitors/2026-11-10-hidden-workers-channels.md`,
+`brain/research/2026-11-10-capital-case-blueprint.md`.
+- Promise: "The night shift you never meet." Every video shows a hidden system at real scale, with one twist the viewer did not know.
+- Audience: curious adults (18-54) who like "how things work", business and infrastructure stories. No prior knowledge needed.
+- Topic rule: a hidden job or overnight process people rely on every day + the scale or money behind it + one counterintuitive twist
+  you can say in one line. One news-peg video a month (a strike, a port jam, a blackout "explained like you're 5").
+- Series (from `brain/research/2026-11-10-video-ideas-30.md`; start with the first three): **Every Level**, **Life Below Deck**, **The Night Shift**,
+  **Follow the Waste**, **Extreme Shift**, **Jobs Nobody Wants**, **Explained Like You're 5**. One playlist per series.
+- Formats: **The shift** (follow one job through a night), **How it works** (one system: trash routes, subway rebuilds, airport nights),
+  **The mistake** (a failure that changed how the system runs), **Explained** (a news event through the workers behind it).
 
 ## Voice
-Clear, calm, practical, a bit of personality. Short sentences, plain words, written for the ear. Show, don't hype.
-**Never:** "this changes everything", "insane", "game-changer", fake urgency, promised income, "AI will replace you" fear-bait,
-bashing other creators, clickbait the video does not pay off, jailbreaks or ways to break a tool's terms.
+Calm, serious narrator with dry humour. About 150 words a minute, 8-11 words a sentence, one-word beats ("Order."). Respect for the workers:
+they are the heroes, never the joke. No politics, no blame on named people or companies without a source.
+**Never:** "you won't believe", "insane", "shocking" in narration, "welcome back", "smash like", templated intros, fear-bait, mocking workers,
+unsourced accusations, copying another channel's script, art, music or thumbnails.
 
-| Instead of | Write |
-|---|---|
-| "This AI tool is INSANE" | "This saved me two hours on Monday. Here's the setup." |
-| "Make $10k a month with AI" | "Here's the workflow. What it earns depends on you; I'll show what it saves." |
-| "You NEED this" | "Here's the free way, and when the paid plan is worth it." |
-
-## Look (to be chosen: the owner picks one of three options with mockups)
-- Format: 16:9, 1920x1080, 30 fps (`animator/src/wide/Wide.jsx`). Thumbnails 1280x720 (`ThumbWide.jsx`).
-- Until a palette is picked the animator uses its default theme: dark `#0E1014`, panel `#171A21`, text `#F4F4F0`, accent blue `#4F8CFF`,
-  highlight yellow `#FFD24F`. The chosen palette goes in every spec as `"theme"` and here.
-- Type: Inter (Black for titles, ExtraBold for body). Real logos for every tool shown, in their own colours.
-- Screen recordings: 1080p or higher, OBS Studio, browser zoom 125%, hide personal data (email, tabs, bookmarks) before recording.
-- Music: YouTube Audio Library or Pixabay Music only, licence noted in `videos/<slug>/assets/LICENCES.md`.
+## Look (the owner picks one of three palettes; option A is the animator's default until then)
+- Flat 2D illustration, our own cast: simple round-headed worker caricatures with hard hats, hi-vis, uniforms; thick dark outlines;
+  no gradients on characters. Different head shape, line weight, palette and fonts from Capital Case, OverSimplified and Crayon Capital.
+- Option A "Night shift": night blue `#101A2E`, panel `#1B2742`, warm paper `#F2E8D5`, safety orange `#F28C28`, sodium yellow `#FFD166`.
+- Black title cards for key terms (one or two words, spaced capitals). Datelines for cold opens ("4:12 AM / Chicago, Illinois").
+- Type: Inter (Black titles, ExtraBold body), monospace for datelines and labels.
+- 16:9, 1920x1080, 30 fps (`animator/src/wide/Wide.jsx`). Thumbnails 1280x720 (`ThumbWide.jsx`, layout `word`).
+- Art pipeline: a character sheet first (approved once), then scene illustrations made in Google Flow from that sheet and checked by hand
+  for consistency; every scene is drawn for its video (no reused templates). Short real clips only if transformed (framed, annotated, under narration, credited).
+- Music: YouTube Audio Library or Pixabay only, licence noted in `videos/<slug>/assets/LICENCES.md`.
 
 ## Every video
-- Target keyword in the title, the first line of the description and spoken in the first 30 seconds.
-- The thumbnail and title make one promise; the hook confirms it in the first 5 seconds; the video pays it off.
-- Chapters (cards in the video match the chapter list), one mid-video card, end screen for the last 20 seconds, pinned comment.
-- Ending (about 20 s): one-line recap, "watch this next" to the best related video, subscribe ask in one sentence. Never "smash like".
-- Realistic AI-generated people, places or events: tick YouTube's altered or synthetic content box and say it in the description.
-- Affiliate links: "Affiliate link" in the description next to the link, plus "I may earn a commission at no cost to you."
+- 10-12 minutes (1,500-1,700 words), 4-5 named acts = chapters. Target keyword in the title, the first description line and the first 30 s.
+- Hook (0-30 s, about 75 words): time and place, a staggering fact, an ironic reversal, then "This is the story of..." with the paradox.
+- A "but here's what nobody notices" turn every 60-90 s; every act ends on a reversal; the biggest answer held back to about 70-75%.
+- Each act: one short voiced worker line (character voice); one named night-shift vignette and one modern comparison per video.
+- Ending: callback to the hook + a 3-6 word moral, then "Which hidden job should we follow next? We'll credit you on screen." (pinned too).
+- Thumbnail: ONE big ALL-CAPS word (3-12 letters, white with a dark outline, top), 1-2 expressive worker caricatures, one prop showing
+  the twist (a clock at 3 AM, a mountain of trash, a red warning light), night blue against warm orange. Readable in one second at phone size.
+- Description: sources list, a short disclaimer, chapters, "Voice: AI (Kokoro)". Proofread every on-screen word (typos and map errors get called out).

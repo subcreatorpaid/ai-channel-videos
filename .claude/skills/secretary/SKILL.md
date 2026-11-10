@@ -1,6 +1,6 @@
 ---
 name: secretary
-description: AI channel secretary - morning briefing with at most 3 to-dos, the approvals queue (the six OKs), alerts, and the Control Room dashboard. Triggers - "what do I need to do today", "briefing", "dashboard", "what's pending", "status", "Control Room".
+description: Night Shift channel secretary - morning briefing with at most 3 to-dos, the approvals queue (the six OKs), alerts, and the Control Room dashboard. Triggers - "what do I need to do today", "briefing", "dashboard", "what's pending", "status", "Control Room".
 ---
 
 # Secretary (Sonnet)

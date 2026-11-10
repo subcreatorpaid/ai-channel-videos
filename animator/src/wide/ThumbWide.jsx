@@ -1,5 +1,6 @@
 // YouTube thumbnail, 1280x720 (packager makes 3 concepts per video; vidIQ scores them before OK 2).
 // spec "thumb": {words: "2-4 WORDS", hot?: "word in accent box", image?: "assets/x.png", side?: "right"|"left", badge?: "NEW", theme?}
+//   layout "word": ONE big ALL-CAPS word on top (white, dark outline) over a full illustration (caricatures + one prop) - the channel's main style
 // Rules (docs/packaging.md): the words never repeat the title, one focal image, readable at phone size (test at 320x180).
 import React from 'react';
 import {AbsoluteFill, Img, staticFile} from 'remotion';
@@ -9,6 +10,15 @@ import {DEFAULT_THEME} from './Wide';
 export const ThumbWide = ({thumb = {}, theme = {}}) => {
   const T = {...DEFAULT_THEME, ...theme, ...(thumb.theme || {})};
   const words = String(thumb.words || 'YOUR WORDS HERE').split(' ');
+  if (thumb.layout === 'word') {
+    const w = String(thumb.words || 'WORD').toUpperCase(), size = Math.min(230, Math.floor(1180 / (w.length * 0.78)));
+    return (<AbsoluteFill style={{background: T.bg}}>
+      <Fonts />
+      {thumb.image && <Img src={staticFile(thumb.image)} style={{position: 'absolute', inset: 0, width: 1280, height: 720, objectFit: 'cover'}} />}
+      <div style={{position: 'absolute', top: 18, left: 0, right: 0, textAlign: 'center', fontFamily: FONT, fontWeight: 900, fontSize: size, letterSpacing: -2,
+        color: '#FFFFFF', WebkitTextStroke: `${Math.round(size / 18)}px #0B0F1A`, paintOrder: 'stroke fill', textShadow: '0 10px 30px rgba(0,0,0,0.5)'}}>{w}</div>
+    </AbsoluteFill>);
+  }
   const left = thumb.side === 'left';
   const longest = Math.max(...words.map((w) => w.length));
   const size = Math.min(words.length > 3 ? 120 : 150, Math.floor(560 / (longest * 0.8)));  // longest word fits the 560 px text column

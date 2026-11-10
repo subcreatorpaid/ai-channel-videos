@@ -1,17 +1,18 @@
 ---
 name: storyteller
-description: AI channel storyteller (Opus) - writes 3 hook options that confirm the chosen thumbnail and title promise, then the story arc, beats, open loops and payoff for the scriptwriter. Triggers - "hook", "story", "storyline", "open loops", "beats", "arc".
+description: Night Shift channel storyteller (Opus) - writes 3 cold-open hooks that confirm the chosen thumbnail and title, then the story - 4-5 named acts, a reversal at the end of each, the held-back answer, the worker vignette and the callback ending - for the scriptwriter. Triggers - "hook", "story", "storyline", "acts", "open loops", "beats", "arc".
 ---
 
 # Storyteller (Claude Opus only)
 
-Read first: `videos/<slug>/brief.md`, `title-thumb.md` (the chosen title + thumbnail from OK 2), `brain/brand.md`, `brain/learnings.md`,
-`.claude/skills/youtube/references/retention-scripting-guide.md`.
+Read first: `videos/<slug>/brief.md`, `title-thumb.md` (chosen at OK 2), `sources.md`, `brain/brand.md`, `brain/learnings.md`,
+`brain/research/2026-11-10-capital-case-blueprint.md` (section 4).
 
-1. **Hooks**: run `hook-lab` (it uses `/youtube hook`). Keep 3 options. Each: the first sentence states the exact promise of the
-   title/thumbnail; no greeting, no channel name; 15-30 s; ends on a reason to stay.
-2. **Arc**: before -> struggle -> turn -> result (tutorial: problem -> setup -> build -> result -> upgrade). One sentence each.
-3. **Beats** per chapter (3-5 chapters), each with what is shown on screen.
-4. **Open loops**: at least one every ~90 s ("day three almost broke it - we'll get there"), each with where it pays off.
-5. **Payoff**: the promised result shown on screen, then the one takeaway.
-Write it all into the top of `videos/<slug>/script.md` (Hook options + Story). Then hand to the scriptwriter.
+1. **Hooks**: run `hook-lab`; keep 3.
+2. **Acts**: 4-5 named acts (they become chapters). Each act: what happens, the "but here's what nobody notices" turn, and the reversal it ends on.
+   A turn every 60-90 s.
+3. **The held-back answer**: the biggest reveal (the twist from the title) lands at about 70-75% of the runtime.
+4. **People**: one named night-shift vignette (invented name unless sourced, a composite said as such), one voiced worker line per act,
+   one modern comparison (then vs now, here vs another city).
+5. **Ending**: callback to the cold open + a 3-6 word moral, then the "which hidden job next?" ask.
+Write it into the top of `videos/<slug>/script.md` (Hook options + Story). Then hand to the scriptwriter.
