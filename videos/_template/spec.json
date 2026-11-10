@@ -1,0 +1,45 @@
+{
+  "slug": "<slug>",
+  "title": "<chosen title>",
+  "style": "wide",
+  "audio": {
+    "kokoro_voice": "am_michael+am_puck",
+    "speed": 1.1
+  },
+  "theme": {},
+  "watermark": "",
+  "beats": [
+    {
+      "say": "I let Claude run my inbox for seven days. Here is exactly what happened.",
+      "show": {
+        "type": "title",
+        "kicker": "7-day test",
+        "title": "Claude ran my *inbox* for a week",
+        "sub": "The setup, the mistakes, and the result",
+        "word": "Here"
+      }
+    },
+    {
+      "say": "Chapter one. The setup, which takes about ten minutes.",
+      "show": {
+        "type": "chapter",
+        "n": 1,
+        "title": "The setup"
+      }
+    },
+    {
+      "say": "Watch this next video to build the full system.",
+      "show": {
+        "type": "endscreen",
+        "title": "Build the full system next"
+      }
+    }
+  ],
+  "keyword": "<target keyword>",
+  "thumbs": [
+    {
+      "words": "TWO TO FOUR WORDS",
+      "hot": "FOUR"
+    }
+  ]
+}

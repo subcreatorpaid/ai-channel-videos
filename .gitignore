@@ -1,0 +1,8 @@
+*.pyc
+.DS_Store
+__pycache__/
+models/
+out/
+site/_site/
+dashboard/out/
+content/plan100/thumbs/
