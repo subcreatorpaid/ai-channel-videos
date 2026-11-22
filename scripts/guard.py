@@ -8,7 +8,7 @@ Errors block a release (OK 6). Warnings are nudges. What it checks:
 - brain/*.json is valid; max 3 to-dos; plan stages are known
 - no secrets anywhere in the repo (API keys, tokens, private keys)
 - video folders: never-list words in titles/scripts/specs, long-form score (scripts/longform_check.py),
-  upload.md has the AI voice line, AI-content and affiliate disclosures where needed, music licences noted
+  upload.md has the AI voice line and disclosures, sources.md exists before upload, music licences noted
 - log files are one line each
 """
 import json
@@ -18,8 +18,8 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
-NEVER = ["insane", "game-changer", "game changer", "this changes everything", "get rich", "guaranteed income", "make $10k",
-         "passive income guaranteed", "jailbreak", "smash that like", "smash like"]
+NEVER = ["you won't believe", "insane", "welcome back", "smash that like", "smash like", "don't forget to subscribe",
+         "oversimplified", "crayon capital", "capital case"]  # last three: never name or imitate the reference channels on screen
 SECRET = re.compile(r"(sk-[A-Za-z0-9_-]{20,}|sk-ant-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,}|AKIA[0-9A-Z]{16}"
                     r"|AIza[0-9A-Za-z_-]{35}|-----BEGIN [A-Z ]*PRIVATE KEY-----|xox[bap]-[A-Za-z0-9-]{10,}|ya29\.[0-9A-Za-z_-]{20,})")
 STAGES = {"idea", "ok1", "thumb", "ok2", "script", "ok3", "assets", "storyboard", "ok4", "review360", "ok5", "final",
@@ -92,6 +92,8 @@ def check_videos():
                 warn(f"{rel}/upload.md: say whether the altered or synthetic content box is ticked (realistic AI visuals need it)")
             if "[check" in t:
                 err(f"{rel}/upload.md: unresolved [CHECK] left in the upload package")
+        if up.exists() and not (d / "sources.md").exists():
+            err(f"{rel}: sources.md (proof folder) is missing before upload")
         sc = d / "script.md"
         if sc.exists() and "[check" in sc.read_text(encoding="utf-8").lower() and (d / "upload.md").exists():
             err(f"{rel}/script.md: unresolved [CHECK] claims before upload")

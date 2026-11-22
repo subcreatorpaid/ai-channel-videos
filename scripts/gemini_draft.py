@@ -47,21 +47,22 @@ def ask(prompt, system, search=False, as_json=False):
 
 
 def house_rules():
-    return ("You research for a faceless YouTube channel that teaches people to use AI to automate their work and create things "
-            "(Claude, Gemini, Google Flow, bots, agents), with step-by-step tutorials and 'how I built it' videos. "
+    return ("You research for a faceless, illustrated YouTube channel that follows the workers and processes people rarely see: "
+            "overnight maintenance, sanitation, logistics and building operations (10-12 minute narrated story explainers). "
             "Follow this brand book and these rules exactly.\n\n"
             + (ROOT / "brain/brand.md").read_text() + "\n\n" + (ROOT / "brain/rules.md").read_text())
 
 
 def scan():
     learn = (ROOT / "brain/learnings.md").read_text()[:3000]
-    prompt = (f"Today is {TODAY}. Search the web for news from the last 7 days that matters to people using AI to automate work "
-              "and create: new or changed features in Claude, Gemini, Google Flow, ChatGPT and popular automation/agent tools (Zapier, Make, n8n, "
-              "browser agents), price or free-tier changes, and YouTube videos in this niche getting far more views than their channel's usual "
-              "(outliers) in the last 30 days.\n"
-              "Return Markdown with sections: '## Tool and feature news', '## Price and free-tier changes', '## Outlier videos (title, channel, views, why it worked)', "
-              "'## 5 video ideas' (each: working title, format tutorial|built|tested|compared, target keyword, evidence). "
-              "For every claim give the date and the official source page. Mark anything not from an official page as 'unconfirmed'. "
+    prompt = (f"Today is {TODAY}. Search the web for news from the last 7 days about the hidden work that keeps cities and supply chains "
+              "running: overnight maintenance (subways, roads, bridges, power grids), sanitation and waste, logistics (ports, warehouses, "
+              "trucking, rail, air cargo), building operations, and the people who do it (strikes, shortages, records, failures, new technology). "
+              "Also list YouTube videos in this niche from the last 30 days getting far more views than their channel's usual (outliers).\n"
+              "Return Markdown with sections: '## News pegs (what happened, where, the worker angle)', '## Surprising facts (number, source, date)', "
+              "'## Outlier videos (title, channel, views, why it worked)', '## 5 video ideas' (each: working title, format shift|how|mistake|explained, "
+              "target keyword, the one-line twist, evidence). "
+              "For every claim give the date and the source page; prefer official and primary sources. Mark anything else 'unconfirmed'. "
               "Skip anything you can't date.\n\nWhat we already learned:\n" + learn)
     text, sources = ask(prompt, house_rules(), search=True)
     out = ROOT / f"brain/research/{TODAY}_gemini_scan.md"

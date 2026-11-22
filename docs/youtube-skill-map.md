@@ -8,7 +8,7 @@ The brain wins where they disagree (approvals, AI labels, voice, look, budgets).
 | Command | Role / helper that runs it | Step (docs/pipeline.md) | Writes to |
 |---|---|---|---|
 | `/youtube ideate` | researcher | 1 ideas | `brain/ideas.json` (+ evidence) |
-| `/youtube competitor` | competitor-analysis (later, owner postponed it) | 1 ideas | `brain/competitors/<date>.md` |
+| `/youtube competitor` | competitor-analysis (baseline done 10 Nov; monthly refresh) | 1 ideas | `brain/competitors/<date>-update.md` |
 | `/youtube strategy` | strategist (once, then monthly) | planning | `brain/research/strategy.md` |
 | `/youtube calendar` | strategist (weekly) | planning | `brain/plan.json` |
 | `/youtube thumbnail` | packager | 2 thumbnail | `videos/<slug>/title-thumb.md` |

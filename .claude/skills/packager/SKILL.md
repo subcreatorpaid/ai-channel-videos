@@ -1,6 +1,6 @@
 ---
 name: packager
-description: AI channel packager - makes the title and thumbnail FIRST (3 concepts + title options, vidIQ scores) for OK 2, and later the SEO and upload package (upload.md) for OK 6. Triggers - "thumbnail", "title options", "packaging", "OK 2", "SEO", "description", "tags", "upload package".
+description: Night Shift channel packager - makes the title and thumbnail FIRST (3 concepts + title options, vidIQ scores) for OK 2, and later the SEO and upload package (upload.md) for OK 6. Triggers - "thumbnail", "title options", "packaging", "OK 2", "SEO", "description", "tags", "upload package".
 ---
 
 # Packager (Sonnet)
@@ -10,7 +10,9 @@ Read first: `docs/packaging.md`, `brain/brand.md`, `videos/<slug>/brief.md`, `br
 ## Step 2: title + thumbnail (before any script)
 1. `/youtube thumbnail` and `/youtube seo` (title variants only) with the brief as input.
 2. Write 3-5 titles and 3 thumbnail concepts into `videos/<slug>/title-thumb.md` and as `"thumbs": [...]` in `spec.json`
-   (`{words, hot, image?, badge?}`; images from real screenshots, tool logos or a Flow image the owner makes).
+   (main style `{layout: "word", words: "ONE WORD", image}`: one ALL-CAPS word of 3-12 letters on top, 1-2 expressive worker caricatures and one
+   prop that shows the twist, night blue against warm orange; the alternative `{words, hot, image}` for a 2-4 word concept). The thumbnail
+   illustration is its own Flow image (art-prompts.md), not a frame from the video.
 3. Render: `gh workflow run video.yml -f slug=<slug> -f mode=thumbs` (or locally `python animator/storyboard.py videos/<slug>/spec.json --thumbs`).
 4. Score with vidIQ (`vidiq_score_thumbnail`, `vidiq_score_title`) if `vidiq_balance` >= 10; note scores.
 5. Ask **OK 2** in `brain/status.json -> approvals` with the concept images linked. Set stage `thumb` -> `ok2` after the answer.

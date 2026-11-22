@@ -5,13 +5,13 @@
   python animator/storyboard.py videos/<slug>/spec.json --props    # only write props (estimated timings), no stills
   python animator/storyboard.py videos/<slug>/spec.json --thumbs   # thumbnail concepts from spec "thumbs" (or "thumb") -> videos/<slug>/thumbs/
 
-Word times are estimated (about 2.7 words a second at speed 1.1), which is close enough for stills. Each still is taken
+Word times are estimated (about 2.5 words a second, ~150 a minute), which is close enough for stills. Each still is taken
 near the end of its beat, when every element of the scene has animated in. Needs `npm ci` in animator/ and Pillow.
 """
 import json, os, pathlib, re, shutil, subprocess, sys
 
 HERE = pathlib.Path(__file__).resolve().parent
-FPS, WPS, GAP = 30, 2.7, 0.35
+FPS, WPS, GAP = 30, 2.5, 0.35
 BROWSER = [f"--browser-executable={os.environ['REMOTION_BROWSER']}"] if os.environ.get("REMOTION_BROWSER") else []  # optional local Chrome
 TOK = re.compile(r"\[([^|\]]+)\|([^\]]+)\]|(\S+)")
 

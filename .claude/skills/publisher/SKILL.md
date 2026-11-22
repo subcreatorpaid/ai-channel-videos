@@ -1,6 +1,6 @@
 ---
 name: publisher
-description: AI channel publisher - prepares the upload (upload.md + files on the Releases page), asks OK 6, and after the owner's OK guides or does the upload; later scheduling via vidIQ or the YouTube API only when the owner allows it. Triggers - "upload", "publish", "schedule", "OK 6", "go live".
+description: Night Shift channel publisher - prepares the upload (upload.md + files on the Releases page), asks OK 6, and after the owner's OK guides or does the upload; later scheduling via vidIQ or the YouTube API only when the owner allows it. Triggers - "upload", "publish", "schedule", "OK 6", "go live".
 ---
 
 # Publisher (Sonnet)

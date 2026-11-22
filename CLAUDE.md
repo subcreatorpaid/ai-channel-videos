@@ -1,14 +1,16 @@
-# AI channel: the brain
+# Night Shift channel: the brain
 
-This repo is the single source of truth for Hammad's new YouTube channel (working name: **"AI Channel"**; the real name comes later).
+This repo is the single source of truth for Hammad's new YouTube channel (working name: **"Night Shift"**; the real name comes later).
 Every session and every scheduled run starts here. Read this file, then `brain/rules.md`, then the role skill you were asked to run
 (`.claude/skills/<role>/SKILL.md`). Built from the Sub-Creator Paid system (github.com/subcreatorpaid/subcreator-videos: copy from it, never edit it).
 
 ## The channel in one paragraph
-A faceless YouTube channel (screen recordings + motion graphics + Kokoro voice, no AI host) that shows people how to use AI to automate
-their work and create things: Claude, Gemini, Google Flow, bots and agents, as step-by-step tutorials and "how I built it" videos.
-8-12 minute videos, 3-4 a week; Shorts cut from them from week 4. The owner (Hammad) only reviews and presses OK. The team below does the rest.
+A faceless, illustrated YouTube channel that follows the workers and processes people rarely see: overnight maintenance, sanitation,
+logistics and building operations. Style modelled on Capital Case (flat 2D caricatures, black title cards, one narrator) with our own
+characters and palette; Kokoro voice, no host. 10-12 minute story-driven explainers, 3-4 a week (owner's target); Shorts cut from them from week 4.
+The owner (Hammad) only reviews and presses OK. The team below does the rest.
 He may write in Urdu: start each reply with one English line of what he said, then answer in English. Keep replies short.
+Research behind the format: `brain/competitors/2026-11-10-hidden-workers-channels.md` and `brain/research/2026-11-10-capital-case-blueprint.md`.
 
 ## Goal
 1,000 subscribers + 4,000 public watch hours within 90 days (10 Nov 2026 -> 8 Feb 2027), about 11 subscribers and 45 watch hours a day.
@@ -23,7 +25,7 @@ Check the current YouTube Partner Program thresholds on YouTube Help before prom
 | storyteller | hook (3 options) + story arc, beats, open loops, payoff | **Opus** | hook |
 | scriptwriter | full script, one voice line per scene | **Opus** | script |
 | director | shot list, pacing, storyboard sheet | Sonnet | - |
-| animator | spec.json, screen recordings list, 360p and 1080p renders | Sonnet | - |
+| animator | character sheet, scene illustrations (Flow), spec.json, 360p and 1080p renders | Sonnet | - |
 | guard | facts, AI labels, licences, never-list, secrets | Sonnet | - |
 | publisher | `upload.md`; uploads only after OK 6 | Sonnet | metadata |
 | secretary | morning briefing, max 3 to-dos, Control Room | Sonnet | - |
@@ -33,7 +35,7 @@ Full map of the 14 /youtube commands: `docs/youtube-skill-map.md`. The skill its
 ## The per-video workflow and the six OKs (owner's order)
 1. Ideas with evidence -> **OK 1** (owner picks). 2. Thumbnail + title first: 3 concepts, scored with vidIQ -> **OK 2**.
 3. Hook (3 options) matching the thumbnail promise, story, full script (Opus) -> **OK 3**.
-4. Assets: screen recordings, logos, SFX, music. 5. Director: shot list + storyboard sheet -> **OK 4**.
+4. Art: character sheet (once), scene illustrations from Flow, SFX, music. 5. Director: shot list + storyboard sheet -> **OK 4**.
 6. 360p review render -> **OK 5**, then the 1080p final once; guard checks. 7. `upload.md` -> **OK 6** -> upload (manual at first).
 8. 48-hour and 7-day review into `brain/learnings.md`. Details: `docs/pipeline.md`. For the first videos every OK is asked one by one;
 batching (4 ideas at once, 4 thumbnails at once) starts only when the owner says so.
@@ -41,7 +43,7 @@ batching (4 ideas at once, 4 thumbnails at once) starts only when the owner says
 ## Where everything lives
 | What | Where |
 |---|---|
-| Brand voice, look, never-list | `brain/brand.md` (palette not chosen yet: 3 options pending) |
+| Brand voice, look, never-list, hook and script formula | `brain/brand.md` (palette not chosen yet: 3 options pending) |
 | Approvals, safety, compliance, budgets | `brain/rules.md` |
 | Goal + latest numbers | `brain/goals.json` |
 | This week's videos and their stage | `brain/plan.json` |
@@ -52,7 +54,7 @@ batching (4 ideas at once, 4 thumbnails at once) starts only when the owner says
 | Research + competitor files | `brain/research/`, `brain/competitors/` |
 | Run log | `brain/log/YYYY-MM-DD-HHMM-<role>-<slug>.md`, one line each, never edit an old one |
 | One video | `videos/<slug>/`: `brief.md`, `title-thumb.md`, `script.md`, `spec.json`, `storyboard/`, `assets/`, `upload.md`, `review.md` (copy `videos/_template/`) |
-| Long-form animator (16:9) | `animator/src/wide/Wide.jsx` (scene kit), `ThumbWide.jsx` (1280x720), `animator/prep.py` (voice), `animator/storyboard.py` (OK 4 sheet); rules `docs/animator-rules.md` |
+| Long-form animator (16:9) | `animator/src/wide/Wide.jsx` (scene kit: illus, titlecard, dateline, dialogue + info scenes), `ThumbWide.jsx` (1280x720), `animator/prep.py` (voice), `animator/storyboard.py` (OK 4 sheet); rules `docs/animator-rules.md` |
 | Shorts (vertical, from week 4) | the vertical scene kits in `animator/src/flow/` (composition `Short`) |
 | Gemini trend scan (free, research only) | `scripts/gemini_draft.py scan` via `.github/workflows/gemini.yml` daily 06:00 UTC -> PR |
 | Checks | `scripts/guard.py` (run before every commit) + `.github/workflows/guard.yml` |
@@ -72,7 +74,9 @@ batching (4 ideas at once, 4 thumbnails at once) starts only when the owner says
    change DNS or security settings, delete data. Keys only in GitHub Secrets, never in chat or files.
 
 ## Current state (secretary keeps this short)
-- 10 Nov 2026: system set up. Channel name, brand palette and YouTube account details still open. Competitor analysis postponed by the owner.
-- Voice: Kokoro (free, runs in GitHub Actions), `am_michael+am_puck` at 1.1. Paid: Google AI plan with Flow (images and b-roll only, labelled).
+- 10 Nov 2026: niche set to hidden workers and processes, Capital Case graphic style (owner). Competitor research done (files above).
+- Open: channel name, palette (3 options), character sheet, YouTube account. The research blueprint suggests 1 long video a week to stay clear of
+  "inauthentic content"; the owner's target is 3-4 a week, so the art pipeline must keep every video hand-checked and original.
+- Voice: Kokoro (free, GitHub Actions), narrator `am_michael+am_puck` at 1.0; worker lines in other Kokoro voices. Paid: Google AI plan with Flow (illustrations).
 - Waiting for the owner's files: `youtube-brain-blueprint.md`, `1_CLAUDE_brain.md`, `2_brand.md`, `3_rules.md` (merge them in when they arrive).
-- Next: 3 brand-look options -> owner picks -> first 5 ideas (OK 1).
+- Next: 3 palette + character options -> owner picks -> character sheet -> first 5 ideas (OK 1).

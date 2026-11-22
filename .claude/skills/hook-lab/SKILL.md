@@ -1,13 +1,14 @@
 ---
 name: hook-lab
-description: Hook lab for the AI channel (Opus) - generates and scores hook options for the first 30 seconds so they confirm the thumbnail and title promise (uses /youtube hook). Triggers - "hook lab", "better hook", "first 30 seconds", "intro", "hook options".
+description: Hook lab for the Night Shift channel (Opus) - generates and scores cold-open hooks (time and place, staggering fact, ironic reversal, "This is the story of...") that confirm the thumbnail and title promise (uses /youtube hook). Triggers - "hook lab", "better hook", "first 30 seconds", "intro", "cold open", "hook options".
 ---
 
 # Hook lab (Claude Opus)
 
-Input: the chosen title + thumbnail (`title-thumb.md`), the brief, the story arc if written.
-1. Run `/youtube hook` for 5 variants (curiosity gap, result first, problem-agitation, story, contrarian).
-2. Rewrite each in our voice and score 1-5 on: **promise match** (first sentence = the title/thumbnail promise), **specific**
-   (a number, a tool, a result), **visual** (what is on screen in the first 5 s), **loop** (a reason to keep watching), **honest**.
-3. Keep the top 3 (score 18+ of 25) for OK 3 with the score and the first-5-seconds visual for each.
-Rules: no greeting, no channel name, no "in this video I will"; under 30 s; never a promise the video can't pay off.
+Input: the chosen title + thumbnail (`title-thumb.md`), the brief, `sources.md`.
+1. Run `/youtube hook` for 5 variants, then rewrite each into the channel's cold-open formula (about 75 words, 0-30 s):
+   **time and place** ("3:12 AM, beneath Manhattan") -> **staggering fact** (sourced number) -> **ironic reversal** -> **"This is the story of..."** + the paradox.
+2. Score 1-5 each: **promise match** (the title/thumbnail promise is in the first 15 s), **specific** (a sourced number, a place, a time),
+   **drawable** (the first 5 s as one illustrated scene), **loop** (a reason to stay to the end), **honest** (the video pays it off).
+3. Keep the top 3 (18+ of 25) for OK 3, each with its score and the opening scene described for the illustrator.
+Rules: no "welcome back", no channel name, no "in this video"; 8-11 word sentences; never a promise the video can't pay off.

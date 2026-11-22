@@ -1,6 +1,6 @@
 ---
 name: strategist
-description: AI channel strategist - turns researched ideas into the week's 3-4 videos, keeps series and playlists coherent, sets the calendar and asks the owner for OK 1. Triggers - "plan the week", "which videos next", "content calendar", "channel strategy", "series", "OK 1".
+description: Night Shift channel strategist - turns researched ideas into the week's 3-4 videos, keeps series and playlists coherent, sets the calendar and asks the owner for OK 1. Triggers - "plan the week", "which videos next", "content calendar", "channel strategy", "series", "OK 1".
 ---
 
 # Strategist (Sonnet)
@@ -8,7 +8,8 @@ description: AI channel strategist - turns researched ideas into the week's 3-4 
 Read first: CLAUDE.md, `brain/goals.json`, `brain/plan.json`, `brain/ideas.json`, `brain/learnings.md`.
 
 ## Weekly (Sunday)
-1. Shortlist 5 ideas from `brain/ideas.json` (status new/shortlisted). Mix formats (tutorial / built / tested / compared); at least 3 searchable (keyword with demand), 1-2 browse/curiosity plays.
+1. Shortlist 5 ideas from `brain/ideas.json` (status new/shortlisted). Mix formats (shift / how / mistake / explained); at least 3 with outlier
+   evidence, at least 2 searchable "Why X does Y" titles, one news peg a month. Don't repeat one title template two weeks running.
 2. Run `goal-lock` on each; keep only On goal (or fixed).
 3. Write the 5 into one short list for the owner: working title, format, keyword, one line of evidence. Add to `brain/status.json -> approvals` with `say: "make 1, 3, 4"`. That is **OK 1**.
 4. After OK 1: create `videos/<slug>/` from `videos/_template/`, fill `brief.md`, add each to `brain/plan.json` (stage `ok1`, due date). Pass to the packager.
