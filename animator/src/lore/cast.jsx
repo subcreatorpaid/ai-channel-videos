@@ -87,6 +87,13 @@ export const HatShape = ({kind, color, holo}) => {
   if (kind === 'cap') return (<g {...st}><path d="M-66,-34 Q-62,-100 0,-104 Q62,-100 66,-34 Z" /><path d="M8,-42 Q74,-54 106,-30 L60,-30 Z" /></g>);
   if (kind === 'beanie') return (<g {...st}><path d="M-68,-22 Q-68,-114 0,-116 Q68,-114 68,-22 Z" /><rect x="-70" y="-42" width="140" height="24" rx="8" /><circle cx="0" cy="-118" r="14" /></g>);
   if (kind === 'mask') return (<g {...st}><path d="M-58,-30 Q-60,60 0,74 Q60,60 58,-30 Q30,-44 0,-44 Q-30,-44 -58,-30 Z" /><ellipse cx="-24" cy="-6" rx="13" ry="9" fill={holo ? 'none' : '#1a1a1a'} /><ellipse cx="24" cy="-6" rx="13" ry="9" fill={holo ? 'none' : '#1a1a1a'} /></g>);
+  if (kind === 'helmet') return (<g {...st}>
+    <path d="M-82,40 Q-92,-118 0,-122 Q92,-118 82,40 Q78,92 40,100 L-40,100 Q-78,92 -82,40Z" />
+    {!holo && <path d="M30,-118 Q86,-100 82,40 Q78,92 40,100 L20,100 Q70,40 30,-118Z" fill="rgba(0,0,0,0.22)" stroke="none" />}
+    <path d="M-62,-20 Q0,-36 62,-20 L56,22 Q0,40 -56,22Z" fill={holo ? 'none' : '#E8A62A'} />
+    {!holo && <path d="M-50,-14 Q-20,-24 4,-22 L-2,-4 Q-26,-4 -48,4Z" fill="#FFE08A" stroke="none" opacity="0.8" />}
+    <path d="M-8,-120 L-8,-40 M8,-120 L8,-40" fill="none" strokeWidth="3" />
+    <path d="M-40,60 L40,60 M-30,78 L30,78" fill="none" strokeWidth="3" /></g>);
   if (kind === 'headlamp') return (<g {...st}><path d="M-66,-36 Q0,-56 66,-36" fill="none" strokeWidth={holo ? 4 : 10} stroke={holo ? HOLO.stroke : '#333'} /><rect x="-18" y="-62" width="36" height="26" rx="6" /><circle cx="0" cy="-49" r="7" fill="#FFF3B0" /></g>);
   return null;
 };
@@ -199,7 +206,7 @@ const Emote = ({kind, t, chibi}) => {
 // ---------------------------------------------------------------- the person
 // c = cast entry: {skin, hair, hairColor, eyeColor, top, topKind: 'tee'|'tank'|'bare'|'jacket'|'hivis'|'overalls'|'coat', bottom, shoes,
 //                  hat, hatColor, beard: 'stubble'|'full', tool, badge}
-const SLEEVE = {dress: 'none', tee: 'short', tank: 'none', bare: 'none', overalls: 'short', jacket: 'long', hivis: 'long', coat: 'long'};
+const SLEEVE = {armor: 'long', dress: 'none', tee: 'short', tank: 'none', bare: 'none', overalls: 'short', jacket: 'long', hivis: 'long', coat: 'long'};
 const Mitten = ({at, a, w, skin, sil, chibi, fist}) => (
   <g transform={`translate(${at[0]},${at[1]}) rotate(${-a})`}>
     {chibi ? <circle cx="0" cy={w * 0.15} r={w * 0.6} fill={sil ? '#120C09' : skin} stroke={INK} strokeWidth={CLW} />
@@ -269,6 +276,8 @@ export const Person = ({c = {}, age = 'adult', pose = 'stand', face = 'neutral',
         : <><Seg a={sh} b={el} w0={B.aw[0]} w1={B.aw[1]} color={armUpper} sil={sil} />
           {sleeve === 'short' && !sil && <Seg a={sh} b={end(sh[0], sh[1], a1, B.ua * 0.42)} w0={B.aw[0] + 5} w1={B.aw[0] + 3} color={top} sil={sil} />}</>}
       <Seg a={el} b={cuff} w0={B.fw[0]} w1={B.fw[1]} color={armLower} sil={sil} />
+      {kind === 'armor' && !chibi && <><ellipse cx={sh[0] + s * 6} cy={sh[1] - 4} rx="40" ry="30" fill={F(tint(top, 0.08))} stroke={INK} strokeWidth={CLW * 0.8} />
+        <Seg a={end(el[0], el[1], a2, B.la * 0.45)} b={cuff} w0={B.fw[0] + 8} w1={B.fw[1] + 10} color={shade(top, 0.85)} sil={sil} /></>}
       {!chibi && !sil && sleeve === 'none' && <path d={`M${el[0] - 6 * s},${el[1] + 20} q${4 * s},20 ${-2 * s},40`} fill="none" stroke={shade(skin, 0.72)} strokeWidth="2.5" strokeLinecap="round" />}
       <Mitten at={hd} a={a2} w={chibi ? B.fw[1] * 1.0 : 30} skin={skin} sil={sil} chibi={chibi} fist={P.box || P.work} />
       {i === 1 && c.tool && !sil && <ToolShape kind={c.tool} x={hd[0]} y={hd[1] + 10} />}
@@ -285,6 +294,12 @@ export const Person = ({c = {}, age = 'adult', pose = 'stand', face = 'neutral',
       {(kind === 'bare' || kind === 'tank') && !chibi && <g fill="none" stroke={shade(skin, 0.68)} strokeWidth="2.5" strokeLinecap="round">
         {kind === 'bare' && <><path d={`M-64,${shY + 58} Q-30,${shY + 86} -4,${shY + 64}`} /><path d={`M64,${shY + 58} Q30,${shY + 86} 4,${shY + 64}`} />
           <path d={`M0,${shY + 70} L0,${hipY - 20}`} />{[0, 1, 2].map((k2) => <path key={k2} d={`M-26,${shY + 112 + k2 * 40} Q-12,${shY + 118 + k2 * 40} -3,${shY + 112 + k2 * 40} M26,${shY + 112 + k2 * 40} Q12,${shY + 118 + k2 * 40} 3,${shY + 112 + k2 * 40}`} />)}</>}
+      </g>}
+      {kind === 'armor' && <g stroke={INK} strokeWidth="3.5" strokeLinejoin="round">
+        <path d={`M${-B.sh[0] * 0.72},${shY - 14} Q0,${shY - 30} ${B.sh[0] * 0.72},${shY - 14} L${B.waist[0] * 0.8},${shY + (waY - shY) * 0.7} Q0,${shY + (waY - shY) * 0.86} ${-B.waist[0] * 0.8},${shY + (waY - shY) * 0.7}Z`} fill={tint(top, 0.12)} />
+        <path d={`M0,${shY - 24} L0,${shY + (waY - shY) * 0.84}`} fill="none" />
+        {[0, 1, 2].map((k2) => <rect key={k2} x={-B.waist[0] * 0.7} y={waY - 16 + k2 * 30} width={B.waist[0] * 1.4} height="24" rx="6" fill={shade(top, 0.9)} />)}
+        {[-1, 1].map((d) => <rect key={d} x={d * B.hip[0] * 0.6 - 16} y={hipY - 40} width="32" height="30" rx="5" fill="#5A4A36" />)}
       </g>}
       {kind === 'hivis' && [0.42, 0.68].map((q, i2) => <rect key={i2} x={-200} y={shY + (hipY - shY) * q} width="400" height={chibi ? 12 : 18} fill="#E6E6DE" stroke={INK} strokeWidth="2.5" />)}
       {kind === 'hivis' && !chibi && [-1, 1].map((d) => <path key={d} d={`M${d * 30},${shY - 34} L${d * 44},${shY + (hipY - shY) * 0.42}`} stroke="#E6E6DE" strokeWidth="16" />)}
@@ -366,7 +381,7 @@ export const Person = ({c = {}, age = 'adult', pose = 'stand', face = 'neutral',
     {P.box && <rect x={-B.sh[0] * 0.9} y={shY + (hipY - shY) * 0.35} width={B.sh[0] * 1.8} height={B.sh[0] * 1.3} rx="4" fill={F('#C8955A')} stroke={INK} strokeWidth={CLW} />}
     <g transform={`rotate(${tilt},${hx},${hy + B.hr[1] * 0.8})`}>
       {head}
-      {holoOn && (holo.kind === 'hat' || ['hardhat', 'cap', 'beanie', 'mask', 'headlamp'].includes(holo.shape)) && (
+      {holoOn && (holo.kind === 'hat' || ['hardhat', 'cap', 'beanie', 'mask', 'headlamp', 'helmet'].includes(holo.shape)) && (
         <g transform={`translate(${hx},${hy + (chibi ? 0 : 8)}) scale(${B.k})`}>
           <g opacity={(1 - holoBreak) * mix(0, 1, Math.min(1, (f - holoFrom) / 3)) * (0.85 + 0.15 * Math.sin(f / 3))} transform={`translate(${holoBreak * 20},${-holoBreak * 30}) scale(${1 + holoBreak * 0.2})`}>
             <HatShape kind={holo.shape} holo />
@@ -378,7 +393,7 @@ export const Person = ({c = {}, age = 'adult', pose = 'stand', face = 'neutral',
         {holo.shape === 'vest' ? <path d={torso} {...HOLO} />
           : <g transform={`translate(${B.sh[0] * 1.6},${(shY + hipY) / 2}) scale(${chibi ? 1.6 : 1.3})`}><ToolShape kind={holo.shape === 'tool' ? 'wrench' : holo.shape} x={0} y={0} holo /></g>}
       </g>)}
-    {rim && !sil && <g transform={`rotate(${tilt},${hx},${hy + B.hr[1] * 0.8})`}><defs><clipPath id={`r${uid}`}><rect x={hx + (round ? rr : 50) * 0.35} y={hy - 200} width="300" height={-shY + hy + 900} /></clipPath></defs>
+    {rim && !sil && c.hat !== 'helmet' && <g transform={`rotate(${tilt},${hx},${hy + B.hr[1] * 0.8})`}><defs><clipPath id={`r${uid}`}><rect x={hx + (round ? rr : 50) * 0.35} y={hy - 200} width="300" height={-shY + hy + 900} /></clipPath></defs>
       <g clipPath={`url(#r${uid})`} opacity="0.9">
         {round ? <circle cx={hx} cy={round && !chibi ? ry : hy} r={rr - 2} fill="none" stroke={rim} strokeWidth="5" />
           : <path d={FACE} transform={`translate(${hx - 2},${hy})`} fill="none" stroke={rim} strokeWidth="5" />}
