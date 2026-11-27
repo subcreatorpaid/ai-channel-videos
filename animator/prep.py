@@ -2,6 +2,7 @@
 """Prepare a video spec for the Remotion animator.
 Usage: python animator/prep.py videos/<slug>/spec.json [--hook N]
        Long-form (16:9): spec "style": "wide" -> composition "Long" (src/wide/Wide.jsx); "captions" defaults to off there.
+       Born-as format: spec "style": "lore" -> the same "Long" composition renders src/lore/Lore.jsx (docs/lore-style.md).
        --hook N  = build only hook variant N from spec["hooks"] as a 4 s clip (rule H3)
 
 Follows the animator rules v4 in docs/animator-rules.md (P = pacing, M4 = punches, A = audio, W6 = cue sheet).
@@ -48,7 +49,7 @@ if hook_n is not None:  # H3: one hook variant as a 4 s clip
 pub = HERE / "public"; pub.mkdir(exist_ok=True)
 a = spec.get("audio", {})
 speed = a.get("speed", 0.95)
-cap = 1.15 if spec.get("style") == "wide" else 1.12 if spec.get("style") in ("story", "softui", "launch", "keynote", "showreel", "motion", "overview", "fluid", "wide") else 1.05  # owner asked for an energetic voice (26 Oct 2026): story style allows up to 1.12
+cap = 1.15 if spec.get("style") in ("wide", "lore") else 1.12 if spec.get("style") in ("story", "softui", "launch", "keynote", "showreel", "motion", "overview", "fluid", "wide") else 1.05  # owner asked for an energetic voice (26 Oct 2026): story style allows up to 1.12
 if speed > cap: warn(f"voice speed {speed} above {cap} (P5); using {cap}"); speed = cap
 gap = min(0.45, max(0.25, spec.get("gap", GAP)))
 holds = []
@@ -80,7 +81,7 @@ parts, beats, t, methods = [np.zeros(int(LEAD * SR), np.float32)], [], LEAD, []
 speech = []  # (start, end) seconds where the voice speaks, for ducking
 for bi, (b, c, tk) in enumerate(zip(spec["beats"], clips, toks)):
     dur = len(c) / SR
-    show = dict(b["show"])
+    show = dict(b.get("show") or (b.get("shots") or [{}])[0])  # lore style: a beat can hold several shots, each starting on a word
     for k in ("image", "video"):
         if show.get(k):
             src = spec_p.parent / show[k]; dst = pub / ("a_" + src.name)
@@ -108,6 +109,7 @@ for bi, (b, c, tk) in enumerate(zip(spec["beats"], clips, toks)):
     beats.append({"say": b["say"], "show": show, "from": round((t - (LEAD if not beats else 0.12)) * FPS),
                   "speakFrom": round(t * FPS), "speakFrames": round(dur * FPS), "words": caps})
     beats[-1]["riser"] = bool(b.get("riser"))
+    if b.get("shots"): beats[-1]["shots"] = b["shots"]
     speech.append((t, t + dur))
     g = END_PAD if bi == len(spec["beats"]) - 1 else gap + holds[bi]
     parts += [c.astype(np.float32), np.zeros(int(g * SR), np.float32)]
@@ -128,7 +130,7 @@ try:
     # A3: a swoosh on every other beat change and a tick on every other reveal, about half the old count
     bounds = [beats[0]["from"] / FPS] + [b["from"] / FPS for b in beats[1::2]] + [N / SR]
     reveals = [(b["speakFrom"] / FPS + 0.2, "blip") for b in beats[2::2]]
-    if spec.get("style") in ("story", "softui", "launch", "keynote", "showreel", "motion", "overview", "fluid", "wide"): bounds, reveals = [0.0, N / SR], []  # story: effects come from each beat's "sfx" list
+    if spec.get("style") in ("story", "softui", "launch", "keynote", "showreel", "motion", "overview", "fluid", "wide", "lore"): bounds, reveals = [0.0, N / SR], []  # story: effects come from each beat's "sfx" list
     music, sfx = synth_bed(N, bounds, reveals)
     # beat "sfx": [[word or seconds-from-line-start, kind], ...] (kinds in renderer/sfx.py)
     ev = []
@@ -193,13 +195,14 @@ def limit(x, ceil=10 ** (-1 / 20), blk=128):
 mix = limit(mix * 10 ** ((-14 - loudness(mix)) / 20)).astype(np.float32)
 sf.write(pub / "voice.wav", mix, SR)
 
-for f in ("Inter-Black.otf", "Inter-ExtraBold.otf", "Inter-Bold.otf", "Inter-Medium.otf", "Inter-SemiBold.otf", "DejaVuSerif-Italic.ttf"):
+for f in ("Inter-Black.otf", "Inter-ExtraBold.otf", "Inter-Bold.otf", "Inter-Medium.otf", "Inter-SemiBold.otf", "DejaVuSerif-Italic.ttf",
+          "Bitter-ExtraBold.ttf", "Bitter-SemiBoldItalic.ttf", "PatrickHand-Regular.ttf", "JetBrainsMono-Bold.ttf"):  # last 4: lore style (OFL)
     p = HERE.parent / "fonts" / f
     if p.exists(): shutil.copy(p, pub / f)
 props = {"slug": spec["slug"], "handle": spec.get("handle", ""), "fps": FPS, "total": total, "beats": beats,
-         "captions": spec.get("captions", spec.get("style") != "wide"), "thumb": spec.get("thumb", {}), "style": spec.get("style", ""),
+         "captions": spec.get("captions", spec.get("style") not in ("wide", "lore")), "thumb": spec.get("thumb", {}), "style": spec.get("style", ""),
          "title": spec.get("title", ""), "look": spec.get("look", "v5"), "bg": spec.get("bg", "warm"), "variant": spec.get("variant", "views"),
-         "theme": spec.get("theme", {}), "watermark": spec.get("watermark", ""), "audio": True}
+         "theme": spec.get("theme", {}), "watermark": spec.get("watermark", ""), "audio": True, "cast": spec.get("cast", {})}
 (HERE / "props.json").write_text(json.dumps(props, indent=1))
 
 # W2: one still per beat at its answer moment (18 frames before the beat ends, when everything is still)

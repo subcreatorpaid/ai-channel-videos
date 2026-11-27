@@ -1,0 +1,41 @@
+{
+  "slug": "born-as-track-walker",
+  "title": "If You Were Born as a Night Track Walker",
+  "style": "lore",
+  "audio": {"kokoro_voice": "am_michael+am_puck", "speed": 1.1},
+  "watermark": "",
+  "cast": {
+    "you": {"name": "You", "skin": "#E2A882", "hair": "short", "hairColor": "#3B2A20", "eyeColor": "#4A3426", "top": "#2F3B4C", "topKind": "hivis", "bottom": "#2B2F38", "hat": "hardhat", "hatColor": "#F2C230", "beard": "stubble", "tool": "lantern", "badge": true},
+    "you_kid": {"name": "You", "skin": "#E2A882", "hair": "fringe", "hairColor": "#3B2A20", "top": "#6FA8DC", "bottom": "#3A4A6B"},
+    "mum": {"name": "Mum", "skin": "#E9B896", "hair": "bun", "hairColor": "#6B3E26", "top": "#C9504A", "topKind": "tee", "bottom": "#5A4636"},
+    "foreman": {"name": "Big Dev", "skin": "#8D5A3B", "hair": "buzz", "hairColor": "#1E1612", "top": "#E8E4DA", "topKind": "jacket", "bottom": "#2B2F38", "beard": "full", "hat": "cap", "hatColor": "#C0392B"}
+  },
+  "beats": [
+    {"say": "If you were born as a night track walker,",
+      "show": {"type": "portrait", "who": "you", "face": "determined", "set": {"kind": "tunnel", "mood": "steel", "blur": 12, "fx": "dust"}, "rim": "#FFD27A",
+        "heroTitle": {"name": "TRACK WALKER", "word": "track", "x": 0.3, "y": 0.45}, "cam": {"move": "push", "amount": 0.06, "focus": [0.62, 0.4]}}},
+    {"say": "you'd walk eleven miles of live tunnel every night.",
+      "shots": [
+        {"type": "scene", "set": {"kind": "tunnel", "mood": "steel", "fx": "dust"}, "cast": [{"id": "you", "x": 0.42, "y": 0.92, "scale": 0.8, "walkTo": 0.58}], "cam": {"move": "push", "amount": 0.1}},
+        {"at": "every", "type": "map", "title": "ELEVEN MILES", "places": [{"name": "Depot", "x": 0.2, "y": 0.3, "pin": true}, {"name": "Bank", "x": 0.75, "y": 0.62}], "routes": [{"points": [[0.2, 0.3], [0.4, 0.42], [0.55, 0.38], [0.75, 0.62]], "frames": 24}]}
+      ]},
+    {"say": "Find a crack nobody else could see.",
+      "show": {"type": "scene", "set": {"kind": "tunnel", "mood": "steel"}, "cast": [{"id": "you", "x": 0.5, "pose": "kneel", "face": "surprised", "emote": "exclaim", "emoteWord": "crack"}], "tr": "cut",
+        "callouts": [{"text": "THE CRACK", "from": [0.22, 0.2], "to": [0.42, 0.8], "word": "crack"}]}},
+    {"say": "Then stop a train with eight hundred people on it.",
+      "show": {"type": "scene", "set": {"kind": "tunnel", "mood": "ember", "fx": "embers"}, "cast": [{"id": "you", "x": 0.5, "pose": "cheer", "face": "angry", "emote": "vein"}], "cam": {"move": "shake"},
+        "counter": {"label": "PEOPLE ON BOARD", "steps": [{"value": "1"}, {"value": "80", "word": "eight"}, {"value": "800", "word": "hundred"}]}}},
+    {"say": "And the person who almost gets you fired?", "show": {"type": "scene", "set": {"kind": "depot", "mood": "steel"}, "cast": [{"id": "foreman", "x": 0.55, "pose": "cross", "face": "smug", "silhouette": true, "rim": "#FFD27A"}]}},
+    {"say": "You'll call him Dad.", "show": {"type": "polaroids", "photos": [{"who": "foreman", "face": "smug", "caption": "Big Dev", "x": 0.5, "y": 0.47}], "stamp": {"text": "DAD", "word": "Dad"}}},
+    {"say": "But right now?", "show": {"type": "book", "tr": "rewind", "left": {"kicker": "Born in the Dark", "title": "Prologue", "text": "The kid from Platform 9"}, "right": {"who": "you_kid", "age": "chibi", "face": "happy", "caption": "you, age 0"}}},
+    {"say": "You're a baby in South London. No lantern, no hard hat.",
+      "show": {"type": "scene", "set": {"kind": "room", "mood": "night", "window": "night", "props": [{"kind": "crib", "x": 0.42}, {"kind": "lamp", "x": 0.72}]}, "place": "SOUTH LONDON · 1991",
+        "cast": [{"id": "you_kid", "age": "chibi", "x": 0.42, "y": 0.8, "face": "happy", "faces": [{"word": "hat", "face": "surprised"}], "emotes": [{"word": "hat", "emote": "shock"}], "holo": {"shape": "hardhat", "word": "lantern", "untilWord": "hat"}}]}},
+    {"say": "Your mum works nights too.",
+      "show": {"type": "scene", "set": {"kind": "room", "mood": "warm", "props": [{"kind": "table", "x": 0.7}]}, "cast": [{"id": "mum", "x": 0.4, "face": "tired", "emote": "zzz", "tag": {"text": "MUM", "sub": "night cleaner", "y": 0.18}}, {"id": "you_kid", "age": "chibi", "x": 0.62, "face": "neutral", "emote": "question"}]}},
+    {"say": "Remember that.", "show": {"type": "corkboard", "notes": [{"text": "MUM = NIGHTS", "icon": "🌙"}]}},
+    {"say": "Chapter one. The Underground.", "show": {"type": "chapter", "n": 1, "title": "The Underground"}},
+    {"say": "Quick pause. Which job should we be born into next?", "show": {"type": "poll", "names": ["Lighthouse keeper", "Sewer flusher", "Bridge painter"]}},
+    {"say": "Would you still take the night shift?", "show": {"type": "end", "question": "Would you still take the night shift?", "who": "you_kid"}}
+  ]
+}
