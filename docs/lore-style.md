@@ -148,9 +148,7 @@ These carry most of the storytelling and are re-used in every video:
 
 ---
 
-## 9. Fit with the hidden-workers channel
+## 9. Which channel
 
-The format maps well to our niche: **"If you were born as a [sewer worker / night-shift nurse / long-haul trucker / Tube track
-walker]…"**, a whole working life in 10 minutes, second person, with our own original worker characters. The devices fit naturally
-(shift rota as the to-do list, depot map with routes, ID badge polaroid, "HOURS WORKED" counter). This needs Hammad's OK because it
-changes the channel's format.
+Hammad's decision (27 Nov 2026): the born-as format gets its **own new channel**, separate from the hidden-workers channel.
+Its subject and cast are still to be chosen. The kit's worker props (hard hats, hi-vis, depot sets) stay as general options.
