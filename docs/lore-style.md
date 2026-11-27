@@ -86,7 +86,24 @@ But right now… you're a baby in [place]. No [tool], no [uniform].`
 - **Name tags**: a white rounded label pops in next to a new character with a tiny caption under it ("CALLISTO / your mom",
   "SWEET / brother"). Villains get bold callouts with a curved arrow ("MOTHER DEMON", "THE DARK LORD").
 
+**How the kit draws them (rebuilt 27 Nov 2026 to copy the reference look closely, `animator/src/lore/cast.jsx`):**
+- Chibi: a perfect circle head with a big cel-shadow crescent on the lower right, black oval eyes with two white highlights, short
+  thick brows, a tiny nose curve, pink blush, half-circle ears; a small tunic body, thick boneless arms with ball hands, round shoes.
+- Adult: a ~7.5-heads-tall "wooden mannequin" - every limb segment (upper arm, forearm, thigh, shin) is its own outlined capsule, so
+  the joints read; mitten hands with a thumb line; one hard cel shadow on the side away from the light; faint muscle lines on bare
+  arms and chests. Face: cheekbones and a narrowing jaw, almond eyes with a heavy upper lid, tapered brows, a shaded nose, smile lines,
+  stubble as a transparent hair-colour layer.
+- Side characters (mums, kids' friends) can use `"head": "round"` - the chibi head on an adult body, as the reference does - and
+  `"soft": true` for thinner brows and lashes. `topKind` adds `tank`, `bare` and `dress` (with a gold belt).
+- Characters use a 6 px outline, sets 3.5 px, so the cast always reads first.
+
 ## 4. Backgrounds and world
+
+- **How the kit draws them**: interiors have a meander band, a gradient wall with soft painted shadow blobs, a shuttered window
+  with a view and a light patch, a skirting board and side-view plank floors; props have one shadow side (sofa, armchair, TV,
+  photo wall, plant, clock, basket, shelf...). The default street is a row of clapboard houses with porches, a picket fence, a lawn,
+  a kerb and a road (`"terrace": true` for the old brick row). Outdoor skies have a cloud bank, distant hills and a town silhouette.
+  Every set gets a warm soft-light grade, a light vignette and fine animated grain.
 
 - Flat vector sets with a simple perspective: rooms, streets, bars, prison blocks, deserts, snowy forests, space.
 - **One colour temperature per scene**: warm cream for childhood, ember orange for war and hell, navy and violet for night, teal for

@@ -21,8 +21,10 @@ Read first: `docs/lore-style.md` (the rules, measured from the reference videos)
 - Pace: ~1,500 words for 10 minutes (Kokoro `am_michael+am_puck` at 1.1 ≈ the measured 177 wpm while speaking).
 
 ## 2. Cast (once per series, reused in every video)
-Put each character in `spec.cast` (copy from `brain/cast.json` when it exists): `skin, hair, hairColor, eyeColor, top, topKind
-(tee|jacket|hivis|overalls), bottom, shoes, hat (hardhat|cap|beanie|headlamp), hatColor, beard (stubble|full), tool (lantern|wrench|broom|clipboard), badge`.
+Put each character in `spec.cast` (copy from `brain/cast.json` when it exists): `skin, hair (short|buzz|long|bun|curly|fringe|bald), hairColor, eyeColor,
+top, topKind (tee|tank|bare|dress|jacket|coat|hivis|overalls), bottom, shoes, hat (hardhat|cap|beanie|headlamp), hatColor, beard (stubble|full),
+tool (lantern|wrench|broom|clipboard), badge`, plus `head: "round"` (chibi-style head on an adult body, for side characters) and `soft: true`
+(thin brows, lashes). The look is copied from the reference; the characters themselves stay original.
 The hero needs two entries: the adult (`you`) and the child (`you_kid`, used with `"age": "chibi"`). Code-drawn for now; a hand-made
 SVG cast can replace `Person` in `animator/src/lore/cast.jsx` later without changing specs.
 

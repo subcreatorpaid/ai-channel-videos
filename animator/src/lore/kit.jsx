@@ -37,7 +37,22 @@ export const MOODS = {
   sepia: {sky: '#E8D7AE', wall: '#E3CFA2', wall2: '#D3BC8A', floor: '#B89A68', floor2: '#A2855A', trim: '#8A6A3E', light: '#FFF1C8', glow: 'rgba(255,240,200,0.4)'},
   steel: {sky: '#2A2F36', wall: '#4A525C', wall2: '#3E454E', floor: '#2C3036', floor2: '#23272C', trim: '#E8B341', light: '#FFE9A8', glow: 'rgba(255,230,160,0.22)'},
 };
-export const mood = (m, over = {}) => ({...MOODS[m] || MOODS.warm, ...over});
+// furniture tones per mood (wood, fabric, accent), muted like the reference
+const MOOD_EXTRA = {
+  warm: {wood: '#7E5638', fabric: '#C9B79A', accent: '#9C3A30'}, night: {wood: '#4A3A34', fabric: '#56607E', accent: '#7A3A40'},
+  dusk: {wood: '#5E3A2E', fabric: '#8C5A50', accent: '#E0A060'}, ember: {wood: '#4A2414', fabric: '#6E3A26', accent: '#F08A2A'},
+  teal: {wood: '#21424A', fabric: '#2E5A62', accent: '#4FD1C5'}, snow: {wood: '#8A7A6A', fabric: '#B8C4D0', accent: '#5B6B7C'},
+  sepia: {wood: '#7A5E3E', fabric: '#C8B48A', accent: '#8A6A3E'}, steel: {wood: '#4A4440', fabric: '#5A626C', accent: '#E8B341'},
+};
+export const mood = (m, over = {}) => ({...MOODS.warm, ...MOOD_EXTRA.warm, ...MOODS[m], ...MOOD_EXTRA[m], ...over});
+
+// fine animated film grain (the reference footage has a light texture over everything)
+export const Grain = ({f, k = 0.07}) => (
+  <svg width={W} height={H} style={{position: 'absolute', inset: 0, mixBlendMode: 'overlay', opacity: k * 2, pointerEvents: 'none'}}>
+    <filter id={`grain${Math.floor(f / 2) % 8}`}><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed={Math.floor(f / 2) % 8} stitchTiles="stitch" /><feColorMatrix type="saturate" values="0" /></filter>
+    <rect width={W} height={H} filter={`url(#grain${Math.floor(f / 2) % 8})`} opacity="0.5" />
+  </svg>
+);
 
 // overshoot pop (labels, stamps, emotes): 0 -> 1.12 -> 1 over d frames
 export const pop = (t, d = 6) => (t <= 0 ? 0 : t >= d * 2 ? 1 : t < d ? 1.12 * expo(t, d) : mix(1.12, 1, inOut(t - d, d)));

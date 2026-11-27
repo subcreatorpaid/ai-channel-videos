@@ -22,8 +22,10 @@ and the overlays `place` (corner tag), `placeTitle {text, sub, word}`, `caption`
 | `end` | Last shot: the book closes on a question | `question, text, who, age` |
 
 **Sets** (`set.kind`): room, street, depot, tunnel, road, city, sky, glow (silhouette backdrop), black.
-`set.mood`: warm, night, dusk, ember, teal, snow, sepia, steel. Extras: `props [{kind, x, y}]` (lamp, crib, bed, table, door, frame,
-shelf, rug, crate, barrel, cone, lamppost, van), `window` (day|night|storm|none), `fx` (rain|snow|embers|dust), `blur`, `rays [x,y]`, `night`.
+`set.mood`: warm, night, dusk, ember, teal, snow, sepia, steel. Extras: `props [{kind, x, y}]` (lamp, crib, basket, bed, table, door,
+frame, photos, shelf, rug, sofa, armchair, tv, plant, clock, crate, barrel, cone, lamppost, van), `window` (day|night|storm|none),
+`windowX`, `band` (false hides the meander band), `wainscot`, `terrace` (street: brick row instead of houses), `houses` (colours),
+`fx` (rain|snow|embers|dust), `blur`, `rays [x,y]`, `night`.
 
 **Actor** (`scene.cast[]`): `id` (from spec.cast), `age` (adult|chibi), `x`, `y` (feet, default 0.86), `scale`, `flip`,
 `pose` (stand, point, wave, hips, cross, shrug, think, carry, slump, kneel, cheer, walk, work), `face` (neutral, happy, laugh, angry, sad,

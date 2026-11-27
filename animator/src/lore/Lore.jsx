@@ -76,7 +76,7 @@ export const LORE_TYPES = Object.keys(TYPES);
 
 // ---------------------------------------------------------------- overlays shared by every shot type
 const Overlays = ({f, s, b, cast}) => (<>
-  {(s.cast || []).filter((a) => a.tag).map((a, i) => <NameTag key={'t' + i} f={f} at={wordAt(b, a.tag.word, 12)} x={a.tag.x ?? (a.x ?? 0.5)} y={a.tag.y ?? 0.2} text={a.tag.text} sub={a.tag.sub} />)}
+  {(s.cast || []).filter((a) => a.tag).map((a, i) => <NameTag key={'t' + i} f={f} at={wordAt(b, a.tag.word, 12)} x={a.tag.x ?? (a.x ?? 0.5)} y={a.tag.y ?? Math.max(0.06, (a.y ?? 0.86) - ((a.age === 'chibi' ? 450 : 760) * (a.scale ?? 1) + 60) / H)} text={a.tag.text} sub={a.tag.sub} />)}
   {(s.callouts || []).map((c, i) => <Callout key={'c' + i} f={f} at={wordAt(b, c.word, 10 + i * 20)} text={c.text} from={c.from} to={c.to} />)}
   {s.bubble && <Bubble f={f} at={wordAt(b, s.bubble.word, 6)} text={s.bubble.text} x={s.bubble.x ?? 0.3} y={s.bubble.y ?? 0.25} tx={s.bubble.tx ?? 0.36} ty={s.bubble.ty ?? 0.42} w={s.bubble.w} />}
   {s.counter && <Counter f={f} b={b} s={s.counter} />}
