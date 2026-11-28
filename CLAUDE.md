@@ -53,6 +53,7 @@ batching (4 ideas at once, 4 thumbnails at once) starts only when the owner says
 | Run log | `brain/log/YYYY-MM-DD-HHMM-<role>-<slug>.md`, one line each, never edit an old one |
 | One video | `videos/<slug>/`: `brief.md`, `title-thumb.md`, `script.md`, `spec.json`, `storyboard/`, `assets/`, `upload.md`, `review.md` (copy `videos/_template/`) |
 | Long-form animator (16:9) | `animator/src/wide/Wide.jsx` (scene kit), `ThumbWide.jsx` (1280x720), `animator/prep.py` (voice), `animator/storyboard.py` (OK 4 sheet); rules `docs/animator-rules.md` |
+| Born-as format ("If you were born as a…") | `animator/src/lore/` (spec `"style": "lore"`), rules `docs/lore-style.md`, skill `lore-animator`, gates `scripts/check_lore_spec.py` |
 | Shorts (vertical, from week 4) | the vertical scene kits in `animator/src/flow/` (composition `Short`) |
 | Gemini trend scan (free, research only) | `scripts/gemini_draft.py scan` via `.github/workflows/gemini.yml` daily 06:00 UTC -> PR |
 | Checks | `scripts/guard.py` (run before every commit) + `.github/workflows/guard.yml` |

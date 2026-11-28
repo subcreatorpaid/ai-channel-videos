@@ -1,0 +1,1 @@
+2026-11-27 20:50 | animator | lore look rebuilt to copy the reference style (chibi cel-shadow heads, mannequin adults, detailed sets, grain); born-as moved to a new channel | owner: say what the new channel is 'born as'
