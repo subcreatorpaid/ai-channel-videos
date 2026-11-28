@@ -18,14 +18,20 @@ and the overlays `place` (corner tag), `placeTitle {text, sub, word}`, `caption`
 | `polaroids` | Family, crew, friends; red X when lost | `photos [{who, age, face, caption, x, y, cross, crossWord}], string, stamp` |
 | `before_after` | Ageing, changes | `left/right {who, age, face, label}` |
 | `tv` | News moments | `who, face, headline` |
+| `land3d` | Cel-shaded 3D establishing shots (same palette, ink outlines, on twos); never two in a row | `scene` (wall, fort, sea, camp, road), `palette` (day, cold, dusk), `camera {from, to, look, fov}`, `fog`, `set.mood` |
 | `poll` | The mid-video break (33-40 %) | `question, names, title, items` |
 | `end` | Last shot: the book closes on a question | `question, text, who, age` |
 
-**Sets** (`set.kind`): room, street, depot, tunnel, road, city, sky, glow (silhouette backdrop), black.
+**Sets** (`set.kind`): room, street, depot, tunnel, road, city, sky, glow (silhouette backdrop), black, and the history kit: farm (villa + fence, `villaX`),
+fort (stone wall + gate, `gate: false`), tent (leather tent inside), rampart (on top of a wall, looking out). `road` takes `paved` (stone road); `room` takes `stone` (block walls).
 `set.mood`: warm, night, dusk, ember, teal, snow, sepia, steel. Extras: `props [{kind, x, y}]` (lamp, crib, basket, bed, table, door,
-frame, photos, shelf, rug, sofa, armchair, tv, plant, clock, crate, barrel, cone, lamppost, van), `window` (day|night|storm|none),
+frame, photos, shelf, rug, sofa, armchair, tv, plant, clock, crate, barrel, cone, lamppost, van, goat, bunk, standard, stone (carved), cart, amphora, fire, pool; each prop takes `scale` and `flip`), `window` (day|night|storm|none),
 `windowX`, `band` (false hides the meander band), `wainscot`, `terrace` (street: brick row instead of houses), `houses` (colours),
 `fx` (rain|snow|embers|dust), `blur`, `rays [x,y]`, `night`.
+
+**Costumes** (spec.cast): `topKind` legion (red tunic + plate armour, `mail: true` for mail; set `bottom` to the skin colour for bare legs) or tunic;
+`hat` galea (Roman helmet) or crest (plumed officer helmet); `shield: true` (+ `shieldColor`); `tool` gladius, pilum, shovel, vine.
+`chapter` takes `kicker` to replace "CHAPTER n" (time-jump cards like "AD 122 → 138").
 
 **Actor** (`scene.cast[]`): `id` (from spec.cast), `age` (adult|chibi), `x`, `y` (feet, default 0.86), `scale`, `flip`,
 `pose` (stand, point, wave, hips, cross, shrug, think, carry, slump, kneel, cheer, walk, work), `face` (neutral, happy, laugh, angry, sad,

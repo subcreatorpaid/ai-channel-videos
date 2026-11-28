@@ -87,6 +87,17 @@ export const HatShape = ({kind, color, holo}) => {
   if (kind === 'cap') return (<g {...st}><path d="M-66,-34 Q-62,-100 0,-104 Q62,-100 66,-34 Z" /><path d="M8,-42 Q74,-54 106,-30 L60,-30 Z" /></g>);
   if (kind === 'beanie') return (<g {...st}><path d="M-68,-22 Q-68,-114 0,-116 Q68,-114 68,-22 Z" /><rect x="-70" y="-42" width="140" height="24" rx="8" /><circle cx="0" cy="-118" r="14" /></g>);
   if (kind === 'mask') return (<g {...st}><path d="M-58,-30 Q-60,60 0,74 Q60,60 58,-30 Q30,-44 0,-44 Q-30,-44 -58,-30 Z" /><ellipse cx="-24" cy="-6" rx="13" ry="9" fill={holo ? 'none' : '#1a1a1a'} /><ellipse cx="24" cy="-6" rx="13" ry="9" fill={holo ? 'none' : '#1a1a1a'} /></g>);
+  if (kind === 'galea') return (<g {...st}>
+    <path d="M-80,-6 Q-96,-26 -96,-40 L-74,-44 Q-70,-118 0,-122 Q70,-118 74,-44 L96,-40 Q96,-26 80,-6 L70,-24 L-70,-24Z" />
+    {!holo && <path d="M30,-118 Q74,-100 74,-44 L96,-40 Q96,-26 80,-6 L70,-24 L40,-24Z" fill="rgba(0,0,0,0.18)" stroke="none" />}
+    <path d="M-78,-44 Q0,-60 78,-44" fill="none" strokeWidth="6" />
+    <path d="M-72,-24 L-80,40 Q-64,60 -46,36 L-46,-18Z M72,-24 L80,40 Q64,60 46,36 L46,-18Z" />
+    {!holo && <><circle cx="-62" cy="8" r="5" fill="#E8C060" /><circle cx="62" cy="8" r="5" fill="#E8C060" /><path d="M-6,-122 L-6,-70 M6,-122 L6,-70" fill="none" strokeWidth="3" /></>}
+    {holo ? null : null}
+  </g>);
+  if (kind === 'crest') return (<g>
+    <path d="M-60,-118 Q0,-200 60,-118 L44,-114 Q0,-170 -44,-114Z" fill={holo ? 'none' : '#B8322A'} stroke={holo ? HOLO.stroke : INK} strokeWidth={holo ? 4 : 5} />
+    <HatShape kind="galea" color={color} holo={holo} /></g>);
   if (kind === 'helmet') return (<g {...st}>
     <path d="M-82,40 Q-92,-118 0,-122 Q92,-118 82,40 Q78,92 40,100 L-40,100 Q-78,92 -82,40Z" />
     {!holo && <path d="M30,-118 Q86,-100 82,40 Q78,92 40,100 L20,100 Q70,40 30,-118Z" fill="rgba(0,0,0,0.22)" stroke="none" />}
@@ -206,7 +217,7 @@ const Emote = ({kind, t, chibi}) => {
 // ---------------------------------------------------------------- the person
 // c = cast entry: {skin, hair, hairColor, eyeColor, top, topKind: 'tee'|'tank'|'bare'|'jacket'|'hivis'|'overalls'|'coat', bottom, shoes,
 //                  hat, hatColor, beard: 'stubble'|'full', tool, badge}
-const SLEEVE = {armor: 'long', dress: 'none', tee: 'short', tank: 'none', bare: 'none', overalls: 'short', jacket: 'long', hivis: 'long', coat: 'long'};
+const SLEEVE = {legion: 'short', tunic: 'short', armor: 'long', dress: 'none', tee: 'short', tank: 'none', bare: 'none', overalls: 'short', jacket: 'long', hivis: 'long', coat: 'long'};
 const Mitten = ({at, a, w, skin, sil, chibi, fist}) => (
   <g transform={`translate(${at[0]},${at[1]}) rotate(${-a})`}>
     {chibi ? <circle cx="0" cy={w * 0.15} r={w * 0.6} fill={sil ? '#120C09' : skin} stroke={INK} strokeWidth={CLW} />
@@ -295,6 +306,15 @@ export const Person = ({c = {}, age = 'adult', pose = 'stand', face = 'neutral',
         {kind === 'bare' && <><path d={`M-64,${shY + 58} Q-30,${shY + 86} -4,${shY + 64}`} /><path d={`M64,${shY + 58} Q30,${shY + 86} 4,${shY + 64}`} />
           <path d={`M0,${shY + 70} L0,${hipY - 20}`} />{[0, 1, 2].map((k2) => <path key={k2} d={`M-26,${shY + 112 + k2 * 40} Q-12,${shY + 118 + k2 * 40} -3,${shY + 112 + k2 * 40} M26,${shY + 112 + k2 * 40} Q12,${shY + 118 + k2 * 40} 3,${shY + 112 + k2 * 40}`} />)}</>}
       </g>}
+      {kind === 'legion' && (c.mail ? <g>
+          <rect x={-200} y={shY - 40} width="400" height={hipY - shY + 30} fill="#8E9294" />
+          {Array.from({length: 14}, (_, k) => <path key={k} d={`M-200,${shY - 30 + k * ((hipY - shY + 20) / 14)} L200,${shY - 30 + k * ((hipY - shY + 20) / 14)}`} stroke="#6E7274" strokeWidth="2" strokeDasharray="5 4" />)}
+        </g> : <g stroke={INK} strokeWidth={chibi ? 2.5 : 3.5}>
+          {Array.from({length: chibi ? 4 : 6}, (_, k) => { const y = waY - (chibi ? 4 : 6) * 0 + (k - (chibi ? 4 : 6)) * (chibi ? 18 : 26) + (chibi ? 18 : 26); return <rect key={k} x={-200} y={y} width="400" height={chibi ? 18 : 26} fill={k % 2 ? '#A9AEB2' : '#B9BEC2'} />; })}
+          {[-1, 1].map((d) => <path key={d} d={`M${d * 26},${shY - 34} Q${d * 70},${shY - 30} ${d * (B.sh[0] + 6)},${shY + 8} L${d * (B.sh[0] - 8)},${shY + 40} Q${d * 60},${shY + 10} ${d * 26},${shY + 6}Z`} fill="#B9BEC2" />)}
+          <rect x={-200} y={shY - 6} width="400" height={chibi ? 14 : 30} fill="#A9AEB2" />
+          {[-1, 1].map((d) => <circle key={'r' + d} cx={d * 30} cy={shY + 30} r="5" fill="#D9B45A" stroke="none" />)}
+        </g>)}
       {kind === 'armor' && <g stroke={INK} strokeWidth="3.5" strokeLinejoin="round">
         <path d={`M${-B.sh[0] * 0.72},${shY - 14} Q0,${shY - 30} ${B.sh[0] * 0.72},${shY - 14} L${B.waist[0] * 0.8},${shY + (waY - shY) * 0.7} Q0,${shY + (waY - shY) * 0.86} ${-B.waist[0] * 0.8},${shY + (waY - shY) * 0.7}Z`} fill={tint(top, 0.12)} />
         <path d={`M0,${shY - 24} L0,${shY + (waY - shY) * 0.84}`} fill="none" />
@@ -310,6 +330,12 @@ export const Person = ({c = {}, age = 'adult', pose = 'stand', face = 'neutral',
       {!chibi && <rect x={-B.hip[0] - 10} y={hipY - 14} width={B.hip[0] * 2 + 20} height="18" fill={shade(bottom, 0.6)} stroke={INK} strokeWidth="3" />}
       {c.badge && <rect x={B.sh[0] * 0.2} y={shY + (hipY - shY) * 0.2} width={chibi ? 20 : 26} height={chibi ? 26 : 34} rx="4" fill="#fff" stroke={INK} strokeWidth="3" />}
     </g>}
+    {(kind === 'legion' || kind === 'tunic') && (() => { const hem = hipY + (chibi ? 34 : 86); return (<g>
+      <path d={`M${-B.waist[0] - 2},${waY} L${-B.hip[0] - (chibi ? 10 : 22)},${hem} Q0,${hem + 10} ${B.hip[0] + (chibi ? 10 : 22)},${hem} L${B.waist[0] + 2},${waY}Z`} fill={F(top)} stroke={INK} strokeWidth={CLW} strokeLinejoin="round" />
+      {!sil && <path d={`M${B.waist[0] * 0.3},${waY} L${B.hip[0] * 0.4},${hem + 4} L${B.hip[0] + (chibi ? 9 : 20)},${hem} L${B.waist[0]},${waY}Z`} fill="rgba(60,25,10,0.18)" />}
+      {!sil && <rect x={-B.waist[0] - 4} y={hipY - (chibi ? 30 : 40)} width={B.waist[0] * 2 + 8} height={chibi ? 10 : 16} rx="3" fill={kind === 'legion' ? '#6B4A30' : shade(top, 0.7)} stroke={INK} strokeWidth="3" />}
+      {!sil && kind === 'legion' && !chibi && [-14, -4, 6, 16].map((x) => <g key={x}><rect x={x - 3} y={hipY - 24} width="7" height="74" fill="#6B4A30" stroke={INK} strokeWidth="2" /><circle cx={x + 0.5} cy={hipY + 52} r="4" fill="#D9B45A" /></g>)}
+    </g>); })()}
     {coatLen > 0 && <g><path d={`M${-B.waist[0]},${waY} L${-B.hip[0] - (kind === 'dress' ? 40 : 18)},${hipY + coatLen} Q0,${hipY + coatLen + 12} ${B.hip[0] + (kind === 'dress' ? 40 : 18)},${hipY + coatLen} L${B.waist[0]},${waY}Z`} fill={F(top)} stroke={INK} strokeWidth={CLW} strokeLinejoin="round" />
       {!sil && <path d={`M${B.waist[0] * 0.3},${waY} L${B.hip[0] * 0.5},${hipY + coatLen + 4} L${B.hip[0] + (kind === 'dress' ? 38 : 16)},${hipY + coatLen} L${B.waist[0]},${waY}Z`} fill="rgba(60,25,10,0.18)" />}
       {!sil && kind === 'dress' && <path d={`M${-B.waist[0] - 2},${waY + 6} Q0,${waY + 18} ${B.waist[0] + 2},${waY + 6}`} fill="none" stroke="#D9B45A" strokeWidth="6" />}</g>}
@@ -381,13 +407,22 @@ export const Person = ({c = {}, age = 'adult', pose = 'stand', face = 'neutral',
     {P.box && <rect x={-B.sh[0] * 0.9} y={shY + (hipY - shY) * 0.35} width={B.sh[0] * 1.8} height={B.sh[0] * 1.3} rx="4" fill={F('#C8955A')} stroke={INK} strokeWidth={CLW} />}
     <g transform={`rotate(${tilt},${hx},${hy + B.hr[1] * 0.8})`}>
       {head}
-      {holoOn && (holo.kind === 'hat' || ['hardhat', 'cap', 'beanie', 'mask', 'headlamp', 'helmet'].includes(holo.shape)) && (
+      {holoOn && (holo.kind === 'hat' || ['hardhat', 'cap', 'beanie', 'mask', 'headlamp', 'helmet', 'galea', 'crest'].includes(holo.shape)) && (
         <g transform={`translate(${hx},${hy + (chibi ? 0 : 8)}) scale(${B.k})`}>
           <g opacity={(1 - holoBreak) * mix(0, 1, Math.min(1, (f - holoFrom) / 3)) * (0.85 + 0.15 * Math.sin(f / 3))} transform={`translate(${holoBreak * 20},${-holoBreak * 30}) scale(${1 + holoBreak * 0.2})`}>
             <HatShape kind={holo.shape} holo />
           </g></g>)}
     </g>
     {arms}
+    {c.shield && !P.box && (() => { const w = chibi ? 120 : 150, h = chibi ? 170 : 270, x = -B.sh[0] - (chibi ? 30 : 40), y = (shY + hipY) / 2 + (chibi ? 30 : 40);
+      return (<g transform={`translate(${x},${y})`}>
+        <path d={`M${-w / 2},${-h / 2} Q0,${-h / 2 - 14} ${w / 2},${-h / 2} L${w / 2},${h / 2} Q0,${h / 2 + 14} ${-w / 2},${h / 2}Z`} fill={F(c.shieldColor || '#A8322A')} stroke={INK} strokeWidth={CLW} strokeLinejoin="round" />
+        {!sil && <><path d={`M${w * 0.12},${-h / 2 - 4} L${w / 2},${-h / 2} L${w / 2},${h / 2} L${w * 0.12},${h / 2 + 4}Z`} fill="rgba(0,0,0,0.18)" />
+          <rect x={-w / 2 + 10} y={-h / 2 + 12} width={w - 20} height={h - 24} rx="6" fill="none" stroke="#E2B65A" strokeWidth="5" />
+          <path d={`M0,${-h * 0.36} L0,${h * 0.36} M${-w * 0.34},0 L${w * 0.34},0`} stroke="#E2B65A" strokeWidth="5" />
+          {[-1, 1].map((d) => <path key={d} d={`M${d * 14},-8 Q${d * w * 0.3},${-h * 0.22} ${d * w * 0.36},${-h * 0.08} M${d * 14},8 Q${d * w * 0.3},${h * 0.22} ${d * w * 0.36},${h * 0.08}`} stroke="#E2B65A" strokeWidth="4" fill="none" />)}
+          <circle r={chibi ? 18 : 24} fill="#C9CED2" stroke={INK} strokeWidth="4" /><circle r={chibi ? 7 : 9} fill="#E8EDF0" /></>}
+      </g>); })()}
     {holoOn && ['vest', 'tool', 'wrench', 'lantern'].includes(holo.shape) && (
       <g opacity={(1 - holoBreak) * Math.min(1, (f - holoFrom) / 3)}>
         {holo.shape === 'vest' ? <path d={torso} {...HOLO} />
@@ -406,6 +441,10 @@ const FACE = 'M0,-66 C36,-66 52,-46 51,-10 C50,18 45,38 30,54 Q15,66 0,66 Q-15,6
 
 export const ToolShape = ({kind, x, y, holo}) => {
   const st = holo ? HOLO : {fill: '#9AA3AD', stroke: INK, strokeWidth: 4};
+  if (kind === 'gladius') return (<g transform={`translate(${x},${y}) rotate(-20)`} {...st}><path d="M-7,-10 L-7,-120 L0,-138 L7,-120 L7,-10Z" fill={holo ? HOLO.fill : '#D8DDE0'} /><rect x="-20" y="-12" width="40" height="10" rx="4" fill={holo ? HOLO.fill : '#8A6A40'} /><rect x="-6" y="-2" width="12" height="26" fill={holo ? HOLO.fill : '#6B4A30'} /><circle cy="28" r="8" fill={holo ? HOLO.fill : '#C9A04A'} /></g>);
+  if (kind === 'pilum') return (<g transform={`translate(${x},${y}) rotate(-8)`} {...st}><path d="M0,-300 L0,110" strokeWidth="9" stroke={holo ? HOLO.stroke : '#8B5A2B'} fill="none" /><path d="M0,-300 L0,-420" strokeWidth="5" stroke={holo ? HOLO.stroke : '#7A8288'} fill="none" /><path d="M-8,-420 L0,-446 L8,-420Z" fill={holo ? HOLO.fill : '#C9CED2'} /></g>);
+  if (kind === 'shovel') return (<g transform={`translate(${x},${y}) rotate(-12)`} {...st}><path d="M0,-150 L0,70" strokeWidth="9" stroke={holo ? HOLO.stroke : '#8B5A2B'} fill="none" /><path d="M-24,70 L24,70 L20,130 Q0,146 -20,130Z" fill={holo ? HOLO.fill : '#8E9294'} /></g>);
+  if (kind === 'vine') return (<g transform={`translate(${x},${y}) rotate(-25)`}><path d="M0,-150 Q6,-80 -2,0 Q-6,40 2,70" stroke={INK} strokeWidth="14" fill="none" strokeLinecap="round" /><path d="M0,-150 Q6,-80 -2,0 Q-6,40 2,70" stroke="#7A5232" strokeWidth="8" fill="none" strokeLinecap="round" /></g>);
   if (kind === 'lantern') return (<g transform={`translate(${x},${y})`} {...st}><path d="M-14,0 L14,0" fill="none" /><rect x="-18" y="8" width="36" height="46" rx="6" fill={holo ? HOLO.fill : '#FFD36B'} /><rect x="-22" y="52" width="44" height="10" rx="3" /></g>);
   if (kind === 'broom') return (<g transform={`translate(${x},${y})`} {...st}><path d="M0,-120 L0,40" strokeWidth="9" stroke={holo ? HOLO.stroke : '#8B5A2B'} fill="none" /><path d="M-26,40 L26,40 L34,96 L-34,96 Z" fill={holo ? HOLO.fill : '#D9B56B'} /></g>);
   if (kind === 'clipboard') return (<g transform={`translate(${x},${y - 30})`} {...st}><rect x="-26" y="-10" width="52" height="68" rx="4" fill={holo ? HOLO.fill : '#C8955A'} /><rect x="-18" y="0" width="36" height="48" fill={holo ? 'none' : '#fff'} /></g>);

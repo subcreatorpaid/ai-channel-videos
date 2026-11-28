@@ -8,6 +8,7 @@ import {AbsoluteFill, useCurrentFrame, staticFile, Audio} from 'remotion';
 import {W, H, INK, LoreFonts, wordAt, speaking, camTransform, camOrigin, expo, inOut, mix, hash, pop,
   NameTag, Callout, PlaceTag, PlaceTitle, Caption, Stamp, Bubble, HeroTitle, Corner, SANS} from './kit';
 import {Person} from './cast';
+import {Land3D} from './three';
 import {Set, SetFx} from './sets';
 import {ChapterCard, Book, Corkboard, TodoList, Document, MapRoute, Polaroids, Counter, BeforeAfter, TVNews, PollBreak} from './devices';
 
@@ -68,10 +69,21 @@ const Portrait = ({f, s, b, cast}) => {
   </>);
 };
 
+// cel-shaded 3D establishing shot over the 2D sky, with optional 2D characters in the foreground (the mixed look)
+const Land3DShot = ({f, s, b, cast}) => {
+  const actors = s.cast || [];
+  return (<>
+    <Set set={{kind: 'sky', mood: 'warm', noTown: true, ...s.set, ground: false}} f={f} />
+    <Land3D s={s} f={f} t0={b.from} dur={b.frames} />
+    {actors.length > 0 && <svg width={W} height={H} style={{position: 'absolute', inset: 0, overflow: 'visible'}}>{actors.map((a, i) => <Actor key={i} a={a} i={i} cast={cast} f={f} b={b} n={actors.length} />)}</svg>}
+    <SetFx set={{vignette: 0.3, ...(s.set || {})}} f={f} />
+  </>);
+};
+
 const End = ({f, s, b, cast}) => <Book f={f} b={b} cast={cast} s={{left: {title: s.question, text: s.text || 'Who should we be born as next? Tell me in the comments.'}, right: {who: s.who, age: s.age || 'chibi', face: 'happy', seal: 'SUBSCRIBE', caption: s.caption}}} />;
 
 const TYPES = {scene: Scene, portrait: Portrait, chapter: ChapterCard, book: Book, corkboard: Corkboard, todo: TodoList, document: Document, map: MapRoute,
-  polaroids: Polaroids, before_after: BeforeAfter, tv: TVNews, poll: PollBreak, end: End};
+  polaroids: Polaroids, before_after: BeforeAfter, tv: TVNews, poll: PollBreak, end: End, land3d: Land3DShot};
 export const LORE_TYPES = Object.keys(TYPES);
 
 // ---------------------------------------------------------------- overlays shared by every shot type

@@ -39,7 +39,7 @@ def keys(file, const):
 
 POSES, FACES, EMOTES = keys("cast.jsx", "POSES"), keys("cast.jsx", "EXPR"), keys("cast.jsx", "EMOTES")
 PROPS, SETS = keys("sets.jsx", "PROPS"), keys("sets.jsx", "KINDS") | {"black"}
-TYPES = {"scene", "portrait", "chapter", "book", "corkboard", "todo", "document", "map", "polaroids", "before_after", "tv", "poll", "end"}
+TYPES = {"scene", "portrait", "chapter", "book", "corkboard", "todo", "document", "map", "polaroids", "before_after", "tv", "poll", "end", "land3d"}
 TRS = {"cut", "smear", "dip", "flash", "rewind", "fade", "push"}
 # we copy techniques, never the reference channel's characters or brands (brain/rules.md never-list)
 NEVER = ["kratos", "master chief", "cortana", "doom slayer", "simon riley", "ghost (call of duty)", "carl johnson", "grove street", "borninlore", "halo", "call of duty", "god of war", "gta"]

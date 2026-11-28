@@ -23,7 +23,7 @@ export const ChapterCard = ({f, s, b}) => {
   const t = f - b.from, p = expo(t - 4, 10), out = 1 - inOut(t - (b.frames - 8), 8);
   return (<div style={{position: 'absolute', inset: 0, background: '#000', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', opacity: out}}>
     <div style={{width: 34, height: 34, borderRadius: 17, background: '#C0392B', opacity: p, marginBottom: 18, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontFamily: SANS, fontWeight: 900, fontSize: 18}}>{s.icon || '★'}</div>
-    <div style={{fontFamily: MONO, fontSize: 18, letterSpacing: 8, color: '#9C8E7C', opacity: p}}>CHAPTER {ROMAN[s.n] || s.n}</div>
+    <div style={{fontFamily: MONO, fontSize: 18, letterSpacing: 8, color: '#9C8E7C', opacity: p}}>{s.kicker || `CHAPTER ${ROMAN[s.n] || s.n}`}</div>
     <div style={{fontFamily: TITLE, fontWeight: 800, fontSize: 64, color: '#F3E6CF', opacity: p, filter: `blur(${(1 - p) * 6}px)`, marginTop: 10}}>{s.title}</div>
   </div>);
 };

@@ -1,0 +1,8073 @@
+{
+ "slug": "roman-legionary",
+ "style": "lore",
+ "title": "What If You Were Born As a Roman Legionary?",
+ "audio": {
+  "kokoro_voice": "am_michael+am_puck",
+  "speed": 0.85
+ },
+ "cast": {
+  "kid": {
+   "skin": "#D9A27A",
+   "hair": "short",
+   "hairColor": "#3B2A20",
+   "top": "#D8C9A6",
+   "topKind": "tunic",
+   "bottom": "#D9A27A",
+   "shoes": "#6B4A30"
+  },
+  "recruit": {
+   "skin": "#D9A27A",
+   "hair": "short",
+   "hairColor": "#3B2A20",
+   "top": "#C9B48A",
+   "topKind": "tunic",
+   "bottom": "#D9A27A",
+   "shoes": "#6B4A30"
+  },
+  "you": {
+   "skin": "#D9A27A",
+   "hair": "short",
+   "hairColor": "#3B2A20",
+   "top": "#B0302A",
+   "topKind": "legion",
+   "bottom": "#D9A27A",
+   "shoes": "#6B4A30",
+   "hat": "galea",
+   "hatColor": "#B9BEC2",
+   "shield": true,
+   "tool": "pilum"
+  },
+  "youb": {
+   "skin": "#D9A27A",
+   "hair": "short",
+   "hairColor": "#3B2A20",
+   "top": "#B0302A",
+   "topKind": "legion",
+   "bottom": "#D9A27A",
+   "shoes": "#6B4A30"
+  },
+  "youd": {
+   "skin": "#D9A27A",
+   "hair": "short",
+   "hairColor": "#3B2A20",
+   "top": "#B0302A",
+   "topKind": "tunic",
+   "bottom": "#D9A27A",
+   "shoes": "#6B4A30",
+   "tool": "shovel"
+  },
+  "vet": {
+   "skin": "#D09A72",
+   "hair": "short",
+   "hairColor": "#7E7670",
+   "beard": "stubble",
+   "top": "#B0302A",
+   "topKind": "legion",
+   "bottom": "#D09A72",
+   "shoes": "#6B4A30",
+   "hat": "galea",
+   "hatColor": "#A9AEB2",
+   "shield": true,
+   "tool": "shovel"
+  },
+  "old": {
+   "skin": "#D09A72",
+   "hair": "short",
+   "hairColor": "#8E8680",
+   "beard": "stubble",
+   "top": "#C9B48A",
+   "topKind": "tunic",
+   "bottom": "#D09A72",
+   "shoes": "#6B4A30"
+  },
+  "dad": {
+   "skin": "#C98E68",
+   "hair": "curly",
+   "hairColor": "#4A3222",
+   "beard": "full",
+   "top": "#8A6A44",
+   "topKind": "tunic",
+   "bottom": "#C98E68",
+   "shoes": "#5A3A22"
+  },
+  "mum": {
+   "skin": "#E2B08A",
+   "hair": "bun",
+   "hairColor": "#5A3A22",
+   "top": "#7A8F5A",
+   "topKind": "dress",
+   "bottom": "#7A8F5A",
+   "shoes": "#5A3A22"
+  },
+  "gramps": {
+   "skin": "#C98E68",
+   "hair": "bald",
+   "hairColor": "#CFC8C0",
+   "beard": "full",
+   "top": "#6E7E92",
+   "topKind": "tunic",
+   "bottom": "#C98E68",
+   "shoes": "#5A3A22"
+  },
+  "aux": {
+   "skin": "#C98E68",
+   "hair": "short",
+   "hairColor": "#4A3222",
+   "top": "#9A7A50",
+   "topKind": "legion",
+   "mail": true,
+   "bottom": "#C98E68",
+   "shoes": "#5A3A22",
+   "hat": "galea",
+   "hatColor": "#9EA4A8",
+   "shield": true,
+   "shieldColor": "#4E6E4A"
+  },
+  "cent": {
+   "skin": "#C98E68",
+   "hair": "buzz",
+   "hairColor": "#222222",
+   "beard": "stubble",
+   "top": "#B0302A",
+   "topKind": "legion",
+   "mail": true,
+   "bottom": "#C98E68",
+   "shoes": "#6B4A30",
+   "hat": "crest",
+   "hatColor": "#C9A04A",
+   "tool": "vine"
+  },
+  "recruiter": {
+   "skin": "#C98E68",
+   "hair": "buzz",
+   "hairColor": "#2A2018",
+   "top": "#B0302A",
+   "topKind": "legion",
+   "mail": true,
+   "bottom": "#C98E68",
+   "shoes": "#6B4A30"
+  },
+  "ox": {
+   "skin": "#E2A882",
+   "hair": "curly",
+   "hairColor": "#8A4A22",
+   "beard": "full",
+   "top": "#B0302A",
+   "topKind": "legion",
+   "bottom": "#E2A882",
+   "shoes": "#6B4A30"
+  },
+  "hisp": {
+   "skin": "#B97E58",
+   "hair": "curly",
+   "hairColor": "#1E1612",
+   "top": "#B0302A",
+   "topKind": "tunic",
+   "bottom": "#B97E58",
+   "shoes": "#6B4A30"
+  },
+  "emp": {
+   "skin": "#D9A27A",
+   "hair": "curly",
+   "hairColor": "#4A3626",
+   "beard": "full",
+   "top": "#6A2E6E",
+   "topKind": "dress",
+   "bottom": "#6A2E6E",
+   "shoes": "#5A3A22"
+  },
+  "emp2": {
+   "skin": "#D9A27A",
+   "hair": "short",
+   "hairColor": "#6A5A4A",
+   "beard": "full",
+   "top": "#6A2E6E",
+   "topKind": "dress",
+   "bottom": "#6A2E6E",
+   "shoes": "#5A3A22"
+  },
+  "brica": {
+   "skin": "#EDC2A0",
+   "hair": "long",
+   "hairColor": "#9A4A22",
+   "top": "#3E6E8A",
+   "topKind": "dress",
+   "bottom": "#3E6E8A",
+   "shoes": "#5A3A22"
+  },
+  "son": {
+   "skin": "#E2B08A",
+   "hair": "fringe",
+   "hairColor": "#6A3A22",
+   "top": "#B0302A",
+   "topKind": "tunic",
+   "bottom": "#E2B08A",
+   "shoes": "#5A3A22"
+  },
+  "girl": {
+   "skin": "#E2B08A",
+   "hair": "long",
+   "hairColor": "#9A4A22",
+   "top": "#D8C9A6",
+   "topKind": "dress",
+   "bottom": "#D8C9A6",
+   "shoes": "#5A3A22"
+  },
+  "raider": {
+   "skin": "#D9B08A",
+   "hair": "long",
+   "hairColor": "#7A4A22",
+   "beard": "full",
+   "topKind": "bare",
+   "bottom": "#4E5E3A",
+   "shoes": "#3A2A20"
+  },
+  "lady": {
+   "skin": "#EDC2A0",
+   "hair": "bun",
+   "hairColor": "#3A2618",
+   "top": "#A8523A",
+   "topKind": "dress",
+   "bottom": "#A8523A",
+   "shoes": "#5A3A22"
+  },
+  "trader": {
+   "skin": "#C98E68",
+   "hair": "short",
+   "hairColor": "#3A2A20",
+   "beard": "full",
+   "top": "#5E6E4A",
+   "topKind": "tunic",
+   "bottom": "#C98E68",
+   "shoes": "#5A3A22"
+  }
+ },
+ "beats": [
+  {
+   "say": "If you were born as a Roman legionary,",
+   "show": {
+    "type": "portrait",
+    "who": "you",
+    "face": "determined",
+    "set": {
+     "kind": "glow",
+     "mood": "dusk",
+     "light": [
+      0.7,
+      0.42
+     ]
+    },
+    "rim": "#FFB36A",
+    "heroTitle": {
+     "name": "LEGIONARY",
+     "sub": "(that's you)",
+     "word": "legionary",
+     "x": 0.3,
+     "y": 0.45
+    },
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.62,
+      0.4
+     ]
+    }
+   }
+  },
+  {
+   "say": "you'd march twenty miles before lunch,",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "road",
+     "mood": "warm",
+     "paved": true
+    },
+    "cast": [
+     {
+      "id": "you",
+      "x": 0.15,
+      "walkTo": 0.6,
+      "pose": "walk",
+      "face": "determined"
+     },
+     {
+      "id": "ox",
+      "x": 0.0,
+      "walkTo": 0.42,
+      "pose": "walk",
+      "face": "tired",
+      "scale": 0.92
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      -120,
+      0
+     ]
+    },
+    "counter": {
+     "label": "ROMAN MILES",
+     "steps": [
+      {
+       "value": "0",
+       "word": "march"
+      },
+      {
+       "value": "20",
+       "word": "miles"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "say": "carrying a third of your own body weight on your back,",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.4,
+       "pose": "carry",
+       "face": "tired",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true,
+      "blur": 6
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.5,
+       "y": 1.45,
+       "scale": 1.7,
+       "pose": "carry",
+       "face": "worried",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "callouts": [
+      {
+       "text": "≈ 1/3 OF YOU",
+       "from": [
+        0.72,
+        0.3
+       ],
+       "to": [
+        0.58,
+        0.55
+       ],
+       "word": "weight"
+      }
+     ],
+     "at": "weight"
+    }
+   ]
+  },
+  {
+   "say": "and help build a wall that crosses an entire country, coast to coast.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.3,
+       "pose": "work",
+       "face": "determined"
+      },
+      {
+       "id": "youd",
+       "x": 0.6,
+       "pose": "work",
+       "face": "tired"
+      },
+      {
+       "id": "ox",
+       "x": 0.8,
+       "pose": "carry",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     }
+    },
+    {
+     "type": "land3d",
+     "scene": "wall",
+     "palette": "day",
+     "set": {
+      "mood": "warm"
+     },
+     "camera": {
+      "from": [
+       80,
+       34,
+       80
+      ],
+      "to": [
+       40,
+       26,
+       62
+      ]
+     },
+     "at": "crosses"
+    }
+   ]
+  },
+  {
+   "say": "So why, after twenty-five years of loyal service, would you be ordered to build another one?",
+   "shots": [
+    {
+     "type": "portrait",
+     "who": "vet",
+     "face": "tired",
+     "set": {
+      "kind": "glow",
+      "mood": "steel",
+      "light": [
+       0.7,
+       0.45
+      ]
+     },
+     "rim": "#9FC3D9",
+     "cam": {
+      "move": "push",
+      "amount": 0.1,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "steel",
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "surprised",
+       "emote": "question"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "ordered"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.45,
+       "pose": "shrug",
+       "face": "angry",
+       "emote": "vein"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     },
+     "at": "another"
+    }
+   ]
+  },
+  {
+   "say": "That part comes later.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "steel"
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.5,
+      "pose": "cross",
+      "face": "neutral"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.06
+    }
+   }
+  },
+  {
+   "say": "But right now,",
+   "show": {
+    "type": "book",
+    "tr": "rewind",
+    "left": {
+     "kicker": "Year 99",
+     "title": "Prologue",
+     "text": "A farm in southern Gaul"
+    },
+    "right": {
+     "who": "kid",
+     "age": "chibi",
+     "face": "happy",
+     "caption": "you, age 0"
+    }
+   }
+  },
+  {
+   "say": "you're a baby in a farmhouse in southern Gaul, in the year 99. No helmet. No sword. Just a very small blanket.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.75,
+      "props": [
+       {
+        "kind": "basket",
+        "x": 0.45
+       },
+       {
+        "kind": "rug",
+        "x": 0.45
+       },
+       {
+        "kind": "amphora",
+        "x": 0.1
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "kid",
+       "x": 0.45,
+       "age": "chibi",
+       "y": 0.8,
+       "face": "surprised"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "place": "SOUTHERN GAUL · AD 99"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.75,
+      "props": [
+       {
+        "kind": "basket",
+        "x": 0.45
+       },
+       {
+        "kind": "rug",
+        "x": 0.45
+       },
+       {
+        "kind": "amphora",
+        "x": 0.1
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "kid",
+       "x": 0.45,
+       "age": "chibi",
+       "y": 0.8,
+       "face": "neutral",
+       "holo": {
+        "shape": "galea",
+        "word": "helmet",
+        "untilWord": "sword"
+       }
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "no"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.75,
+      "props": [
+       {
+        "kind": "basket",
+        "x": 0.45
+       },
+       {
+        "kind": "rug",
+        "x": 0.45
+       },
+       {
+        "kind": "amphora",
+        "x": 0.1
+       }
+      ],
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "kid",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "happy",
+       "emote": "heart",
+       "age": "chibi"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "just"
+    }
+   ]
+  },
+  {
+   "say": "Remember that blanket.",
+   "show": {
+    "type": "corkboard",
+    "title": "THINGS TO REMEMBER",
+    "notes": [
+     {
+      "text": "THE BLANKET",
+      "icon": "🧺",
+      "word": "blanket"
+     }
+    ]
+   },
+   "hold": 0.9
+  },
+  {
+   "say": "Your father is not a soldier. He's a farmer who argues with goats.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "warm",
+      "props": [
+       {
+        "kind": "goat",
+        "x": 0.14,
+        "scale": 1.4
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "dad",
+       "x": 0.42,
+       "pose": "point",
+       "face": "angry",
+       "talk": true,
+       "emote": "vein",
+       "emoteWord": "argues",
+       "tag": {
+        "text": "DAD",
+        "sub": "farmer",
+        "word": "father"
+       }
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "warm",
+      "props": [
+       {
+        "kind": "goat",
+        "x": 0.14,
+        "scale": 1.4
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "dad",
+       "x": 0.5,
+       "pose": "shrug",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "argues"
+    }
+   ]
+  },
+  {
+   "say": "But your grandfather was one. Twenty-five years in the auxiliaries, and he came home with a limp, a bag of silver and something better: Roman citizenship.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "ember",
+      "stone": true,
+      "band": false,
+      "window": "night",
+      "windowX": 0.75,
+      "props": [
+       {
+        "kind": "fire",
+        "x": 0.5
+       },
+       {
+        "kind": "rug",
+        "x": 0.5
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "gramps",
+       "x": 0.4,
+       "pose": "think",
+       "face": "smug",
+       "tag": {
+        "text": "GRANDPA",
+        "sub": "veteran",
+        "word": "grandfather"
+       }
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "aux",
+       "x": 0.45,
+       "face": "determined"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     },
+     "caption": "25 YEARS EARLIER",
+     "at": "twenty-five"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "gramps",
+       "x": 0.4,
+       "pose": "slump",
+       "face": "tired",
+       "walkTo": 0.55
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "at": "limp"
+    },
+    {
+     "type": "document",
+     "title": "DIPLOMA OF CITIZENSHIP",
+     "rows": [
+      {
+       "label": "Name",
+       "value": "Your grandfather",
+       "word": "something"
+      },
+      {
+       "label": "Service",
+       "value": "25 years, auxiliary",
+       "word": "better"
+      },
+      {
+       "label": "Reward",
+       "value": "Roman citizen",
+       "word": "citizenship"
+      }
+     ],
+     "who": "gramps",
+     "stamp": "CIVIS ROMANUS",
+     "at": "something"
+    }
+   ]
+  },
+  {
+   "say": "And that makes you something rare: a citizen of Rome.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "warm",
+     "stone": true,
+     "band": false,
+     "window": "day",
+     "windowX": 0.75,
+     "props": [
+      {
+       "kind": "basket",
+       "x": 0.45
+      },
+      {
+       "kind": "rug",
+       "x": 0.45
+      },
+      {
+       "kind": "amphora",
+       "x": 0.1
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "kid",
+      "x": 0.5,
+      "age": "chibi",
+      "face": "happy",
+      "pose": "cheer",
+      "emote": "exclaim",
+      "emoteWord": "rare"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.06
+    },
+    "stamp": {
+     "text": "CITIZEN",
+     "word": "citizen",
+     "x": 0.72,
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "say": "Your mother calls it the most valuable thing the family owns.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "mum",
+       "x": 0.35,
+       "pose": "point",
+       "face": "happy",
+       "talk": true,
+       "tag": {
+        "text": "MUM",
+        "word": "mother"
+       }
+      },
+      {
+       "id": "kid",
+       "x": 0.6,
+       "age": "chibi",
+       "face": "happy"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ],
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "mum",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "smug"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "valuable"
+    }
+   ]
+  },
+  {
+   "say": "More valuable than the goats.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "farm",
+     "mood": "warm",
+     "props": [
+      {
+       "kind": "goat",
+       "x": 0.14,
+       "scale": 1.4
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "mum",
+      "x": 0.4,
+      "pose": "hips",
+      "face": "smug"
+     },
+     {
+      "id": "dad",
+      "x": 0.62,
+      "face": "surprised",
+      "emote": "shock"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "The goats disagree.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "farm",
+     "mood": "warm",
+     "props": [
+      {
+       "kind": "goat",
+       "x": 0.4,
+       "scale": 2.2
+      },
+      {
+       "kind": "goat",
+       "x": 0.68,
+       "scale": 2.0,
+       "flip": true
+      }
+     ]
+    },
+    "cast": [],
+    "cam": {
+     "move": "push",
+     "amount": 0.1,
+     "focus": [
+      0.5,
+      0.6
+     ]
+    }
+   }
+  },
+  {
+   "say": "Every night, your grandfather tells the same stories.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "ember",
+      "stone": true,
+      "band": false,
+      "window": "night",
+      "windowX": 0.75,
+      "props": [
+       {
+        "kind": "fire",
+        "x": 0.5
+       },
+       {
+        "kind": "rug",
+        "x": 0.5
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "gramps",
+       "x": 0.32,
+       "pose": "point",
+       "face": "happy",
+       "talk": true
+      },
+      {
+       "id": "kid",
+       "x": 0.62,
+       "age": "chibi",
+       "face": "neutral",
+       "look": [
+        -1,
+        0
+       ]
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "ember",
+      "stone": true,
+      "band": false,
+      "window": "night",
+      "windowX": 0.75,
+      "props": [
+       {
+        "kind": "fire",
+        "x": 0.5
+       },
+       {
+        "kind": "rug",
+        "x": 0.5
+       }
+      ],
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "kid",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "tired",
+       "emote": "zzz",
+       "age": "chibi"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "same"
+    }
+   ]
+  },
+  {
+   "say": "Forts in the snow. Bridges built in a day. A centurion who could shout louder than thunder.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "snow",
+      "fx": "snow"
+     },
+     "cast": [
+      {
+       "id": "aux",
+       "x": 0.3,
+       "face": "worried",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "aux",
+       "x": 0.35,
+       "pose": "work",
+       "face": "determined"
+      },
+      {
+       "id": "aux",
+       "x": 0.6,
+       "pose": "carry",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "bridges"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "steel"
+     },
+     "cast": [
+      {
+       "id": "cent",
+       "x": 0.45,
+       "pose": "point",
+       "face": "angry",
+       "talk": true,
+       "emote": "steam"
+      },
+      {
+       "id": "aux",
+       "x": 0.75,
+       "face": "scared",
+       "emote": "shock"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "centurion"
+    }
+   ]
+  },
+  {
+   "say": "You don't believe half of them.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "ember",
+     "stone": true,
+     "band": false,
+     "window": "night",
+     "windowX": 0.75,
+     "props": [
+      {
+       "kind": "fire",
+       "x": 0.5
+      },
+      {
+       "kind": "rug",
+       "x": 0.5
+      }
+     ],
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "kid",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "smug",
+      "emote": "question",
+      "age": "chibi"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "You'll find out later that he left out the worst parts.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "ember",
+      "stone": true,
+      "band": false,
+      "window": "night",
+      "windowX": 0.75,
+      "props": [
+       {
+        "kind": "fire",
+        "x": 0.5
+       },
+       {
+        "kind": "rug",
+        "x": 0.5
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "gramps",
+       "x": 0.45,
+       "pose": "think",
+       "face": "sad"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "night"
+     },
+     "cast": [
+      {
+       "id": "aux",
+       "x": 0.5,
+       "silhouette": true,
+       "pose": "slump"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     },
+     "at": "worst"
+    }
+   ]
+  },
+  {
+   "say": "Chapter one: The Recruit.",
+   "show": {
+    "type": "chapter",
+    "n": 1,
+    "title": "The Recruit",
+    "icon": "I"
+   }
+  },
+  {
+   "say": "Years pass, and the cute kid? Gone.",
+   "show": {
+    "type": "before_after",
+    "left": {
+     "who": "kid",
+     "age": "chibi",
+     "face": "happy",
+     "label": "AGE 4"
+    },
+    "right": {
+     "who": "recruit",
+     "face": "determined",
+     "label": "AGE 18"
+    }
+   }
+  },
+  {
+   "say": "You're eighteen. The harvest has failed twice. There are four younger brothers and not enough bread.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "dusk",
+      "props": [
+       {
+        "kind": "goat",
+        "x": 0.12,
+        "scale": 1.4
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.45,
+       "face": "worried",
+       "tag": {
+        "text": "YOU",
+        "sub": "age 18",
+        "word": "eighteen"
+       }
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.35,
+       "pose": "slump",
+       "face": "sad"
+      },
+      {
+       "id": "dad",
+       "x": 0.62,
+       "pose": "shrug",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "at": "harvest"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "kid",
+       "x": 0.25,
+       "age": "chibi",
+       "face": "sad"
+      },
+      {
+       "id": "son",
+       "x": 0.42,
+       "age": "chibi",
+       "face": "sad"
+      },
+      {
+       "id": "kid",
+       "x": 0.6,
+       "age": "chibi",
+       "face": "worried"
+      },
+      {
+       "id": "son",
+       "x": 0.78,
+       "age": "chibi",
+       "face": "sad"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "counter": {
+      "label": "LOAVES",
+      "steps": [
+       {
+        "value": "4",
+        "word": "four"
+       },
+       {
+        "value": "1",
+        "word": "bread"
+       }
+      ]
+     },
+     "at": "four"
+    }
+   ]
+  },
+  {
+   "say": "And in the market town, a man in red is looking for recruits.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "sepia",
+      "villaX": 0.82,
+      "props": [
+       {
+        "kind": "cart",
+        "x": 0.18
+       },
+       {
+        "kind": "amphora",
+        "x": 0.4
+       },
+       {
+        "kind": "crate",
+        "x": 0.46
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.3,
+       "face": "surprised",
+       "look": [
+        1,
+        0
+       ]
+      },
+      {
+       "id": "recruiter",
+       "x": 0.7,
+       "pose": "hips",
+       "face": "smug"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "place": "THE MARKET TOWN"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "sepia",
+      "villaX": 0.82,
+      "props": [
+       {
+        "kind": "cart",
+        "x": 0.18
+       },
+       {
+        "kind": "amphora",
+        "x": 0.4
+       },
+       {
+        "kind": "crate",
+        "x": 0.46
+       }
+      ],
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "recruiter",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "smug"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "looking"
+    }
+   ]
+  },
+  {
+   "say": "He checks that you're freeborn. He checks that you're fit. He asks if you can read.",
+   "shots": [
+    {
+     "type": "todo",
+     "kicker": "RECRUITMENT",
+     "title": "CHECKLIST",
+     "items": [
+      {
+       "text": "Freeborn",
+       "icon": "✓",
+       "word": "freeborn",
+       "strikeWord": "freeborn"
+      },
+      {
+       "text": "Fit",
+       "icon": "✓",
+       "word": "fit",
+       "strikeWord": "fit"
+      },
+      {
+       "text": "Can read?",
+       "icon": "?",
+       "word": "read"
+      }
+     ]
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "sepia",
+      "villaX": 0.82,
+      "props": [
+       {
+        "kind": "cart",
+        "x": 0.18
+       },
+       {
+        "kind": "amphora",
+        "x": 0.4
+       },
+       {
+        "kind": "crate",
+        "x": 0.46
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "recruiter",
+       "x": 0.35,
+       "pose": "point",
+       "face": "neutral",
+       "talk": true
+      },
+      {
+       "id": "recruit",
+       "x": 0.62,
+       "face": "worried",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     },
+     "at": "asks"
+    }
+   ]
+  },
+  {
+   "say": "You can, a little. Your grandfather taught you, with a stick in the dirt.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "sepia",
+      "villaX": 0.82,
+      "props": [
+       {
+        "kind": "cart",
+        "x": 0.18
+       },
+       {
+        "kind": "amphora",
+        "x": 0.4
+       },
+       {
+        "kind": "crate",
+        "x": 0.46
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.5,
+       "pose": "shrug",
+       "face": "worried"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "warm",
+      "props": [
+       {
+        "kind": "goat",
+        "x": 0.14,
+        "scale": 1.4
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "gramps",
+       "x": 0.35,
+       "pose": "point",
+       "face": "happy",
+       "tool": "vine"
+      },
+      {
+       "id": "kid",
+       "x": 0.6,
+       "age": "chibi",
+       "pose": "think",
+       "face": "neutral"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "caption": "10 YEARS EARLIER",
+     "at": "grandfather"
+    }
+   ]
+  },
+  {
+   "say": "That stick just got you hired.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "farm",
+     "mood": "sepia",
+     "villaX": 0.82,
+     "props": [
+      {
+       "kind": "cart",
+       "x": 0.18
+      },
+      {
+       "kind": "amphora",
+       "x": 0.4
+      },
+      {
+       "kind": "crate",
+       "x": 0.46
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "recruiter",
+      "x": 0.32,
+      "pose": "wave",
+      "face": "happy"
+     },
+     {
+      "id": "recruit",
+      "x": 0.6,
+      "face": "happy",
+      "pose": "cheer"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.06
+    },
+    "stamp": {
+     "text": "HIRED",
+     "word": "hired",
+     "x": 0.75,
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "say": "You raise your hand and swear an oath to the emperor.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "ember",
+      "light": [
+       0.5,
+       0.3
+      ]
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.5,
+       "pose": "wave",
+       "face": "determined",
+       "rim": "#FFB36A"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "ember",
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "determined"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "oath"
+    }
+   ]
+  },
+  {
+   "say": "It's called the sacramentum. Break it, and the punishment is death.",
+   "shots": [
+    {
+     "type": "document",
+     "title": "SACRAMENTUM",
+     "rows": [
+      {
+       "label": "Oath to",
+       "value": "The emperor",
+       "word": "sacramentum"
+      },
+      {
+       "label": "Term",
+       "value": "25 years",
+       "word": "called"
+      },
+      {
+       "label": "If broken",
+       "value": "Death",
+       "word": "death"
+      }
+     ],
+     "who": "recruit",
+     "stamp": "SWORN"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "night",
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "scared",
+       "emote": "shock"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "death"
+    }
+   ]
+  },
+  {
+   "say": "You sign up for twenty-five years.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "farm",
+     "mood": "sepia",
+     "villaX": 0.82,
+     "props": [
+      {
+       "kind": "cart",
+       "x": 0.18
+      },
+      {
+       "kind": "amphora",
+       "x": 0.4
+      },
+      {
+       "kind": "crate",
+       "x": 0.46
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "recruit",
+      "x": 0.5,
+      "pose": "work",
+      "face": "determined"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    },
+    "counter": {
+     "label": "YEARS SIGNED",
+     "steps": [
+      {
+       "value": "25",
+       "word": "twenty-five"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "say": "You're eighteen. You'll be forty-three when you get out. If you get out.",
+   "shots": [
+    {
+     "type": "before_after",
+     "left": {
+      "who": "recruit",
+      "face": "happy",
+      "label": "AGE 18"
+     },
+     "right": {
+      "who": "old",
+      "face": "tired",
+      "label": "AGE 43"
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "night",
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "worried",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "if"
+    }
+   ]
+  },
+  {
+   "say": "The recruiter hands you a small lead tag to wear around your neck.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "sepia",
+      "villaX": 0.82,
+      "props": [
+       {
+        "kind": "cart",
+        "x": 0.18
+       },
+       {
+        "kind": "amphora",
+        "x": 0.4
+       },
+       {
+        "kind": "crate",
+        "x": 0.46
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "recruiter",
+       "x": 0.38,
+       "pose": "point",
+       "face": "neutral"
+      },
+      {
+       "id": "recruit",
+       "x": 0.62,
+       "face": "surprised",
+       "look": [
+        -1,
+        0
+       ]
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "sepia",
+      "villaX": 0.82,
+      "props": [
+       {
+        "kind": "cart",
+        "x": 0.18
+       },
+       {
+        "kind": "amphora",
+        "x": 0.4
+       },
+       {
+        "kind": "crate",
+        "x": 0.46
+       }
+      ],
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "recruit",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "neutral"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "callouts": [
+      {
+       "text": "LEAD TAG",
+       "from": [
+        0.72,
+        0.28
+       ],
+       "to": [
+        0.52,
+        0.5
+       ],
+       "word": "tag"
+      }
+     ],
+     "at": "tag"
+    }
+   ]
+  },
+  {
+   "say": "It has your name on it.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "warm",
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "recruit",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "happy"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "It's how they'll know who you were.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "night"
+    },
+    "cast": [
+     {
+      "id": "recruit",
+      "x": 0.5,
+      "face": "sad",
+      "pose": "slump"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.08
+    }
+   }
+  },
+  {
+   "say": "Chapter two: The Mule.",
+   "show": {
+    "type": "chapter",
+    "n": 2,
+    "title": "The Mule",
+    "icon": "II"
+   }
+  },
+  {
+   "say": "Training starts the next morning, before the sun does.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.4,
+       "face": "tired",
+       "emote": "zzz"
+      },
+      {
+       "id": "cent",
+       "x": 0.7,
+       "pose": "point",
+       "face": "angry",
+       "talk": true
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "place": "TRAINING CAMP"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "night",
+      "night": true,
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.4,
+       "pose": "walk",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "before"
+    }
+   ]
+  },
+  {
+   "say": "You march. Twenty Roman miles in five hours, in full kit.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "warm",
+      "paved": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.2,
+       "walkTo": 0.62,
+       "pose": "walk",
+       "face": "determined"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -120,
+       0
+      ]
+     }
+    },
+    {
+     "type": "land3d",
+     "scene": "road",
+     "palette": "day",
+     "set": {
+      "mood": "warm"
+     },
+     "camera": {
+      "from": [
+       30,
+       14,
+       40
+      ],
+      "to": [
+       10,
+       12,
+       30
+      ]
+     },
+     "counter": {
+      "label": "MILES · HOURS",
+      "steps": [
+       {
+        "value": "20 mi",
+        "word": "miles"
+       },
+       {
+        "value": "5 h",
+        "word": "hours"
+       }
+      ]
+     },
+     "at": "twenty"
+    }
+   ]
+  },
+  {
+   "say": "Your shield. Your armour. Two javelins. A shovel. A saw. A cooking pot. Three days of grain.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.5,
+       "face": "neutral"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "callouts": [
+      {
+       "text": "SHIELD",
+       "from": [
+        0.2,
+        0.3
+       ],
+       "to": [
+        0.42,
+        0.55
+       ],
+       "word": "shield"
+      },
+      {
+       "text": "ARMOUR",
+       "from": [
+        0.8,
+        0.25
+       ],
+       "to": [
+        0.55,
+        0.45
+       ],
+       "word": "armour"
+      },
+      {
+       "text": "JAVELINS ×2",
+       "from": [
+        0.82,
+        0.6
+       ],
+       "to": [
+        0.6,
+        0.4
+       ],
+       "word": "javelins"
+      }
+     ]
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.5,
+       "face": "worried"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     },
+     "callouts": [
+      {
+       "text": "SHOVEL",
+       "from": [
+        0.82,
+        0.3
+       ],
+       "to": [
+        0.58,
+        0.55
+       ],
+       "word": "shovel"
+      },
+      {
+       "text": "SAW",
+       "from": [
+        0.18,
+        0.25
+       ],
+       "to": [
+        0.42,
+        0.45
+       ],
+       "word": "saw"
+      },
+      {
+       "text": "COOKING POT",
+       "from": [
+        0.18,
+        0.7
+       ],
+       "to": [
+        0.42,
+        0.6
+       ],
+       "word": "pot"
+      }
+     ],
+     "at": "shovel"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true,
+      "blur": 6
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.5,
+       "y": 1.45,
+       "scale": 1.7,
+       "pose": "carry",
+       "face": "tired",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     },
+     "callouts": [
+      {
+       "text": "3 DAYS OF GRAIN",
+       "from": [
+        0.78,
+        0.3
+       ],
+       "to": [
+        0.56,
+        0.5
+       ],
+       "word": "grain"
+      }
+     ],
+     "at": "three"
+    }
+   ]
+  },
+  {
+   "say": "Somewhere between twenty and forty kilos, every single day.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "warm",
+      "paved": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "pose": "carry",
+       "face": "tired",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "counter": {
+      "label": "KIT WEIGHT",
+      "steps": [
+       {
+        "value": "20 kg",
+        "word": "twenty"
+       },
+       {
+        "value": "40 kg",
+        "word": "forty"
+       }
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "warm",
+      "paved": true,
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "tired",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "every"
+    }
+   ]
+  },
+  {
+   "say": "For two hundred years, soldiers like you have been called Marius's mules. Now you know why.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "dusk",
+      "paved": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.3,
+       "pose": "carry",
+       "face": "tired"
+      },
+      {
+       "id": "ox",
+       "x": 0.55,
+       "pose": "carry",
+       "face": "tired"
+      },
+      {
+       "id": "youb",
+       "x": 0.78,
+       "pose": "carry",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "stamp": {
+      "text": "MULES",
+      "word": "mules",
+      "x": 0.5,
+      "y": 0.25
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "dusk",
+      "paved": true,
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "angry",
+       "emote": "vein"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "now"
+    }
+   ]
+  },
+  {
+   "say": "You learn to fight in a line, shield against shield, stabbing with a short sword over the rim.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.3,
+       "face": "determined"
+      },
+      {
+       "id": "you",
+       "x": 0.48,
+       "face": "determined"
+      },
+      {
+       "id": "you",
+       "x": 0.66,
+       "face": "determined"
+      },
+      {
+       "id": "cent",
+       "x": 0.88,
+       "pose": "point",
+       "face": "angry",
+       "talk": true
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true,
+      "blur": 6
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.5,
+       "y": 1.45,
+       "scale": 1.7,
+       "pose": "point",
+       "face": "angry",
+       "tool": "gladius"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "stabbing"
+    }
+   ]
+  },
+  {
+   "say": "You learn to dig a ditch, build a wall and pitch a camp, every single night, even if you're leaving at dawn.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.4,
+       "pose": "work",
+       "face": "tired"
+      },
+      {
+       "id": "ox",
+       "x": 0.65,
+       "pose": "work",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     }
+    },
+    {
+     "type": "land3d",
+     "scene": "camp",
+     "palette": "dusk",
+     "set": {
+      "mood": "dusk"
+     },
+     "camera": {
+      "from": [
+       50,
+       30,
+       50
+      ],
+      "to": [
+       30,
+       26,
+       40
+      ]
+     },
+     "at": "pitch"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true,
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "angry",
+       "emote": "vein"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "leaving"
+    }
+   ]
+  },
+  {
+   "say": "You sleep in a leather tent with seven other men.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "tent",
+     "mood": "ember",
+     "props": [
+      {
+       "kind": "fire",
+       "x": 0.5
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.25,
+      "pose": "slump",
+      "face": "tired"
+     },
+     {
+      "id": "ox",
+      "x": 0.5,
+      "face": "happy"
+     },
+     {
+      "id": "hisp",
+      "x": 0.75,
+      "face": "neutral"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.08,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    },
+    "place": "CONTUBERNIUM · 8 MEN"
+   }
+  },
+  {
+   "say": "Eight men. One tent. One cooking pot.",
+   "shots": [
+    {
+     "type": "polaroids",
+     "photos": [
+      {
+       "who": "youb",
+       "face": "neutral",
+       "caption": "you",
+       "x": 0.2,
+       "y": 0.35
+      },
+      {
+       "who": "ox",
+       "face": "happy",
+       "caption": "the snorer",
+       "x": 0.4,
+       "y": 0.6
+      },
+      {
+       "who": "hisp",
+       "face": "smug",
+       "caption": "Spain",
+       "x": 0.6,
+       "y": 0.35
+      },
+      {
+       "who": "recruit",
+       "face": "happy",
+       "caption": "the new one",
+       "x": 0.8,
+       "y": 0.6
+      }
+     ],
+     "string": true
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "tent",
+      "mood": "ember",
+      "props": [
+       {
+        "kind": "fire",
+        "x": 0.5
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.3,
+       "face": "happy"
+      },
+      {
+       "id": "ox",
+       "x": 0.55,
+       "face": "laugh"
+      },
+      {
+       "id": "hisp",
+       "x": 0.78,
+       "face": "happy"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "at": "cooking"
+    }
+   ]
+  },
+  {
+   "say": "These seven will become closer to you than your own brothers.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "tent",
+     "mood": "ember",
+     "props": [
+      {
+       "kind": "fire",
+       "x": 0.5
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "ox",
+      "x": 0.35,
+      "pose": "cheer",
+      "face": "laugh"
+     },
+     {
+      "id": "youb",
+      "x": 0.6,
+      "face": "happy",
+      "emote": "heart",
+      "emoteWord": "brothers"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.06
+    }
+   }
+  },
+  {
+   "say": "One of them snores like a dying ox.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "tent",
+      "mood": "night",
+      "props": [
+       {
+        "kind": "fire",
+        "x": 0.5
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "ox",
+       "x": 0.45,
+       "pose": "slump",
+       "face": "asleep",
+       "emote": "zzz",
+       "tag": {
+        "text": "THE SNORER",
+        "word": "snores"
+       }
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "tent",
+      "mood": "night",
+      "props": [
+       {
+        "kind": "fire",
+        "x": 0.5
+       }
+      ],
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "angry",
+       "emote": "vein"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "ox"
+    }
+   ]
+  },
+  {
+   "say": "You'll miss it one day.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "tent",
+     "mood": "night",
+     "props": [
+      {
+       "kind": "fire",
+       "x": 0.5
+      }
+     ],
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "sad"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "And then there's the drill.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "warm",
+     "noTown": true
+    },
+    "cast": [
+     {
+      "id": "cent",
+      "x": 0.5,
+      "pose": "hips",
+      "face": "smug",
+      "tag": {
+       "text": "THE CENTURION",
+       "word": "drill"
+      }
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "Shields up. Shields together. Shields over your heads.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.3,
+       "face": "determined"
+      },
+      {
+       "id": "you",
+       "x": 0.5,
+       "face": "determined"
+      },
+      {
+       "id": "you",
+       "x": 0.7,
+       "face": "determined"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.4,
+       "face": "worried"
+      },
+      {
+       "id": "you",
+       "x": 0.56,
+       "face": "worried"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     },
+     "at": "together"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.5,
+       "pose": "cheer",
+       "face": "tired",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "at": "over"
+    }
+   ]
+  },
+  {
+   "say": "Eighty men become one giant tortoise of wood and leather.",
+   "shots": [
+    {
+     "type": "land3d",
+     "scene": "camp",
+     "palette": "day",
+     "set": {
+      "mood": "warm"
+     },
+     "camera": {
+      "from": [
+       20,
+       40,
+       30
+      ],
+      "to": [
+       10,
+       30,
+       22
+      ]
+     },
+     "fog": "#C9D6E2"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.15,
+       "face": "determined",
+       "scale": 0.8
+      },
+      {
+       "id": "you",
+       "x": 0.27,
+       "face": "determined",
+       "scale": 0.8
+      },
+      {
+       "id": "you",
+       "x": 0.39,
+       "face": "determined",
+       "scale": 0.8
+      },
+      {
+       "id": "you",
+       "x": 0.51,
+       "face": "determined",
+       "scale": 0.8
+      },
+      {
+       "id": "you",
+       "x": 0.63,
+       "face": "determined",
+       "scale": 0.8
+      },
+      {
+       "id": "you",
+       "x": 0.75,
+       "face": "determined",
+       "scale": 0.8
+      },
+      {
+       "id": "you",
+       "x": 0.87,
+       "face": "determined",
+       "scale": 0.8
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "stamp": {
+      "text": "TESTUDO",
+      "word": "tortoise",
+      "x": 0.5,
+      "y": 0.2
+     },
+     "at": "tortoise"
+    }
+   ]
+  },
+  {
+   "say": "The first time, someone trips, and the whole tortoise falls over.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.35,
+       "face": "surprised"
+      },
+      {
+       "id": "hisp",
+       "x": 0.6,
+       "pose": "slump",
+       "face": "scared",
+       "emote": "shock"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.3,
+       "pose": "kneel",
+       "face": "scared"
+      },
+      {
+       "id": "ox",
+       "x": 0.55,
+       "pose": "kneel",
+       "face": "surprised"
+      },
+      {
+       "id": "hisp",
+       "x": 0.78,
+       "pose": "kneel",
+       "face": "sad"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "falls"
+    }
+   ]
+  },
+  {
+   "say": "The centurion carries a stick made of vine wood.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "warm",
+     "noTown": true,
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "cent",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "smug"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    },
+    "callouts": [
+     {
+      "text": "VINE STICK",
+      "from": [
+       0.78,
+       0.28
+      ],
+      "to": [
+       0.6,
+       0.5
+      ],
+      "word": "vine"
+     }
+    ]
+   }
+  },
+  {
+   "say": "He uses it on the man who tripped.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "warm",
+     "noTown": true
+    },
+    "cast": [
+     {
+      "id": "cent",
+      "x": 0.4,
+      "pose": "work",
+      "face": "angry",
+      "emote": "steam"
+     },
+     {
+      "id": "hisp",
+      "x": 0.65,
+      "pose": "kneel",
+      "face": "scared",
+      "emote": "tears"
+     }
+    ],
+    "cam": {
+     "move": "shake"
+    }
+   }
+  },
+  {
+   "say": "Then on the man next to him, for laughing.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "warm",
+     "noTown": true
+    },
+    "cast": [
+     {
+      "id": "cent",
+      "x": 0.3,
+      "pose": "point",
+      "face": "angry"
+     },
+     {
+      "id": "hisp",
+      "x": 0.5,
+      "pose": "kneel",
+      "face": "sad"
+     },
+     {
+      "id": "youb",
+      "x": 0.72,
+      "face": "laugh",
+      "emote": "notes"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "That was you.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "warm",
+     "noTown": true,
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "scared",
+      "emote": "shock",
+      "tag": {
+       "text": "YOU",
+       "word": "you"
+      }
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "Your pay is three hundred silver denarii a year. Sounds good.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.45,
+       "pose": "cheer",
+       "face": "happy"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     },
+     "counter": {
+      "label": "PAY / YEAR",
+      "steps": [
+       {
+        "value": "300 denarii",
+        "word": "denarii"
+       }
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm",
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "smug"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "sounds"
+    }
+   ]
+  },
+  {
+   "say": "Until they take out money for your food. And your boots. And your tent. And a little set aside for your funeral.",
+   "shots": [
+    {
+     "type": "document",
+     "title": "PAY SLIP",
+     "rows": [
+      {
+       "label": "Pay",
+       "value": "300",
+       "word": "until"
+      },
+      {
+       "label": "Food",
+       "value": "− 80",
+       "word": "food"
+      },
+      {
+       "label": "Boots",
+       "value": "− 12",
+       "word": "boots"
+      },
+      {
+       "label": "Tent",
+       "value": "− 10",
+       "word": "tent"
+      },
+      {
+       "label": "Funeral fund",
+       "value": "− 4",
+       "word": "funeral"
+      }
+     ],
+     "who": "youb",
+     "stamp": "DEDUCTED"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm",
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "worried",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "funeral"
+    }
+   ]
+  },
+  {
+   "say": "The funeral one is the one that worries you.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "night"
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.5,
+      "pose": "think",
+      "face": "worried",
+      "emote": "question"
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      80,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "say": "But there are good days too.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm"
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.35,
+      "face": "happy"
+     },
+     {
+      "id": "hisp",
+      "x": 0.6,
+      "face": "happy",
+      "pose": "wave"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.06
+    }
+   }
+  },
+  {
+   "say": "The fort has a bathhouse. Hot rooms, cold pools, gossip and dice.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "teal",
+      "stone": true,
+      "window": "none",
+      "props": [
+       {
+        "kind": "pool",
+        "x": 0.5
+       },
+       {
+        "kind": "amphora",
+        "x": 0.08
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.3,
+       "face": "happy",
+       "topKind": "bare"
+      },
+      {
+       "id": "ox",
+       "x": 0.7,
+       "face": "laugh",
+       "topKind": "bare"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "place": "THE BATHHOUSE"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "teal",
+      "stone": true,
+      "window": "none",
+      "props": [
+       {
+        "kind": "pool",
+        "x": 0.5
+       },
+       {
+        "kind": "amphora",
+        "x": 0.08
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "hisp",
+       "x": 0.4,
+       "face": "smug",
+       "pose": "point",
+       "talk": true
+      },
+      {
+       "id": "youb",
+       "x": 0.66,
+       "face": "surprised"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     },
+     "at": "gossip"
+    }
+   ]
+  },
+  {
+   "say": "For one hour, you're not a soldier. You're just a young man from Gaul, losing at dice to a man from Spain.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "teal",
+      "stone": true,
+      "window": "none",
+      "props": [
+       {
+        "kind": "pool",
+        "x": 0.5
+       },
+       {
+        "kind": "amphora",
+        "x": 0.08
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.45,
+       "face": "happy",
+       "pose": "hips"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "teal",
+      "stone": true,
+      "window": "none",
+      "props": [
+       {
+        "kind": "pool",
+        "x": 0.5
+       },
+       {
+        "kind": "amphora",
+        "x": 0.08
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.35,
+       "face": "sad",
+       "emote": "tears",
+       "emoteWord": "losing"
+      },
+      {
+       "id": "hisp",
+       "x": 0.65,
+       "pose": "cheer",
+       "face": "laugh"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "counter": {
+      "label": "DICE",
+      "steps": [
+       {
+        "value": "0 : 1",
+        "word": "losing"
+       },
+       {
+        "value": "0 : 7",
+        "word": "spain"
+       }
+      ]
+     },
+     "at": "losing"
+    }
+   ]
+  },
+  {
+   "say": "Chapter three: The Edge of the World.",
+   "show": {
+    "type": "chapter",
+    "n": 3,
+    "title": "The Edge of the World",
+    "icon": "III"
+   }
+  },
+  {
+   "say": "In your first year, the emperor dies. A new one takes the throne.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "night"
+     },
+     "cast": [
+      {
+       "id": "emp2",
+       "x": 0.5,
+       "silhouette": true,
+       "pose": "slump"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "ember",
+      "light": [
+       0.5,
+       0.3
+      ]
+     },
+     "cast": [
+      {
+       "id": "emp",
+       "x": 0.5,
+       "pose": "hips",
+       "face": "smug",
+       "rim": "#FFD27A"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "at": "new"
+    }
+   ]
+  },
+  {
+   "say": "His name is Hadrian. And he doesn't want new land.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "ember"
+    },
+    "cast": [
+     {
+      "id": "emp",
+      "x": 0.45,
+      "pose": "cross",
+      "face": "smug",
+      "tag": {
+       "text": "HADRIAN",
+       "sub": "emperor",
+       "word": "hadrian"
+      }
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "He wants borders.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "ember",
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "emp",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "determined"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    },
+    "stamp": {
+     "text": "BORDERS",
+     "word": "borders",
+     "x": 0.75,
+     "y": 0.25
+    }
+   }
+  },
+  {
+   "say": "So your legion gets new orders. You're going to Britannia.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "cent",
+       "x": 0.4,
+       "pose": "point",
+       "face": "neutral",
+       "talk": true
+      },
+      {
+       "id": "youb",
+       "x": 0.66,
+       "face": "surprised",
+       "emote": "exclaim"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "map",
+     "title": "NEW ORDERS",
+     "places": [
+      {
+       "name": "GAUL",
+       "x": 0.64,
+       "y": 0.56,
+       "pin": true,
+       "word": "orders"
+      },
+      {
+       "name": "BRITANNIA",
+       "x": 0.42,
+       "y": 0.22,
+       "pin": true,
+       "big": true,
+       "word": "britannia"
+      }
+     ],
+     "routes": [
+      {
+       "points": [
+        [
+         0.64,
+         0.56
+        ],
+        [
+         0.55,
+         0.42
+        ],
+        [
+         0.42,
+         0.24
+        ]
+       ],
+       "word": "britannia",
+       "frames": 22
+      }
+     ],
+     "at": "going"
+    }
+   ]
+  },
+  {
+   "say": "For a boy from sunny Gaul, it's the edge of the known world.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "warm",
+      "props": [
+       {
+        "kind": "goat",
+        "x": 0.14,
+        "scale": 1.4
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.4,
+       "face": "happy"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "steel",
+      "fx": "rain"
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.45,
+       "face": "worried",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "at": "edge"
+    }
+   ]
+  },
+  {
+   "say": "You cross the sea, throw up over the side, and land in a country where it rains sideways.",
+   "shots": [
+    {
+     "type": "land3d",
+     "scene": "sea",
+     "palette": "cold",
+     "set": {
+      "mood": "steel"
+     },
+     "camera": {
+      "from": [
+       0,
+       8,
+       30
+      ],
+      "to": [
+       4,
+       7,
+       26
+      ]
+     },
+     "fog": "#8A96A0"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "steel",
+      "noTown": true,
+      "fx": "rain"
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.45,
+       "pose": "slump",
+       "face": "tired",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "throw"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "steel",
+      "fx": "rain"
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "face": "tired",
+       "flip": true
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "rains"
+    }
+   ]
+  },
+  {
+   "say": "Your new home is a fort in the cold north.",
+   "show": {
+    "type": "land3d",
+    "scene": "fort",
+    "palette": "cold",
+    "set": {
+     "mood": "snow"
+    },
+    "camera": {
+     "from": [
+      40,
+      30,
+      50
+     ],
+     "to": [
+      30,
+      26,
+      44
+     ]
+    },
+    "place": "NORTHERN BRITANNIA",
+    "fog": "#C9D6E2"
+   }
+  },
+  {
+   "say": "You write home asking for socks.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "sepia",
+      "stone": true,
+      "band": false,
+      "window": "none",
+      "props": [
+       {
+        "kind": "bunk",
+        "x": 0.16
+       },
+       {
+        "kind": "bunk",
+        "x": 0.86
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.45,
+       "pose": "work",
+       "face": "worried"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "document",
+     "title": "LETTER HOME",
+     "rows": [
+      {
+       "label": "To",
+       "value": "Mother",
+       "word": "home"
+      },
+      {
+       "label": "Please send",
+       "value": "Socks",
+       "word": "socks"
+      }
+     ],
+     "who": "youb",
+     "stamp": "BRITANNIA",
+     "at": "socks"
+    }
+   ]
+  },
+  {
+   "say": "You're not the first. A letter found at a fort in this very region mentions a parcel of socks, sandals and two pairs of underpants.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "snow",
+      "fx": "snow"
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.4,
+       "face": "surprised"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     }
+    },
+    {
+     "type": "document",
+     "title": "A REAL LETTER, FOUND",
+     "rows": [
+      {
+       "label": "Found at",
+       "value": "A fort in the north",
+       "word": "found"
+      },
+      {
+       "label": "Sent",
+       "value": "Socks, sandals",
+       "word": "socks"
+      },
+      {
+       "label": "Also",
+       "value": "2 pairs of underpants",
+       "word": "underpants"
+      }
+     ],
+     "stamp": "ORIGINAL",
+     "at": "letter"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "snow",
+      "fx": "snow",
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "laugh"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "underpants"
+    }
+   ]
+  },
+  {
+   "say": "The frontier is cold.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "snow",
+     "fx": "snow"
+    },
+    "cast": [
+     {
+      "id": "you",
+      "x": 0.45,
+      "pose": "cross",
+      "face": "tired",
+      "emote": "sweat"
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      -60,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "say": "But life goes on, even at the edge of the world.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm"
+    },
+    "cast": [
+     {
+      "id": "lady",
+      "x": 0.35,
+      "face": "happy",
+      "pose": "wave"
+     },
+     {
+      "id": "youb",
+      "x": 0.65,
+      "face": "happy"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.08,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "say": "Officers' wives throw parties. A few years before you arrived, one of them sent a letter inviting a friend to her birthday.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "lady",
+       "x": 0.3,
+       "face": "laugh",
+       "pose": "cheer"
+      },
+      {
+       "id": "brica",
+       "x": 0.55,
+       "face": "happy",
+       "scale": 0.95
+      },
+      {
+       "id": "lady",
+       "x": 0.78,
+       "face": "happy",
+       "flip": true
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "lady",
+       "x": 0.45,
+       "pose": "work",
+       "face": "happy"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "caption": "A FEW YEARS EARLIER",
+     "at": "letter"
+    },
+    {
+     "type": "document",
+     "title": "BIRTHDAY INVITATION",
+     "rows": [
+      {
+       "label": "From",
+       "value": "An officer's wife",
+       "word": "inviting"
+      },
+      {
+       "label": "Party",
+       "value": "Her birthday",
+       "word": "birthday"
+      }
+     ],
+     "stamp": "COME!",
+     "at": "birthday"
+    }
+   ]
+  },
+  {
+   "say": "Two thousand years later, that letter is one of the oldest pieces of writing by a woman in Latin ever found.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "lady",
+       "x": 0.5,
+       "face": "smug",
+       "pose": "hips"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "counter": {
+      "label": "YEARS LATER",
+      "steps": [
+       {
+        "value": "2,000",
+        "word": "thousand"
+       }
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "teal"
+     },
+     "cast": [
+      {
+       "id": "lady",
+       "x": 0.5,
+       "face": "happy",
+       "rim": "#FFE9A8"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     },
+     "stamp": {
+      "text": "FOUND",
+      "word": "found",
+      "x": 0.72,
+      "y": 0.3
+     },
+     "at": "oldest"
+    }
+   ]
+  },
+  {
+   "say": "You never get an invitation.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "snow",
+     "fx": "snow",
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "sad",
+      "emote": "tears"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "So here's a question before we keep going.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "dusk"
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.5,
+      "pose": "think",
+      "face": "neutral",
+      "emote": "question"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.08,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "say": "Which life should we live next? A gladiator, a Viking, or a pharaoh's tomb builder? Tell me in the comments.",
+   "show": {
+    "type": "poll",
+    "question": "Which life should we live next?",
+    "names": [
+     "Gladiator",
+     "Viking",
+     "Pharaoh's tomb builder"
+    ]
+   }
+  },
+  {
+   "say": "Chapter four: The Wall.",
+   "show": {
+    "type": "chapter",
+    "n": 4,
+    "title": "The Wall",
+    "icon": "IV"
+   }
+  },
+  {
+   "say": "You're twenty-three when the emperor himself arrives in Britannia.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm"
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.3,
+      "face": "surprised",
+      "tag": {
+       "text": "YOU",
+       "sub": "age 23",
+       "word": "twenty-three"
+      }
+     },
+     {
+      "id": "emp",
+      "x": 0.62,
+      "pose": "wave",
+      "face": "smug",
+      "walkTo": 0.55
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      80,
+      0
+     ]
+    },
+    "place": "BRITANNIA · AD 122"
+   }
+  },
+  {
+   "say": "He looks at the hills. He looks at the tribes beyond them.",
+   "shots": [
+    {
+     "type": "land3d",
+     "scene": "wall",
+     "palette": "cold",
+     "set": {
+      "mood": "steel"
+     },
+     "camera": {
+      "from": [
+       60,
+       40,
+       90
+      ],
+      "to": [
+       40,
+       34,
+       80
+      ]
+     },
+     "fog": "#C9D6E2"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "steel"
+     },
+     "cast": [
+      {
+       "id": "raider",
+       "x": 0.3,
+       "silhouette": true
+      },
+      {
+       "id": "raider",
+       "x": 0.5,
+       "silhouette": true,
+       "scale": 0.9
+      },
+      {
+       "id": "raider",
+       "x": 0.7,
+       "silhouette": true,
+       "scale": 0.85
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "tribes"
+    }
+   ]
+  },
+  {
+   "say": "And he says: build a wall.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "ember",
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "emp",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "determined",
+      "talk": true
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    },
+    "stamp": {
+     "text": "BUILD A WALL",
+     "word": "wall",
+     "x": 0.5,
+     "y": 0.22
+    }
+   }
+  },
+  {
+   "say": "Not a fence. A wall. Eighty Roman miles long, from one sea to the other.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "emp",
+       "x": 0.3,
+       "pose": "point",
+       "face": "neutral",
+       "talk": true
+      },
+      {
+       "id": "cent",
+       "x": 0.62,
+       "face": "surprised",
+       "emote": "shock"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "map",
+     "title": "THE WALL",
+     "places": [
+      {
+       "name": "WEST SEA",
+       "x": 0.18,
+       "y": 0.42,
+       "word": "one"
+      },
+      {
+       "name": "EAST SEA",
+       "x": 0.82,
+       "y": 0.38,
+       "word": "other"
+      }
+     ],
+     "routes": [
+      {
+       "points": [
+        [
+         0.2,
+         0.42
+        ],
+        [
+         0.4,
+         0.36
+        ],
+        [
+         0.6,
+         0.4
+        ],
+        [
+         0.8,
+         0.38
+        ]
+       ],
+       "word": "miles",
+       "frames": 30
+      }
+     ],
+     "stamp": "80 MILES",
+     "at": "eighty"
+    }
+   ]
+  },
+  {
+   "say": "And guess who's building it?",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "warm",
+     "noTown": true
+    },
+    "cast": [
+     {
+      "id": "emp",
+      "x": 0.4,
+      "pose": "point",
+      "face": "smug"
+     },
+     {
+      "id": "youb",
+      "x": 0.7,
+      "face": "worried",
+      "emote": "question"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "Not slaves. Not workers. Soldiers. You.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "trader",
+       "x": 0.5,
+       "silhouette": true
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     },
+     "stamp": {
+      "text": "✗",
+      "word": "slaves",
+      "x": 0.5,
+      "y": 0.4
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.5,
+       "pose": "slump",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "at": "soldiers"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true,
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "surprised",
+       "emote": "shock"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "you"
+    }
+   ]
+  },
+  {
+   "say": "You quarry stone. You cut turf. You haul it up hills in the wind and rain.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.4,
+       "pose": "work",
+       "face": "tired"
+      },
+      {
+       "id": "ox",
+       "x": 0.66,
+       "pose": "work",
+       "face": "determined"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.45,
+       "pose": "work",
+       "face": "tired",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "at": "turf"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "steel",
+      "noTown": true,
+      "fx": "rain"
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.3,
+       "pose": "carry",
+       "face": "tired",
+       "walkTo": 0.6
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -100,
+       0
+      ]
+     },
+     "at": "haul"
+    }
+   ]
+  },
+  {
+   "say": "Every mile, a small fort. Between them, towers.",
+   "shots": [
+    {
+     "type": "land3d",
+     "scene": "wall",
+     "palette": "day",
+     "set": {
+      "mood": "warm"
+     },
+     "camera": {
+      "from": [
+       100,
+       46,
+       60
+      ],
+      "to": [
+       60,
+       36,
+       50
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.3,
+       "face": "determined",
+       "scale": 0.8
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -120,
+       0
+      ]
+     },
+     "at": "towers"
+    }
+   ]
+  },
+  {
+   "say": "Your century carves its name into a stone, so Rome will know who built this stretch.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.4,
+       "pose": "work",
+       "face": "determined",
+       "tool": "gladius"
+      },
+      {
+       "id": "ox",
+       "x": 0.65,
+       "face": "happy",
+       "pose": "point"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm",
+      "blur": 6,
+      "props": [
+       {
+        "kind": "stone",
+        "x": 0.62,
+        "scale": 2.2
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.3,
+       "face": "smug"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.6,
+       0.6
+      ]
+     },
+     "callouts": [
+      {
+       "text": "CENTURY OF YOUR CENTURION · BUILT THIS",
+       "from": [
+        0.6,
+        0.25
+       ],
+       "to": [
+        0.62,
+        0.7
+       ],
+       "word": "stone"
+      }
+     ],
+     "at": "stone"
+    }
+   ]
+  },
+  {
+   "say": "It takes about six years.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "rampart",
+     "mood": "steel"
+    },
+    "cast": [
+     {
+      "id": "youd",
+      "x": 0.45,
+      "face": "tired"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.08,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    },
+    "counter": {
+     "label": "YEARS",
+     "steps": [
+      {
+       "value": "1",
+       "word": "takes"
+      },
+      {
+       "value": "6",
+       "word": "six"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "say": "By the end, your hands look like your grandfather's.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "steel",
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "youd",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "sad"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     }
+    },
+    {
+     "type": "before_after",
+     "left": {
+      "who": "gramps",
+      "face": "smug",
+      "label": "GRANDPA"
+     },
+     "right": {
+      "who": "youd",
+      "face": "tired",
+      "label": "YOU, 29"
+     },
+     "at": "grandfather's"
+    }
+   ]
+  },
+  {
+   "say": "Then the wall is finished, and you guard it.",
+   "shots": [
+    {
+     "type": "land3d",
+     "scene": "wall",
+     "palette": "dusk",
+     "set": {
+      "mood": "dusk"
+     },
+     "camera": {
+      "from": [
+       40,
+       30,
+       70
+      ],
+      "to": [
+       10,
+       24,
+       56
+      ]
+     },
+     "fog": "#E8C4A0"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "steel"
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "face": "determined"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     },
+     "at": "guard"
+    }
+   ]
+  },
+  {
+   "say": "You check traders. You count cattle. You watch the mist.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.3,
+       "pose": "point",
+       "face": "neutral"
+      },
+      {
+       "id": "trader",
+       "x": 0.62,
+       "face": "worried"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "warm",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "pose": "think",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "counter": {
+      "label": "CATTLE",
+      "steps": [
+       {
+        "value": "1",
+        "word": "count"
+       },
+       {
+        "value": "47",
+        "word": "cattle"
+       }
+      ]
+     },
+     "at": "cattle"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "steel"
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "face": "neutral"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     },
+     "at": "mist"
+    }
+   ]
+  },
+  {
+   "say": "Most days, nothing happens.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "rampart",
+     "mood": "steel"
+    },
+    "cast": [
+     {
+      "id": "you",
+      "x": 0.45,
+      "face": "tired",
+      "emote": "zzz"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "Some nights, something does.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "rampart",
+     "mood": "night",
+     "night": true
+    },
+    "cast": [
+     {
+      "id": "you",
+      "x": 0.45,
+      "face": "worried",
+      "look": [
+       1,
+       0
+      ],
+      "emote": "exclaim"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.08,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "say": "A raid in the dark. Arrows over the parapet. Shouting in a language you never learned.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "night",
+      "night": true
+     },
+     "cast": [
+      {
+       "id": "raider",
+       "x": 0.3,
+       "silhouette": true,
+       "pose": "point"
+      },
+      {
+       "id": "raider",
+       "x": 0.55,
+       "silhouette": true,
+       "pose": "cheer"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "night",
+      "night": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "pose": "cross",
+       "face": "scared",
+       "emote": "shock"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "arrows"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "night"
+     },
+     "cast": [
+      {
+       "id": "raider",
+       "x": 0.5,
+       "silhouette": true,
+       "pose": "point",
+       "talk": true
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "shouting"
+    }
+   ]
+  },
+  {
+   "say": "Your shield takes a hit. Then another.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "night",
+      "night": true,
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "angry",
+       "emote": "vein"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "night",
+      "night": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "pose": "kneel",
+       "face": "scared"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "another"
+    }
+   ]
+  },
+  {
+   "say": "And when the sun comes up, one bunk in your barrack room is empty.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "steel"
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "face": "tired",
+       "pose": "slump"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "sepia",
+      "stone": true,
+      "band": false,
+      "window": "none",
+      "props": [
+       {
+        "kind": "bunk",
+        "x": 0.5,
+        "scale": 1.3
+       }
+      ]
+     },
+     "cast": [],
+     "cam": {
+      "move": "push",
+      "amount": 0.1,
+      "focus": [
+       0.5,
+       0.6
+      ]
+     },
+     "at": "bunk"
+    }
+   ]
+  },
+  {
+   "say": "The snoring one.",
+   "show": {
+    "type": "polaroids",
+    "photos": [
+     {
+      "who": "youb",
+      "face": "neutral",
+      "caption": "you",
+      "x": 0.2,
+      "y": 0.35
+     },
+     {
+      "who": "ox",
+      "face": "happy",
+      "caption": "the snorer",
+      "x": 0.42,
+      "y": 0.6,
+      "cross": true,
+      "crossWord": "snoring"
+     },
+     {
+      "who": "hisp",
+      "face": "smug",
+      "caption": "Spain",
+      "x": 0.62,
+      "y": 0.35
+     },
+     {
+      "who": "recruit",
+      "face": "happy",
+      "caption": "the new one",
+      "x": 0.82,
+      "y": 0.6
+     }
+    ],
+    "string": true
+   },
+   "hold": 1.0
+  },
+  {
+   "say": "The legion pays for his stone. You carve his name yourself.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "sepia",
+      "stone": true,
+      "band": false,
+      "window": "none",
+      "props": [
+       {
+        "kind": "stone",
+        "x": 0.6,
+        "scale": 1.8
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.35,
+       "pose": "kneel",
+       "face": "sad"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "sepia",
+      "stone": true,
+      "band": false,
+      "window": "none",
+      "props": [
+       {
+        "kind": "bunk",
+        "x": 0.16
+       },
+       {
+        "kind": "bunk",
+        "x": 0.86
+       }
+      ],
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "sad",
+       "tool": "gladius",
+       "emote": "tears"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "carve"
+    }
+   ]
+  },
+  {
+   "say": "That night, nobody snores.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "night",
+     "stone": true,
+     "band": false,
+     "window": "night",
+     "windowX": 0.5,
+     "props": [
+      {
+       "kind": "bunk",
+       "x": 0.16
+      },
+      {
+       "kind": "bunk",
+       "x": 0.86
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.35,
+      "pose": "slump",
+      "face": "sad"
+     },
+     {
+      "id": "hisp",
+      "x": 0.7,
+      "pose": "slump",
+      "face": "sad"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "It's the quietest the room has ever been.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "night",
+     "stone": true,
+     "band": false,
+     "window": "night",
+     "windowX": 0.5,
+     "props": [
+      {
+       "kind": "bunk",
+       "x": 0.16
+      },
+      {
+       "kind": "bunk",
+       "x": 0.86
+      }
+     ]
+    },
+    "cast": [],
+    "cam": {
+     "move": "push",
+     "amount": 0.06,
+     "focus": [
+      0.5,
+      0.5
+     ]
+    }
+   }
+  },
+  {
+   "say": "You hate it.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "night",
+     "stone": true,
+     "band": false,
+     "window": "night",
+     "windowX": 0.5,
+     "props": [
+      {
+       "kind": "bunk",
+       "x": 0.16
+      },
+      {
+       "kind": "bunk",
+       "x": 0.86
+      }
+     ],
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "sad",
+      "emote": "tears"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "Chapter five: The Family You're Not Allowed to Have.",
+   "show": {
+    "type": "chapter",
+    "n": 5,
+    "title": "The Family You're Not Allowed to Have",
+    "icon": "V"
+   }
+  },
+  {
+   "say": "Here's the strange part.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm"
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.45,
+      "face": "neutral",
+      "pose": "think",
+      "emote": "question"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.08,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "say": "As a legionary, you're not allowed to marry.",
+   "show": {
+    "type": "document",
+    "title": "ARMY RULES",
+    "rows": [
+     {
+      "label": "Legionaries",
+      "value": "May not marry",
+      "word": "marry"
+     }
+    ],
+    "stamp": "FORBIDDEN"
+   }
+  },
+  {
+   "say": "But you do meet someone. Her name is Brica. She sells bread outside the fort.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.3,
+       "face": "surprised",
+       "emote": "heart",
+       "emoteWord": "someone"
+      },
+      {
+       "id": "brica",
+       "x": 0.62,
+       "face": "happy",
+       "flip": true
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "sepia",
+      "villaX": 0.82,
+      "props": [
+       {
+        "kind": "cart",
+        "x": 0.18
+       },
+       {
+        "kind": "amphora",
+        "x": 0.4
+       },
+       {
+        "kind": "crate",
+        "x": 0.46
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "brica",
+       "x": 0.5,
+       "face": "happy",
+       "pose": "wave",
+       "tag": {
+        "text": "BRICA",
+        "sub": "sells bread",
+        "word": "brica"
+       }
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "brica"
+    }
+   ]
+  },
+  {
+   "say": "You build a life in the little town outside the gate, unofficially.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.35,
+       "face": "happy",
+       "pose": "carry"
+      },
+      {
+       "id": "brica",
+       "x": 0.62,
+       "face": "happy"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.4,
+       "face": "smug"
+      },
+      {
+       "id": "brica",
+       "x": 0.6,
+       "face": "smug"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     },
+     "stamp": {
+      "text": "UNOFFICIAL",
+      "word": "unofficially",
+      "x": 0.75,
+      "y": 0.25
+     },
+     "at": "unofficially"
+    }
+   ]
+  },
+  {
+   "say": "Two kids. A small house. A dog that hates the centurion.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "girl",
+       "x": 0.35,
+       "age": "chibi",
+       "face": "happy"
+      },
+      {
+       "id": "son",
+       "x": 0.6,
+       "age": "chibi",
+       "face": "laugh"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "cent",
+       "x": 0.6,
+       "face": "scared",
+       "emote": "sweat",
+       "pose": "cross"
+      }
+     ],
+     "cam": {
+      "move": "shake"
+     },
+     "at": "dog"
+    }
+   ]
+  },
+  {
+   "say": "Rome pretends not to see.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm"
+    },
+    "cast": [
+     {
+      "id": "cent",
+      "x": 0.5,
+      "pose": "cross",
+      "face": "smug",
+      "look": [
+       -1,
+       0
+      ]
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      80,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "say": "Your daughter learns to walk on the road outside the fort.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "road",
+     "mood": "warm",
+     "paved": true
+    },
+    "cast": [
+     {
+      "id": "girl",
+      "x": 0.3,
+      "age": "chibi",
+      "walkTo": 0.5,
+      "pose": "walk",
+      "face": "happy"
+     },
+     {
+      "id": "youb",
+      "x": 0.7,
+      "pose": "kneel",
+      "face": "happy"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.06
+    }
+   }
+  },
+  {
+   "say": "Your son learns to march by copying you, with a wooden sword and a cooking pot for a helmet.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "warm",
+      "paved": true
+     },
+     "cast": [
+      {
+       "id": "youb",
+       "x": 0.35,
+       "pose": "walk",
+       "face": "determined"
+      },
+      {
+       "id": "son",
+       "x": 0.65,
+       "age": "chibi",
+       "pose": "walk",
+       "face": "determined"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "warm",
+      "paved": true,
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "son",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "smug",
+       "tool": "gladius",
+       "age": "chibi"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "callouts": [
+      {
+       "text": "COOKING POT HELMET",
+       "from": [
+        0.78,
+        0.2
+       ],
+       "to": [
+        0.55,
+        0.35
+       ],
+       "word": "pot"
+      }
+     ],
+     "at": "wooden"
+    }
+   ]
+  },
+  {
+   "say": "Brica says he has your walk.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "warm",
+     "stone": true,
+     "band": false,
+     "window": "day",
+     "windowX": 0.7,
+     "props": [
+      {
+       "kind": "amphora",
+       "x": 0.1
+      },
+      {
+       "kind": "table",
+       "x": 0.82
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "brica",
+      "x": 0.4,
+      "pose": "point",
+      "face": "happy",
+      "talk": true
+     },
+     {
+      "id": "youb",
+      "x": 0.66,
+      "face": "smug"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "You tell her that's the limp.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "warm",
+     "stone": true,
+     "band": false,
+     "window": "day",
+     "windowX": 0.7,
+     "props": [
+      {
+       "kind": "amphora",
+       "x": 0.1
+      },
+      {
+       "kind": "table",
+       "x": 0.82
+      }
+     ],
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "youb",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "tired",
+      "emote": "sweat"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "Remember that blanket? Your mother sent it with you when you left.",
+   "shots": [
+    {
+     "type": "corkboard",
+     "title": "THINGS TO REMEMBER",
+     "notes": [
+      {
+       "text": "THE BLANKET",
+       "icon": "🧺",
+       "word": "blanket"
+      },
+      {
+       "text": "FROM MUM",
+       "icon": "✉",
+       "word": "mother"
+      }
+     ]
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "farm",
+      "mood": "warm",
+      "props": [
+       {
+        "kind": "goat",
+        "x": 0.14,
+        "scale": 1.4
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "mum",
+       "x": 0.35,
+       "pose": "wave",
+       "face": "sad",
+       "emote": "tears"
+      },
+      {
+       "id": "recruit",
+       "x": 0.65,
+       "face": "sad",
+       "pose": "carry"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     },
+     "caption": "YEARS AGO",
+     "at": "sent"
+    }
+   ]
+  },
+  {
+   "say": "Now your daughter sleeps under it.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "ember",
+     "stone": true,
+     "band": false,
+     "window": "night",
+     "windowX": 0.75,
+     "props": [
+      {
+       "kind": "basket",
+       "x": 0.45
+      },
+      {
+       "kind": "fire",
+       "x": 0.85
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "girl",
+      "x": 0.45,
+      "age": "chibi",
+      "y": 0.8,
+      "face": "asleep",
+      "emote": "zzz"
+     },
+     {
+      "id": "youb",
+      "x": 0.75,
+      "face": "happy",
+      "emote": "heart"
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      80,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "say": "Years pass.",
+   "show": {
+    "type": "chapter",
+    "n": 0,
+    "title": "Years pass",
+    "icon": "⌛",
+    "kicker": "AD 122 → 138"
+   }
+  },
+  {
+   "say": "You're promoted. Better pay, fewer latrine duties.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "warm"
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "pose": "cheer",
+       "face": "happy"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "stamp": {
+      "text": "PROMOTED",
+      "word": "promoted",
+      "x": 0.72,
+      "y": 0.28
+     }
+    },
+    {
+     "type": "todo",
+     "kicker": "NEW RANK",
+     "title": "PERKS",
+     "items": [
+      {
+       "text": "Better pay",
+       "icon": "＋",
+       "word": "pay"
+      },
+      {
+       "text": "Latrine duty",
+       "icon": "−",
+       "word": "latrine",
+       "strikeWord": "duties"
+      }
+     ],
+     "at": "better"
+    }
+   ]
+  },
+  {
+   "say": "Your knees start to sound like your grandfather's knees.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm"
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.45,
+      "pose": "kneel",
+      "face": "tired",
+      "emote": "sweat"
+     }
+    ],
+    "cam": {
+     "move": "shake"
+    }
+   }
+  },
+  {
+   "say": "And one morning, you count the years on your fingers, and you run out of fingers.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "sepia",
+      "stone": true,
+      "band": false,
+      "window": "none",
+      "props": [
+       {
+        "kind": "bunk",
+        "x": 0.16
+       },
+       {
+        "kind": "bunk",
+        "x": 0.86
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.45,
+       "pose": "think",
+       "face": "neutral"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "sepia",
+      "stone": true,
+      "band": false,
+      "window": "none",
+      "props": [
+       {
+        "kind": "bunk",
+        "x": 0.16
+       },
+       {
+        "kind": "bunk",
+        "x": 0.86
+       }
+      ],
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "surprised",
+       "emote": "shock"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "at": "run"
+    }
+   ]
+  },
+  {
+   "say": "Twenty-one years.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "dusk"
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.5,
+      "face": "tired"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    },
+    "counter": {
+     "label": "YEARS SERVED",
+     "steps": [
+      {
+       "value": "21",
+       "word": "years"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "say": "Four more.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "dusk",
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "tired"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    },
+    "counter": {
+     "label": "YEARS LEFT",
+     "steps": [
+      {
+       "value": "4",
+       "word": "four"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "say": "Chapter six: The Last Order.",
+   "show": {
+    "type": "chapter",
+    "n": 6,
+    "title": "The Last Order",
+    "icon": "VI"
+   }
+  },
+  {
+   "say": "That same year, the emperor dies. Hadrian is gone.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "glow",
+      "mood": "night"
+     },
+     "cast": [
+      {
+       "id": "emp",
+       "x": 0.5,
+       "pose": "slump",
+       "face": "asleep",
+       "silhouette": true
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "polaroids",
+     "photos": [
+      {
+       "who": "emp",
+       "face": "smug",
+       "caption": "Hadrian, AD 117-138",
+       "x": 0.5,
+       "y": 0.45,
+       "cross": true,
+       "crossWord": "gone"
+      }
+     ],
+     "at": "hadrian"
+    }
+   ]
+  },
+  {
+   "say": "The new emperor wants to show Rome he's strong.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "ember"
+    },
+    "cast": [
+     {
+      "id": "emp2",
+      "x": 0.5,
+      "pose": "cheer",
+      "face": "determined",
+      "rim": "#FFD27A",
+      "tag": {
+       "text": "NEW EMPEROR",
+       "word": "new"
+      }
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      80,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "say": "So he looks at your wall, the wall you spent your youth building,",
+   "shots": [
+    {
+     "type": "land3d",
+     "scene": "wall",
+     "palette": "day",
+     "set": {
+      "mood": "warm"
+     },
+     "camera": {
+      "from": [
+       70,
+       40,
+       90
+      ],
+      "to": [
+       30,
+       30,
+       64
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "steel"
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.45,
+       "face": "sad"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "youth"
+    }
+   ]
+  },
+  {
+   "say": "and he decides it's in the wrong place.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "glow",
+     "mood": "ember",
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "emp2",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "smug"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    },
+    "stamp": {
+     "text": "WRONG PLACE",
+     "word": "wrong",
+     "x": 0.72,
+     "y": 0.28
+    }
+   }
+  },
+  {
+   "say": "Three years later, the new orders arrive. March a hundred miles north.",
+   "shots": [
+    {
+     "type": "document",
+     "title": "NEW ORDERS · AD 141",
+     "rows": [
+      {
+       "label": "From",
+       "value": "The new emperor",
+       "word": "orders"
+      },
+      {
+       "label": "March",
+       "value": "100 miles north",
+       "word": "north"
+      }
+     ],
+     "stamp": "URGENT"
+    },
+    {
+     "type": "map",
+     "title": "MARCH NORTH",
+     "places": [
+      {
+       "name": "OLD WALL",
+       "x": 0.5,
+       "y": 0.7,
+       "pin": true,
+       "word": "march"
+      },
+      {
+       "name": "NEW WALL",
+       "x": 0.5,
+       "y": 0.22,
+       "pin": true,
+       "big": true,
+       "word": "north"
+      }
+     ],
+     "routes": [
+      {
+       "points": [
+        [
+         0.5,
+         0.7
+        ],
+        [
+         0.46,
+         0.45
+        ],
+        [
+         0.5,
+         0.24
+        ]
+       ],
+       "word": "hundred",
+       "frames": 22,
+       "dashed": true
+      }
+     ],
+     "at": "march"
+    }
+   ]
+  },
+  {
+   "say": "And build another wall.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "sepia",
+     "stone": true,
+     "band": false,
+     "window": "none",
+     "props": [
+      {
+       "kind": "bunk",
+       "x": 0.16
+      },
+      {
+       "kind": "bunk",
+       "x": 0.86
+      }
+     ],
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "surprised",
+      "emote": "shock"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "You laugh so hard that the centurion almost lets it go.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "sepia",
+     "stone": true,
+     "band": false,
+     "window": "none",
+     "props": [
+      {
+       "kind": "bunk",
+       "x": 0.16
+      },
+      {
+       "kind": "bunk",
+       "x": 0.86
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.35,
+      "pose": "cheer",
+      "face": "laugh",
+      "emote": "tears"
+     },
+     {
+      "id": "cent",
+      "x": 0.68,
+      "face": "smug",
+      "pose": "cross"
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      -90,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "say": "Almost.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "sepia",
+     "stone": true,
+     "band": false,
+     "window": "none",
+     "props": [
+      {
+       "kind": "bunk",
+       "x": 0.16
+      },
+      {
+       "kind": "bunk",
+       "x": 0.86
+      }
+     ],
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "cent",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "angry",
+      "emote": "vein"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "So you pack the shovel again.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "room",
+     "mood": "sepia",
+     "stone": true,
+     "band": false,
+     "window": "none",
+     "props": [
+      {
+       "kind": "bunk",
+       "x": 0.16
+      },
+      {
+       "kind": "bunk",
+       "x": 0.86
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.45,
+      "pose": "carry",
+      "face": "tired"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    }
+   }
+  },
+  {
+   "say": "You march north through hills you've never seen, with men who were babies when you enlisted.",
+   "shots": [
+    {
+     "type": "land3d",
+     "scene": "road",
+     "palette": "cold",
+     "set": {
+      "mood": "steel"
+     },
+     "camera": {
+      "from": [
+       40,
+       20,
+       50
+      ],
+      "to": [
+       14,
+       14,
+       36
+      ]
+     },
+     "fog": "#C9D6E2"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "steel",
+      "paved": true
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.25,
+       "pose": "walk",
+       "face": "tired"
+      },
+      {
+       "id": "you",
+       "x": 0.5,
+       "pose": "walk",
+       "face": "happy"
+      },
+      {
+       "id": "you",
+       "x": 0.72,
+       "pose": "walk",
+       "face": "happy"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -100,
+       0
+      ]
+     },
+     "at": "babies"
+    }
+   ]
+  },
+  {
+   "say": "They call you grandfather.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "road",
+     "mood": "steel",
+     "paved": true
+    },
+    "cast": [
+     {
+      "id": "you",
+      "x": 0.3,
+      "face": "laugh",
+      "pose": "point"
+     },
+     {
+      "id": "vet",
+      "x": 0.65,
+      "face": "angry",
+      "emote": "vein"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.08,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "say": "You're forty-two, and it's your last year.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "road",
+     "mood": "steel",
+     "paved": true,
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "tired",
+      "tag": {
+       "text": "YOU",
+       "sub": "age 42",
+       "word": "forty-two"
+      }
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "You dig the ditch. You stack the turf. Your back sends you a formal complaint.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "steel",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.4,
+       "pose": "work",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       80,
+       0
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "steel",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.45,
+       "pose": "carry",
+       "face": "tired",
+       "emote": "sweat"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "stack"
+    },
+    {
+     "type": "document",
+     "title": "FORMAL COMPLAINT",
+     "rows": [
+      {
+       "label": "From",
+       "value": "Your back",
+       "word": "back"
+      },
+      {
+       "label": "Subject",
+       "value": "Turf",
+       "word": "complaint"
+      }
+     ],
+     "stamp": "IGNORED",
+     "at": "back"
+    }
+   ]
+  },
+  {
+   "say": "And for the second time in your life, you help build a wall across Britannia.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "steel",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "vet",
+       "x": 0.3,
+       "pose": "work",
+       "face": "determined"
+      },
+      {
+       "id": "you",
+       "x": 0.55,
+       "pose": "work",
+       "face": "tired"
+      },
+      {
+       "id": "you",
+       "x": 0.78,
+       "pose": "carry",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     }
+    },
+    {
+     "type": "land3d",
+     "scene": "wall",
+     "palette": "cold",
+     "set": {
+      "mood": "steel"
+     },
+     "camera": {
+      "from": [
+       80,
+       36,
+       80
+      ],
+      "to": [
+       40,
+       28,
+       60
+      ]
+     },
+     "fog": "#C9D6E2",
+     "at": "across"
+    }
+   ]
+  },
+  {
+   "say": "This one is made of earth instead of stone.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "steel",
+     "noTown": true
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.45,
+      "pose": "shrug",
+      "face": "tired"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.05
+    },
+    "stamp": {
+     "text": "TURF",
+     "word": "earth",
+     "x": 0.72,
+     "y": 0.3
+    }
+   }
+  },
+  {
+   "say": "Rome will abandon it within twenty years.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "steel",
+     "noTown": true,
+     "fx": "rain"
+    },
+    "cast": [],
+    "cam": {
+     "move": "pull",
+     "amount": 0.08
+    },
+    "counter": {
+     "label": "YEARS IT LASTS",
+     "steps": [
+      {
+       "value": "20",
+       "word": "twenty"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "say": "Of course it will.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "sky",
+     "mood": "steel",
+     "noTown": true,
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "tired",
+      "emote": "sweat"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "Chapter seven: Honesta Missio.",
+   "show": {
+    "type": "chapter",
+    "n": 7,
+    "title": "Honesta Missio",
+    "icon": "VII"
+   }
+  },
+  {
+   "say": "And then, finally, it's over.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm"
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.45,
+      "face": "tired",
+      "pose": "slump"
+     }
+    ],
+    "cam": {
+     "move": "pull",
+     "amount": 0.06
+    }
+   }
+  },
+  {
+   "say": "You stand in front of the standards one last time.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm",
+     "props": [
+      {
+       "kind": "standard",
+       "x": 0.3
+      },
+      {
+       "kind": "standard",
+       "x": 0.7
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "vet",
+      "x": 0.5,
+      "face": "determined"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.08,
+     "focus": [
+      0.5,
+      0.42
+     ]
+    }
+   }
+  },
+  {
+   "say": "They give you your honourable discharge, the honesta missio,",
+   "show": {
+    "type": "document",
+    "title": "HONESTA MISSIO",
+    "rows": [
+     {
+      "label": "Service",
+      "value": "25 years",
+      "word": "honourable"
+     },
+     {
+      "label": "Discharge",
+      "value": "Honourable",
+      "word": "discharge"
+     }
+    ],
+    "who": "vet",
+    "stamp": "DISCHARGED"
+   }
+  },
+  {
+   "say": "and a retirement payment worth ten years of wages.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "fort",
+     "mood": "warm"
+    },
+    "cast": [
+     {
+      "id": "old",
+      "x": 0.45,
+      "pose": "cheer",
+      "face": "happy"
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      80,
+      0
+     ]
+    },
+    "counter": {
+     "label": "RETIREMENT",
+     "steps": [
+      {
+       "value": "10 years' pay",
+       "word": "ten"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "say": "And now, finally, you can marry Brica properly.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "old",
+       "x": 0.38,
+       "face": "happy",
+       "emote": "heart"
+      },
+      {
+       "id": "brica",
+       "x": 0.62,
+       "face": "laugh"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "warm",
+      "stone": true,
+      "band": false,
+      "window": "day",
+      "windowX": 0.7,
+      "props": [
+       {
+        "kind": "amphora",
+        "x": 0.1
+       },
+       {
+        "kind": "table",
+        "x": 0.82
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "old",
+       "x": 0.32,
+       "face": "happy"
+      },
+      {
+       "id": "brica",
+       "x": 0.5,
+       "face": "happy"
+      },
+      {
+       "id": "girl",
+       "x": 0.68,
+       "face": "happy",
+       "scale": 0.9
+      },
+      {
+       "id": "son",
+       "x": 0.84,
+       "face": "laugh",
+       "scale": 0.95,
+       "topKind": "legion"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -90,
+       0
+      ]
+     },
+     "at": "properly"
+    }
+   ]
+  },
+  {
+   "say": "You were eighteen when you swore the oath.",
+   "show": {
+    "type": "before_after",
+    "left": {
+     "who": "recruit",
+     "face": "determined",
+     "label": "AGE 18"
+    },
+    "right": {
+     "who": "old",
+     "face": "tired",
+     "label": "AGE 43"
+    }
+   }
+  },
+  {
+   "say": "You're forty-three now. Grey at the temples. A limp. A bag of silver. A Roman name.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "old",
+       "x": 0.45,
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true,
+      "blur": 7
+     },
+     "cast": [
+      {
+       "id": "old",
+       "x": 0.5,
+       "y": 1.5,
+       "scale": 1.75,
+       "face": "neutral"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.07,
+      "focus": [
+       0.5,
+       0.35
+      ]
+     },
+     "callouts": [
+      {
+       "text": "GREY",
+       "from": [
+        0.75,
+        0.2
+       ],
+       "to": [
+        0.58,
+        0.3
+       ],
+       "word": "grey"
+      }
+     ],
+     "at": "grey"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "sky",
+      "mood": "dusk",
+      "noTown": true
+     },
+     "cast": [
+      {
+       "id": "old",
+       "x": 0.45,
+       "pose": "slump",
+       "face": "smug",
+       "walkTo": 0.55
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     },
+     "at": "limp"
+    }
+   ]
+  },
+  {
+   "say": "Just like your grandfather.",
+   "show": {
+    "type": "before_after",
+    "left": {
+     "who": "gramps",
+     "face": "smug",
+     "label": "GRANDPA"
+    },
+    "right": {
+     "who": "old",
+     "face": "smug",
+     "label": "YOU"
+    }
+   }
+  },
+  {
+   "say": "You buy a small farm near the wall you built.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "farm",
+     "mood": "dusk",
+     "props": [
+      {
+       "kind": "goat",
+       "x": 0.12,
+       "scale": 1.4
+      }
+     ]
+    },
+    "cast": [
+     {
+      "id": "old",
+      "x": 0.35,
+      "face": "happy"
+     },
+     {
+      "id": "brica",
+      "x": 0.55,
+      "face": "happy"
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      80,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "say": "Some evenings, you walk up to it and touch the stone with your century's name on it.",
+   "shots": [
+    {
+     "type": "land3d",
+     "scene": "wall",
+     "palette": "dusk",
+     "set": {
+      "mood": "dusk"
+     },
+     "camera": {
+      "from": [
+       30,
+       20,
+       50
+      ],
+      "to": [
+       16,
+       16,
+       40
+      ]
+     },
+     "fog": "#E8C4A0"
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "rampart",
+      "mood": "dusk",
+      "props": [
+       {
+        "kind": "stone",
+        "x": 0.6,
+        "scale": 1.8
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "old",
+       "x": 0.4,
+       "face": "sad",
+       "pose": "point"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.06
+     },
+     "at": "touch"
+    }
+   ]
+  },
+  {
+   "say": "Nobody passing by knows who carved it.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "rampart",
+     "mood": "dusk"
+    },
+    "cast": [
+     {
+      "id": "trader",
+      "x": 0.3,
+      "walkTo": 0.8,
+      "pose": "walk",
+      "face": "neutral"
+     },
+     {
+      "id": "old",
+      "x": 0.15,
+      "face": "neutral",
+      "scale": 0.9
+     }
+    ],
+    "cam": {
+     "move": "pan",
+     "dir": [
+      -90,
+      0
+     ]
+    }
+   }
+  },
+  {
+   "say": "But you do.",
+   "show": {
+    "type": "scene",
+    "set": {
+     "kind": "rampart",
+     "mood": "dusk",
+     "blur": 7
+    },
+    "cast": [
+     {
+      "id": "old",
+      "x": 0.5,
+      "y": 1.5,
+      "scale": 1.75,
+      "face": "smug"
+     }
+    ],
+    "cam": {
+     "move": "push",
+     "amount": 0.07,
+     "focus": [
+      0.5,
+      0.35
+     ]
+    }
+   }
+  },
+  {
+   "say": "You marched thousands of miles, built a wall across a country, buried your best friend and outlived an emperor.",
+   "show": {
+    "type": "todo",
+    "kicker": "A LIFE",
+    "title": "DONE",
+    "items": [
+     {
+      "text": "Marched thousands of miles",
+      "word": "marched",
+      "strikeWord": "miles"
+     },
+     {
+      "text": "Built a wall across a country",
+      "word": "built",
+      "strikeWord": "country"
+     },
+     {
+      "text": "Buried your best friend",
+      "word": "buried",
+      "strikeWord": "friend"
+     },
+     {
+      "text": "Outlived an emperor",
+      "word": "outlived",
+      "strikeWord": "emperor"
+     }
+    ]
+   }
+  },
+  {
+   "say": "And somewhere in a box in your house is a small, worn-out blanket.",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "room",
+      "mood": "ember",
+      "stone": true,
+      "band": false,
+      "window": "night",
+      "windowX": 0.75,
+      "props": [
+       {
+        "kind": "fire",
+        "x": 0.5
+       },
+       {
+        "kind": "rug",
+        "x": 0.5
+       }
+      ]
+     },
+     "cast": [
+      {
+       "id": "old",
+       "x": 0.45,
+       "pose": "kneel",
+       "face": "happy",
+       "emote": "heart"
+      }
+     ],
+     "cam": {
+      "move": "pull",
+      "amount": 0.05
+     }
+    },
+    {
+     "type": "corkboard",
+     "title": "THINGS TO REMEMBER",
+     "notes": [
+      {
+       "text": "THE BLANKET",
+       "icon": "🧺",
+       "word": "blanket",
+       "old": true
+      }
+     ],
+     "at": "blanket"
+    }
+   ]
+  },
+  {
+   "say": "So, knowing all of it, the cold, the marching, the friends you'd lose and the wall you'd build twice,",
+   "shots": [
+    {
+     "type": "scene",
+     "set": {
+      "kind": "fort",
+      "mood": "snow",
+      "fx": "snow"
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.45,
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "push",
+      "amount": 0.08,
+      "focus": [
+       0.5,
+       0.42
+      ]
+     }
+    },
+    {
+     "type": "scene",
+     "set": {
+      "kind": "road",
+      "mood": "warm",
+      "paved": true
+     },
+     "cast": [
+      {
+       "id": "you",
+       "x": 0.2,
+       "walkTo": 0.6,
+       "pose": "walk",
+       "face": "tired"
+      }
+     ],
+     "cam": {
+      "move": "pan",
+      "dir": [
+       -100,
+       0
+      ]
+     },
+     "at": "marching"
+    },
+    {
+     "type": "polaroids",
+     "photos": [
+      {
+       "who": "ox",
+       "face": "happy",
+       "caption": "the snorer",
+       "x": 0.5,
+       "y": 0.45,
+       "cross": true
+      }
+     ],
+     "at": "friends"
+    },
+    {
+     "type": "land3d",
+     "scene": "wall",
+     "palette": "dusk",
+     "set": {
+      "mood": "dusk"
+     },
+     "camera": {
+      "from": [
+       80,
+       40,
+       90
+      ],
+      "to": [
+       50,
+       30,
+       70
+      ]
+     },
+     "fog": "#E8C4A0",
+     "at": "twice"
+    }
+   ]
+  },
+  {
+   "say": "would you still choose to be born as a Roman legionary?",
+   "show": {
+    "type": "end",
+    "question": "Would you still choose it?",
+    "text": "Which life should we live next? Tell me in the comments.",
+    "who": "kid",
+    "age": "chibi"
+   },
+   "hold": 1.2
+  }
+ ]
+}

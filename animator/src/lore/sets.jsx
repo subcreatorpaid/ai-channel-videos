@@ -77,6 +77,25 @@ const PROPS = {
   barrel: (x, y) => <g><rect x={x - 50} y={y - 130} width="100" height="130" rx="20" fill="#3D6E8E" {...S} /><path d={`M${x - 50},${y - 90} L${x + 50},${y - 90} M${x - 50},${y - 40} L${x + 50},${y - 40}`} stroke={INK} strokeWidth="3" /><rect x={x + 14} y={y - 128} width="34" height="126" rx="14" fill="#000" opacity="0.12" /></g>,
   cone: (x, y) => <g><path d={`M${x - 34},${y} L${x - 10},${y - 90} L${x + 10},${y - 90} L${x + 34},${y}Z`} fill="#F07A28" {...S} /><rect x={x - 22} y={y - 50} width="44" height="12" fill="#fff" /></g>,
   lamppost: (x, y, C) => <g><circle cx={x + 90} cy={y - 390} r="190" fill={C.glow} /><circle cx={x + 90} cy={y - 390} r="90" fill={C.glow} /><rect x={x - 9} y={y - 420} width="18" height="420" fill="#2E2E33" {...S} /><path d={`M${x},${y - 420} q60,-30 90,0`} fill="none" stroke={INK} strokeWidth="10" /><rect x={x + 70} y={y - 424} width="40" height="22" rx="6" fill={C.light} {...S} /></g>,
+  goat: (x, y) => <g><ellipse cx={x} cy={y - 78} rx="70" ry="38" fill="#EDE6D8" {...S} />{[-44, -20, 22, 46].map((d) => <rect key={d} x={x + d - 6} y={y - 50} width="12" height="50" fill="#EDE6D8" {...S} />)}
+    <path d={`M${x + 56},${y - 96} L${x + 92},${y - 128} L${x + 112},${y - 96} L${x + 84},${y - 78}Z`} fill="#EDE6D8" {...S} /><path d={`M${x + 88},${y - 126} Q${x + 70},${y - 160} ${x + 60},${y - 140}`} fill="none" stroke="#8A7A62" strokeWidth="7" strokeLinecap="round" />
+    <circle cx={x + 96} cy={y - 108} r="4" fill={INK} /><path d={`M${x + 104},${y - 86} l-4,22`} stroke="#EDE6D8" strokeWidth="8" /><path d={`M${x - 68},${y - 90} l-16,-12`} stroke={INK} strokeWidth="5" strokeLinecap="round" /></g>,
+  bunk: (x, y, C) => <g>{[0, 1].map((k) => <g key={k}><rect x={x - 200} y={y - 90 - k * 170} width="400" height="34" fill={C.wood} {...S} /><rect x={x - 190} y={y - 116 - k * 170} width="380" height="28" rx="10" fill="#B9A27A" {...S} /><rect x={x - 186} y={y - 132 - k * 170} width="90" height="24" rx="10" fill="#D8C9A6" {...S} /></g>)}
+    {[-1, 1].map((d) => <rect key={d} x={x + d * 200 - 12} y={y - 360} width="24" height="360" fill={sh(C.wood)} {...S} />)}</g>,
+  standard: (x, y) => <g><rect x={x - 6} y={y - 560} width="12" height="560" fill="#7A5232" {...S} />{[0, 1, 2, 3, 4].map((k) => <circle key={k} cx={x} cy={y - 420 + k * 50} r="20" fill="#D9B45A" {...S} />)}
+    <rect x={x - 60} y={y - 470} width="120" height="16" rx="5" fill="#D9B45A" {...S} /><path d={`M${x - 40},${y - 520} L${x},${y - 590} L${x + 40},${y - 520}Z`} fill="#D9B45A" {...S} />
+    <path d={`M${x - 50},${y - 454} L${x + 50},${y - 454} L${x + 50},${y - 400} Q${x},${y - 384} ${x - 50},${y - 400}Z`} fill="#A8322A" {...S} /></g>,
+  stone: (x, y) => <g><rect x={x - 90} y={y - 120} width="180" height="120" fill="#B8AE9C" {...S} /><rect x={x - 70} y={y - 104} width="140" height="80" fill="none" stroke="#7E7466" strokeWidth="4" />
+    {[0, 1, 2].map((k) => <path key={k} d={`M${x - 52},${y - 86 + k * 24} L${x + 52 - k * 14},${y - 86 + k * 24}`} stroke="#5E564A" strokeWidth="5" strokeLinecap="round" />)}<path d={`M${x + 30},${y - 120} L${x + 90},${y - 120} L${x + 90},${y} L${x + 50},${y}Z`} fill="#000" opacity="0.12" /></g>,
+  cart: (x, y, C) => <g><rect x={x - 180} y={y - 170} width="360" height="90" fill={C.wood} {...S} />{[0, 1, 2, 3].map((k) => <path key={k} d={`M${x - 180 + k * 90},${y - 170} L${x - 180 + k * 90},${y - 80}`} stroke={INK} strokeWidth="3" />)}
+    <path d={`M${x + 180},${y - 110} L${x + 330},${y - 70}`} stroke="#7A5232" strokeWidth="12" />{[-110, 110].map((d) => <g key={d}><circle cx={x + d} cy={y - 60} r="58" fill="#8A6236" {...S} /><circle cx={x + d} cy={y - 60} r="12" fill="#5A3A22" />{[0, 45, 90, 135].map((a) => <path key={a} d={`M${x + d},${y - 60} l${Math.cos(a * Math.PI / 180) * 54},${Math.sin(a * Math.PI / 180) * 54} M${x + d},${y - 60} l${-Math.cos(a * Math.PI / 180) * 54},${-Math.sin(a * Math.PI / 180) * 54}`} stroke={INK} strokeWidth="3" />)}</g>)}</g>,
+  amphora: (x, y) => <g><path d={`M${x - 20},${y - 200} L${x + 20},${y - 200} L${x + 22},${y - 170} Q${x + 70},${y - 130} ${x + 50},${y - 50} Q${x + 20},${y} ${x},${y} Q${x - 20},${y} ${x - 50},${y - 50} Q${x - 70},${y - 130} ${x - 22},${y - 170}Z`} fill="#C0703E" {...S} />
+    {[-1, 1].map((d) => <path key={d} d={`M${x + d * 20},${y - 186} Q${x + d * 54},${y - 186} ${x + d * 40},${y - 140}`} fill="none" stroke={INK} strokeWidth="8" />)}<path d={`M${x + 20},${y - 168} Q${x + 66},${y - 128} ${x + 48},${y - 52} Q${x + 30},${y - 14} ${x + 10},${y - 4}Z`} fill="#000" opacity="0.14" /></g>,
+  fire: (x, y, C, f = 0) => <g><circle cx={x} cy={y - 60} r="200" fill="#FFB347" opacity="0.18" /><circle cx={x} cy={y - 60} r="110" fill="#FFB347" opacity="0.22" />
+    {[-1, 1].map((d) => <rect key={d} x={x - 80} y={y - 24} width="160" height="20" rx="8" fill="#6B4A30" transform={`rotate(${d * 14},${x},${y - 14})`} {...S} />)}
+    <path d={`M${x - 50},${y - 20} Q${x - 60},${y - 90} ${x - 10},${y - 150} Q${x},${y - 100} ${x + 20},${y - 130} Q${x + 60},${y - 70} ${x + 50},${y - 20}Z`} fill="#F2873A" {...S} /><path d={`M${x - 24},${y - 20} Q${x - 30},${y - 70} ${x},${y - 100} Q${x + 30},${y - 60} ${x + 24},${y - 20}Z`} fill="#FFD36B" /></g>,
+  pool: (x, y) => <g><rect x={x - 360} y={y - 40} width="720" height="60" fill="#C9C2B4" {...S} /><rect x={x - 340} y={y - 30} width="680" height="34" fill="#7FB3C9" /><path d={`M${x - 300},${y - 18} q30,-8 60,0 t60,0 M${x + 40},${y - 14} q30,-8 60,0 t60,0`} fill="none" stroke="#fff" strokeWidth="4" opacity="0.7" />
+    {[-260, -80, 120, 280].map((d, k) => <path key={k} d={`M${x + d},${y - 60} q-14,-40 0,-80 q14,-40 0,-80`} fill="none" stroke="#fff" strokeWidth="10" strokeLinecap="round" opacity="0.35" />)}</g>,
   van: (x, y) => <g><rect x={x - 200} y={y - 190} width="300" height="150" rx="14" fill="#E8E4DA" {...S} /><path d={`M${x + 100},${y - 150} L${x + 170},${y - 150} L${x + 200},${y - 90} L${x + 200},${y - 40} L${x + 100},${y - 40}Z`} fill="#E8E4DA" {...S} /><path d={`M${x + 110},${y - 140} L${x + 165},${y - 140} L${x + 185},${y - 100} L${x + 110},${y - 100}Z`} fill="#9FC3D9" {...S} />{[-120, 120].map((d) => <circle key={d} cx={x + d} cy={y - 36} r="34" fill="#2A2A2E" {...S} />)}</g>,
 };
 export const PROP_NAMES = Object.keys(PROPS);
@@ -98,6 +117,8 @@ const Room = ({C, f, set}) => {
     <rect width={W} height={fy} fill="url(#wallg)" />
     {/* soft shadow blobs on the wall (the reference's painted depth) */}
     {[[0.45, 0.42, 380, 120], [0.8, 0.55, 300, 90], [0.15, 0.62, 260, 80]].map(([x, y, rx, ry], i) => <ellipse key={i} cx={x * W} cy={y * H} rx={rx} ry={ry} fill="#000" opacity="0.045" />)}
+    {set.stone && Array.from({length: 9}, (_, r) => <g key={'st' + r}><path d={`M0,${60 + r * 70} L${W},${60 + r * 70}`} stroke={sh(C.wall, 0.8)} strokeWidth="3" />
+      {Array.from({length: 9}, (_, k) => <path key={k} d={`M${k * 230 + (r % 2) * 115},${60 + r * 70} l0,70`} stroke={sh(C.wall, 0.8)} strokeWidth="3" />)}</g>)}
     {set.wainscot && <><rect y={fy - 220} width={W} height="220" fill={C.wall2} /><path d={`M0,${fy - 220} L${W},${fy - 220}`} stroke={INK} strokeWidth="3.5" />
       {Array.from({length: 8}, (_, i) => <rect key={i} x={40 + i * 240} y={fy - 190} width="200" height="150" fill="none" stroke={sh(C.wall2, 0.85)} strokeWidth="4" />)}</>}
     {set.band !== false && <Meander y={0} color={C.bandInk || '#F3E3C3'} bg={C.trim} />}
@@ -207,8 +228,11 @@ const Road = ({C, set}) => {
     {set.night && <circle cx={W * 0.78} cy={H * 0.2} r="56" fill="#F4F1DE" />}
     <path d={`M0,${hz} L300,${hz - 160} L560,${hz - 40} L900,${hz - 260} L1260,${hz - 30} L1560,${hz - 170} L${W},${hz - 20} L${W},${hz} Z`} fill={set.night ? '#1C2547' : '#8C7AA8'} />
     <rect y={hz} width={W} height={H - hz} fill={set.night ? '#2B2F3A' : '#C9A877'} />
-    <path d={`M${W / 2 - 60},${hz} L${W / 2 + 60},${hz} L${W * 0.9},${H} L${W * 0.1},${H} Z`} fill="#4A4A52" />
-    {Array.from({length: 6}, (_, i) => { const t = Math.pow((i + 1) / 7, 1.6); const y = hz + (H - hz) * t; return <rect key={i} x={W / 2 - 4 - 10 * t} y={y} width={8 + 20 * t} height={10 + 30 * t} fill="#F2D06B" />; })}
+    <path d={`M${W / 2 - 60},${hz} L${W / 2 + 60},${hz} L${W * 0.9},${H} L${W * 0.1},${H} Z`} fill={set.paved ? '#8E877A' : '#4A4A52'} />
+    {set.paved && Array.from({length: 9}, (_, i) => { const t = Math.pow((i + 1) / 10, 1.5), y = hz + (H - hz) * t, hw = 60 + (W * 0.4 - 60) * t;
+      return <g key={'p' + i}><path d={`M${W / 2 - hw},${y} L${W / 2 + hw},${y}`} stroke="#6E685E" strokeWidth={2 + 3 * t} />{Array.from({length: 7}, (_, k) => <path key={k} d={`M${W / 2 - hw + (k + 0.5 + (i % 2) * 0.5) * hw * 2 / 7.5},${y} l0,${-(H - hz) * 0.06 * t - 4}`} stroke="#6E685E" strokeWidth={2 + 2 * t} />)}</g>; })}
+    {set.paved && [-1, 1].map((d) => <path key={'k' + d} d={`M${W / 2 + d * 60},${hz} L${W / 2 + d * W * 0.4},${H}`} stroke={INK} strokeWidth="4" />)}
+    {!set.paved && Array.from({length: 6}, (_, i) => { const t = Math.pow((i + 1) / 7, 1.6); const y = hz + (H - hz) * t; return <rect key={i} x={W / 2 - 4 - 10 * t} y={y} width={8 + 20 * t} height={10 + 30 * t} fill="#F2D06B" />; })}
   </g>);
 };
 
@@ -229,10 +253,10 @@ const Sky = ({C, set, f}) => {
     {/* soft cloud bank */}
     {Array.from({length: 7}, (_, i) => <ellipse key={i} cx={((i * 330 + f * 0.3) % (W + 400)) - 200} cy={H * (0.14 + (i % 3) * 0.05)} rx={160 + (i % 3) * 50} ry={34 + (i % 2) * 12} fill="#fff" opacity={night ? 0.05 : 0.18} />)}
     {/* distant hills and a town silhouette, then the near ground */}
-    <path d={`M0,${H * 0.66} Q${W * 0.15},${H * 0.56} ${W * 0.3},${H * 0.64} T${W * 0.62},${H * 0.6} T${W},${H * 0.62} L${W},${H} L0,${H}Z`} fill={sh(C.sky, 0.72)} opacity="0.7" />
+    {set.ground !== false && <><path d={`M0,${H * 0.66} Q${W * 0.15},${H * 0.56} ${W * 0.3},${H * 0.64} T${W * 0.62},${H * 0.6} T${W},${H * 0.62} L${W},${H} L0,${H}Z`} fill={sh(C.sky, 0.72)} opacity="0.7" />
     {!set.noTown && Array.from({length: 9}, (_, i) => <rect key={i} x={W * 0.05 + i * 46} y={H * 0.62 - (20 + hash(i) * 40)} width="40" height={30 + hash(i) * 40} fill={sh(C.sky, 0.6)} opacity="0.7" />)}
     <path d={`M0,${H * 0.72} Q${W * 0.3},${H * 0.64} ${W * 0.55},${H * 0.71} T${W},${H * 0.69} L${W},${H} L0,${H}Z`} fill={sh(C.floor, 0.85)} />
-    <path d={`M0,${H * 0.8} Q${W * 0.25},${H * 0.74} ${W * 0.5},${H * 0.79} T${W},${H * 0.77} L${W},${H} L0,${H}Z`} fill={night ? '#121935' : C.floor} {...S} />
+    <path d={`M0,${H * 0.8} Q${W * 0.25},${H * 0.74} ${W * 0.5},${H * 0.79} T${W},${H * 0.77} L${W},${H} L0,${H}Z`} fill={night ? '#121935' : C.floor} {...S} /></>}
   </g>);
 };
 
@@ -243,7 +267,53 @@ const Glow = ({C, set}) => (<g>
   <rect y={H * 0.82} width={W} height={H * 0.18} fill="rgba(0,0,0,0.35)" />
 </g>);
 
-const KINDS = {room: Room, street: Street, depot: Depot, tunnel: Tunnel, road: Road, city: City, sky: Sky, glow: Glow};
+
+// Roman-era sets: farm (villa + fence), fort (stone wall + gate), tent (leather interior), rampart (on the wall, looking out)
+const Farm = ({C, set, f}) => (<g><Sky C={C} set={{...set, noTown: true}} f={f} />
+  <g transform={`translate(${W * (set.villaX ?? 0.7)},${H * 0.71})`}>
+    <rect x="-260" y="-170" width="520" height="170" fill="#E9DCC4" {...S} /><path d="M-290,-170 L0,-260 L290,-170Z" fill="#B5603E" {...S} />
+    {Array.from({length: 8}, (_, k) => <path key={k} d={`M${-250 + k * 70},-176 L${-230 + k * 64},-236`} stroke={sh('#B5603E', 0.8)} strokeWidth="3" />)}
+    <rect x="-40" y="-110" width="80" height="110" fill="#6B4A30" {...S} /><rect x="-200" y="-130" width="60" height="50" fill="#3A2A20" {...S} /><rect x="140" y="-130" width="60" height="50" fill="#3A2A20" {...S} />
+    <rect x="180" y="-170" width="80" height="170" fill="#000" opacity="0.1" /></g>
+  {Array.from({length: 14}, (_, k) => <rect key={k} x={k * 140 + 20} y={H * 0.8 - 70} width="14" height="80" fill={C.wood} {...S} />)}
+  <path d={`M0,${H * 0.8 - 54} L${W},${H * 0.8 - 54} M0,${H * 0.8 - 22} L${W},${H * 0.8 - 22}`} stroke={sh(C.wood, 0.7)} strokeWidth="8" />
+</g>);
+
+const Fort = ({C, set, f}) => { const top = H * 0.36, base = H * 0.78;
+  return (<g><Sky C={C} set={{...set, ground: false}} f={f} />
+    <path d={`M0,${H * 0.6} Q${W * 0.3},${H * 0.5} ${W * 0.6},${H * 0.58} T${W},${H * 0.56} L${W},${H} L0,${H}Z`} fill={sh(C.sky, 0.72)} opacity="0.7" />
+    <rect y={top} width={W} height={base - top} fill="#B9B0A0" {...S} />
+    {Array.from({length: 7}, (_, r) => <g key={r}><path d={`M0,${top + 30 + r * ((base - top) / 7)} L${W},${top + 30 + r * ((base - top) / 7)}`} stroke="#978E7E" strokeWidth="3" />
+      {Array.from({length: 13}, (_, k) => <path key={k} d={`M${k * 160 + (r % 2) * 80},${top + 30 + r * ((base - top) / 7)} l0,${(base - top) / 7}`} stroke="#978E7E" strokeWidth="3" />)}</g>)}
+    {Array.from({length: 24}, (_, k) => <rect key={'m' + k} x={k * 84} y={top - 46} width="50" height="50" fill="#B9B0A0" {...S} />)}
+    {[0.18, 0.82].map((x) => <g key={x}><rect x={W * x - 110} y={top - 160} width="220" height={base - top + 160} fill="#C4BBAA" {...S} />
+      {Array.from({length: 4}, (_, k) => <rect key={k} x={W * x - 110 + k * 60} y={top - 200} width="40" height="44" fill="#C4BBAA" {...S} />)}
+      <rect x={W * x - 22} y={top - 100} width="44" height="70" rx="20" fill="#2A221C" {...S} /></g>)}
+    {set.gate !== false && <g><path d={`M${W / 2 - 150},${base} L${W / 2 - 150},${top + 120} Q${W / 2},${top - 20} ${W / 2 + 150},${top + 120} L${W / 2 + 150},${base}Z`} fill="#2A221C" {...S} />
+      <path d={`M${W / 2 - 150},${top + 120} Q${W / 2},${top - 20} ${W / 2 + 150},${top + 120}`} fill="none" stroke="#978E7E" strokeWidth="22" />
+      {Array.from({length: 5}, (_, k) => <rect key={k} x={W / 2 - 130 + k * 54} y={top + 110} width="40" height={base - top - 110} fill="#6B4A30" stroke={INK} strokeWidth="3" />)}</g>}
+    <rect y={base} width={W} height={H - base} fill={C.floor} {...S} /><path d={`M${W / 2 - 150},${base} L${W / 2 - 400},${H} L${W / 2 + 400},${H} L${W / 2 + 150},${base}Z`} fill="#A39A88" />
+  </g>); };
+
+const Tent = ({C, set}) => (<g>
+  <rect width={W} height={H} fill="#7A5A3A" />
+  <path d={`M0,0 L${W / 2},${-40} L${W},0 L${W},${H * 0.78} L0,${H * 0.78}Z`} fill="#A87E52" />
+  {Array.from({length: 7}, (_, k) => <path key={k} d={`M${k * W / 6},0 L${k * W / 6 + (k - 3) * 40},${H * 0.78}`} stroke="#8A6440" strokeWidth="5" />)}
+  {Array.from({length: 4}, (_, r) => <path key={'r' + r} d={`M0,${120 + r * 170} Q${W / 2},${150 + r * 170} ${W},${120 + r * 170}`} fill="none" stroke="#6E4E30" strokeWidth="4" strokeDasharray="10 12" />)}
+  <rect x={W / 2 - 14} y="0" width="28" height={H * 0.78} fill="#5A3A22" {...S} />
+  <ellipse cx={W * 0.5} cy={H * 0.3} rx={W * 0.4} ry={H * 0.3} fill="#FFB347" opacity="0.12" />
+  <rect y={H * 0.78} width={W} height={H * 0.22} fill="#6B5A3E" /><path d={`M0,${H * 0.78} L${W},${H * 0.78}`} stroke={INK} strokeWidth="4" />
+  {Array.from({length: 8}, (_, k) => <rect key={'b' + k} x={60 + k * 240} y={H * 0.8} width="200" height="40" rx="12" fill={['#8E2E26', '#5E6E4A', '#7A6A52'][k % 3]} {...S} />)}
+</g>);
+
+const Rampart = ({C, set, f}) => (<g><Sky C={C} set={{...set, noTown: true}} f={f} />
+  {Array.from({length: 5}, (_, k) => <ellipse key={k} cx={(k * 500 + f * 0.6) % (W + 600) - 300} cy={H * 0.6} rx="320" ry="40" fill="#fff" opacity="0.18" />)}
+  <rect y={H * 0.78} width={W} height={H * 0.22} fill="#A39A88" {...S} />
+  {Array.from({length: 12}, (_, k) => <rect key={k} x={k * 170 - 20} y={H * 0.78 - 130} width="110" height="134" fill="#B9B0A0" {...S} />)}
+  {Array.from({length: 12}, (_, k) => <path key={'s' + k} d={`M${k * 170 - 20},${H * 0.78 - 66} l110,0`} stroke="#978E7E" strokeWidth="3" />)}
+</g>);
+
+const KINDS = {farm: Farm, fort: Fort, tent: Tent, rampart: Rampart, room: Room, street: Street, depot: Depot, tunnel: Tunnel, road: Road, city: City, sky: Sky, glow: Glow};
 export const SET_NAMES = [...Object.keys(KINDS), 'black'];
 
 export const Set = ({set = {}, f}) => {
@@ -255,7 +325,7 @@ export const Set = ({set = {}, f}) => {
     <svg width={W} height={H} style={{position: 'absolute', inset: 0}}>
       <K C={C} f={f} set={set} />
       {(set.props || []).map((p, i) => { const pr = typeof p === 'string' ? {kind: p, x: 0.15 + i * 0.25} : p; const fn = PROPS[pr.kind];
-        return fn ? <g key={i}>{fn(pr.x * W, pr.y ? pr.y * H : fy + 10, C)}</g> : null; })}
+        return fn ? <g key={i} transform={pr.scale || pr.flip ? `translate(${pr.x * W},${pr.y ? pr.y * H : fy + 10}) scale(${(pr.flip ? -1 : 1) * (pr.scale || 1)},${pr.scale || 1}) translate(${-pr.x * W},${-(pr.y ? pr.y * H : fy + 10)})` : undefined}>{fn(pr.x * W, pr.y ? pr.y * H : fy + 10, C, f)}</g> : null; })}
     </svg>
     {set.rays && <Rays x={set.rays[0]} y={set.rays[1]} f={f} />}
   </div>);
